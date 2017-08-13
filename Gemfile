@@ -34,9 +34,21 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#==================================================
+## GEM Added
+
+#==> Start
+
 # Bootstrap
 gem "bootstrap-sass"
+# Simple Form
+gem "simple_form"
+# Devise => Authentification
+gem "devise"
 
+
+#==> End
+#==================================================
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
