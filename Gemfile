@@ -46,6 +46,12 @@ gem "simple_form"
 # Devise => Authentification
 gem "devise"
 
+# I18n
+# Default date and time formats
+gem 'rails-i18n', '5.0.3'
+# Devise
+gem 'devise-i18n'
+
 
 #==> End
 #==================================================
