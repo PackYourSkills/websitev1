@@ -39,10 +39,16 @@ gem 'jbuilder', '~> 2.5'
 
 #==> Start
 
+#Front-end
 # Bootstrap
 gem "bootstrap-sass"
 # Simple Form
 gem "simple_form"
+# font awesome
+gem "font-awesome-sass"
+# Autoprefixer #??
+gem "autoprefixer-rails"
+
 # Devise => Authentification
 gem "devise"
 
