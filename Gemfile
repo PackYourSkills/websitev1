@@ -57,6 +57,7 @@ gem "devise"
 gem 'rails-i18n', '5.0.3'
 # Devise
 gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 
 #==> End
