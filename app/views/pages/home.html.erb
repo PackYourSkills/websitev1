@@ -1,73 +1,76 @@
 <!-- Banner Part -->
 <section id="banner" class="section">
   <h1><%= t('home.banner.slogan1') %></h1>
-  <h1><%= t('home.banner.slogan2') %><%= image_tag "/home.can.#{I18n.locale}.png" %></h1>
+  <h1><%= t('home.banner.slogan2') %> <%= image_tag "/home.can.#{I18n.locale}.png" %></h1>
   <h1><%= t('home.banner.slogan3') %></h1>
   <h1><%= t('home.banner.slogan4') %></h1>
   <h1><%= t('home.banner.baseline') %></h1>
+  <a class="btn btn-primary" href="#" role="button"><%= t('home.banner.call2action') %></a>
 </section>
 <!-- Enf of Banner Part -->
 
-<!--
-en:
-  footer:
-    aboutus:
-      title: "ABOUT US"
-      content: "Pack Your Skills is a web platform that enables travelers to get involved in social or environmental projects by ofering their skills in exchange for food and accommodation."
-    contact:
-      title: "GET IN TOUCH"
-      content: "We will be very happy to talk more about our project with you."
-    newsletter:
-      title: "KEEP AN EYE ON OUR EVOLUTION"
-      content: "Stay close to us. We created an authentic monthly newsletter in which we tell you how we evolved, in total transparency."
+<!-- Mission Part -->
+<section id="mission" class="section">
+  <h1><%= t('home.mission.title') %></h1>
+  <p><%= t('home.mission.text1') %></p>
+  <p><%= t('home.mission.text2') %></p>
+</section>
+<!-- Enf of Mission Part -->
 
-  home:
-    banner:
-      slogan1: "YOUR"
-      slogan2: "SKILLS"
-      slogan3: "CHANGE"
-      slogan4: "THE WORLD"
-      baseline: "Volunteer your skills within a social project and get hosted in exchange"
-      call2action: "See opportunities"
-    mission:
-      title: "WHY DID WE CREATE PACK YOUR SKILLS?"
-      text1: "We dream about a world in which everyone can do what they are the best at for projects that make sense for them, so they are fulfilled at work."
-      text2: "Our mission is to give you the opportunity to try your skills in another context and to discover yourself better to find what would suit you the best"
-    benefits:
-      title: "WHAT’S INTERESTING ABOUT DOING PACK YOUR SKILLS ?"
-      1strong: "You live at the heart of the local culture"
-      1underline: "by being hosted by a local"
-      2strong: "You discover the social entrepreneurship"
-      2underline: "by helping a social entrepreneur"
-      3strong: "You make yourself useful during your trip"
-      3underline: "by ofering skills you master"
-    process:
-      title: "I WANT TO GO, HOW DO I DO ?"
-      step1: "Discover the awesome projects that need your skills"
-      step2: "Apply to introduce yourself and show your talents"
-      step3: "Pack Your Skills & enjoy your journey"
-      call2action: "Start now"
-    Users:
-      title: "WHO CAN USE PACK YOUR SKILLS?"
-      packers:
-        name: "PACKERS"
-        description: "You want to travel and to ofer your skills to local projects with positive impact, in exchange for food and accommodation"
-        call2action: "I AM A PACKER"
-      crews:
-        name: "CREWS"
-        descrition: "You are the team of a startup or charity. Your primary mission is to solve a societal issue. You need key skills to develop your project. You can host a skilled traveler."
-        call2action: "WE ARE A CREW"
-      others:
-        name: "OTHERS"
-        description: "You are neither a Packer nor a Crew but would like to contribute to Pack Your Skills in another way."
-        call2action: "CONTACT US"
-    testimonies:
-      title: "THEY DID IT!"
-    team:
-      title: "WE ARE REAL PEOPLE"
-      maxime: "Maxime The geek of the duet, he is as creative as passionate about strategy, company culture and management. Full of enthusiasm and resolutely optimistic, he keeps the flame of ideas burning so that Pack Your Skills remains dynamic. With his dreams of changing the world and a parisian green and « bobo » (bourgeois-bohemian) lifestyle, he likes alternative places and attends events on social and solidarity economy as ofen as he can. When he needs to let go a bit, you’ll find him with a fresh beer in his hands, in a music gig or at the top of a mountain !"
-      isis: "Isis Bathing in the web and startup environment since she started her studies, she majored in Marketing and is passionate about self-actualization. The younger of the duet, she yet is the one who makes everything we imagine possible by going into details of the execution. She reads a lot, likes hiking in the nature, and cannot prevent herself from having several projects in mind. As she care about her 8-hours sleep and her personal balance, she prefers to sharpen her efectiveness rather than spending long inefective hours of work."
-      call2action: "SEE MORE ON…"
-    partners:
-      title: THEY BELIEVE IN US"
--->
+<!-- Benefits Part -->
+<section id="benefits" class="section">
+  <h1><%= t('home.benefits.title') %></h1>
+  <p><strong><%= t('home.benefits.1strong') %></strong></p>
+  <p><%= t('home.benefits.1underline') %></p>
+  <p><strong><%= t('home.benefits.2strong') %></strong></p>
+  <p><%= t('home.benefits.2underline') %></p>
+  <p><strong><%= t('home.benefits.3strong') %></strong></p>
+  <p><%= t('home.benefits.3underline') %></p>
+</section>
+<!-- Enf of Benefits Part -->
+
+<!-- Process Part -->
+<section id="process" class="section">
+  <h1><%= t('home.process.title') %></h1>
+  <p><%= t('home.process.step1') %></p>
+  <p><%= t('home.process.step2') %></p>
+  <p><%= t('home.process.step3') %></p>
+  <a class="btn btn-primary" href="#" role="button"><%= t('home.process.call2action') %></a>
+</section>
+<!-- Enf of Process Part -->
+
+<!-- Users Part -->
+<section id="users" class="section">
+  <h1><%= t('home.users.title') %></h1>
+  <h2><%= t('home.users.packers.name') %></h2>
+  <p><%= t('home.users.packers.description') %></p>
+  <a class="btn btn-primary" href="#" role="button"><%= t('home.users.packers.call2action') %></a>
+  <h2><%= t('home.users.crews.name') %></h2>
+  <p><%= t('home.users.crews.description') %></p>
+  <a class="btn btn-primary" href="#" role="button"><%= t('home.users.crews.call2action') %></a>
+  <h2><%= t('home.users.others.name') %></h2>
+  <p><%= t('home.users.others.description') %></p>
+  <a class="btn btn-primary" href="#" role="button"><%= t('home.users.others.call2action') %></a>
+</section>
+<!-- Enf of Users Part -->
+
+<!-- Testimonies Part -->
+<section id="testimonies" class="section">
+  <h1><%= t('home.testimonies.title') %></h1>
+</section>
+<!-- Enf of Testimonies Part -->
+
+<!-- Team Part -->
+<section id="team" class="section">
+  <h1><%= t('home.team.title') %></h1>
+  <p><%= t('home.team.maxime') %></p>
+  <p><%= t('home.team.isis') %></p>
+  <a class="btn btn-primary" href="#" role="button"><%= t('home.team.call2action') %></a>
+</section>
+<!-- Enf of Team Part -->
+
+<!-- Partners Part -->
+<section id="partners" class="section">
+  <h1><%= t('home.partners.title') %></h1>
+</section>
+<!-- Enf of Partners Part -->
