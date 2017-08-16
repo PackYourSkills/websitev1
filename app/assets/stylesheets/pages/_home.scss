@@ -15,12 +15,172 @@
 /*  0. GLOBAL STYLES
 /*---------------------------------------------------------------------*/
 
-body {
-  background-color: blue;
-}
 
 /*---------------------------------------------------------------------*/
 /*  1. BANNER PART
 /*---------------------------------------------------------------------*/
 
 
+#banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/home.banner.background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  color: white;
+
+  h1 {
+    margin:0;
+    line-height:0.9;
+  }
+
+  h2 {
+    margin:0;
+    font-weight:100px;
+    line-height:1;
+  }
+
+  .container {
+    margin:0;
+    width:100%;
+    padding-top:20vh;
+  }
+  .slogan_part1 {
+    font-weight:500;
+  }
+
+  .slogan_part2 {
+    font-weight:900;
+  }
+
+  #img_can {
+    width:auto;
+  }
+
+  a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: solid 1px white;
+    background:$brand-color;
+  }
+
+  a:hover{
+    color: $brand-color;
+    border: solid 1px $brand-color;
+    background:rgba(255,255,255,0.5);
+  }
+
+  @media screen and (min-width: 992px) {
+    .container{
+      // padding-top:150px;
+    }
+    h2 {
+      font-size:21px;
+    }
+
+    .slogan_part1 {
+      font-size:60px;
+    }
+
+    .slogan_part2 {
+      font-size:70px;
+    }
+
+    #img_can {
+      height:45px;
+    }
+
+    .call2action {
+      margin-top:25px;
+    }
+
+    a{
+      font-size:25px;
+      padding:5px 60px 5px 60px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    h2 {
+      font-size:16px;
+    }
+
+    .slogan_part1 {
+      font-size:50px;
+    }
+
+    .slogan_part2 {
+      font-size:60px;
+    }
+
+    #img_can {
+      height:42px;
+    }
+
+    .call2action {
+      margin-top:20px;
+    }
+
+    a{
+      font-size:20px;
+      padding:5px 50px 5px 50px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size:12px;
+    }
+    .slogan_part1 {
+      font-size:40px;
+    }
+
+    .slogan_part2 {
+      font-size:45px;
+    }
+
+    #img_can {
+      height:37px;
+    }
+
+    .call2action {
+      margin-top:15px;
+    }
+
+    a{
+      font-size:20px;
+      padding:5px 40px 5px 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #banner::before {
+    content: "";
+    height:50px;
+    width:100%;
+    background-image: url("/home.white-shapeheader.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+  }
+}
+
+
+#banner::after {
+  content: "";
+  height:150px;
+  width:100%;
+  background-image: url("/home.white-wave.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  position: absolute;
+  bottom:0;
+  left:0;
+}

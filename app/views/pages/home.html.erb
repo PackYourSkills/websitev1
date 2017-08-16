@@ -1,11 +1,22 @@
 <!-- Banner Part -->
 <section id="banner" class="section">
-  <h1><%= t('home.banner.slogan1') %></h1>
-  <h1><%= t('home.banner.slogan2') %> <%= image_tag "/home.can.#{I18n.locale}.png" %></h1>
-  <h1><%= t('home.banner.slogan3') %></h1>
-  <h1><%= t('home.banner.slogan4') %></h1>
-  <h1><%= t('home.banner.baseline') %></h1>
-  <a class="btn btn-primary" href="#" role="button"><%= t('home.banner.call2action') %></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <h1 class="slogan_part1"><%= t('home.banner.slogan1') %></h1>
+        <h1 class="slogan_part1"><%= t('home.banner.slogan2') %> <%= image_tag "/home.can.#{I18n.locale}.png", id: 'img_can' %></h1>
+        <h1 class="slogan_part2"><%= t('home.banner.slogan3') %></h1>
+        <h1 class="slogan_part2"><%= t('home.banner.slogan4') %></h1>
+        <h2><%= t('home.banner.baseline1') %></h2>
+        <h2><%= t('home.banner.baseline2') %></h2>
+      </div>
+    </div>
+    <div class="row call2action">
+      <div class="col-xs-12 col-sm-6">
+        <a href="#" role="button"><%= t('home.banner.call2action') %></a>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Enf of Banner Part -->
 
