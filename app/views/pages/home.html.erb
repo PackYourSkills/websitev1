@@ -11,9 +11,9 @@
         <h2><%= t('home.banner.baseline2') %></h2>
       </div>
     </div>
-    <div class="row call2action">
+    <div class="row row_call2action">
       <div class="col-xs-12 col-sm-6">
-        <a href="#" role="button"><%= t('home.banner.call2action') %></a>
+        <a class="red_call2action" href="#" role="button"><%= t('home.banner.call2action') %></a>
       </div>
     </div>
   </div>
@@ -21,47 +21,127 @@
 <!-- Enf of Banner Part -->
 
 <!-- Mission Part -->
-<section id="mission" class="section">
-  <h1><%= t('home.mission.title') %></h1>
-  <p><%= t('home.mission.text1') %></p>
-  <p><%= t('home.mission.text2') %></p>
+<section id="mission" class="section section_path section_right_path">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9 col-sm-offset-1 col-sm-8 col-md-offset-2 col-md-6">
+        <h1><%= t('home.mission.title') %></h1>
+        <p><%= t('home.mission.text1') %></p>
+        <p><%= t('home.mission.text2') %></p>
+      </div>
+      <div class="col-xs-3 col-sm-2 col-md-2">
+        <%= image_tag "/home.question.png" %>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Enf of Mission Part -->
 
 <!-- Benefits Part -->
-<section id="benefits" class="section">
-  <h1><%= t('home.benefits.title') %></h1>
-  <p><strong><%= t('home.benefits.1strong') %></strong></p>
-  <p><%= t('home.benefits.1underline') %></p>
-  <p><strong><%= t('home.benefits.2strong') %></strong></p>
-  <p><%= t('home.benefits.2underline') %></p>
-  <p><strong><%= t('home.benefits.3strong') %></strong></p>
-  <p><%= t('home.benefits.3underline') %></p>
+<section id="benefits" class="section section_path section_left_path">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-3'>
+        <%= image_tag "/home.like.png" %>
+      </div>
+      <div class='col-xs-11 col-sm-9'>
+        <h1><%= t('home.benefits.title') %></h1>
+        <div class="row">
+          <div class='col-xs-12 col-md-4 '>
+            <p><strong><%= t('home.benefits.1strong') %></strong></p>
+            <p><%= t('home.benefits.1underline') %></p>
+          </div>
+          <div class='col-xs-12 col-md-4 '>
+            <p><strong><%= t('home.benefits.2strong') %></strong></p>
+            <p><%= t('home.benefits.2underline') %></p>
+          </div>
+          <div class='col-xs-12 col-md-4 '>
+            <p><strong><%= t('home.benefits.3strong') %></strong></p>
+            <p><%= t('home.benefits.3underline') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Enf of Benefits Part -->
 
 <!-- Process Part -->
-<section id="process" class="section">
-  <h1><%= t('home.process.title') %></h1>
-  <p><%= t('home.process.step1') %></p>
-  <p><%= t('home.process.step2') %></p>
-  <p><%= t('home.process.step3') %></p>
-  <a class="btn btn-primary" href="#" role="button"><%= t('home.process.call2action') %></a>
+<section id="process" class="section section_path section_right_path">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1><%= t('home.process.title') %></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class='col-xs-12 col-md-4'>
+        <div class='row'>
+          <div class='col-xs-4 col-sm-offset-1 col-sm-3 col-md-offset-0   col-md-12'>
+            <%= image_tag "/home.process1.png" %>
+          </div>
+          <div class='col-xs-8 col-sm-6  col-md-12'>
+            <p><strong>1.</strong></p>
+            <p><%= t('home.process.step1') %></p>
+          </div>
+        </div>
+      </div>
+      <div class='col-xs-12 col-md-4'>
+        <div class='row'>
+          <div class='col-xs-4 col-sm-offset-1 col-sm-3 col-md-offset-0 col-md-12'>
+            <%= image_tag "/home.process2.png" %>
+          </div>
+          <div class='col-xs-8 col-sm-6 col-md-12'>
+            <p><strong>2.</strong></p>
+            <p><%= t('home.process.step2') %></p>
+          </div>
+        </div>
+      </div>
+      <div class='col-xs-12 col-md-4'>
+        <div class='row'>
+          <div class='col-xs-4 col-sm-offset-1 col-sm-3 col-md-offset-0   col-md-12'>
+            <%= image_tag "/home.process3.png" %>
+          </div>
+          <div class='col-xs-8 col-sm-6  col-md-12'>
+            <p><strong>3.</strong></p>
+            <p><%= t('home.process.step3') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row_call2action">
+      <a class="red_call2action" href="#" role="button"><%= t('home.process.call2action') %></a>
+    </div>
+  </div>
 </section>
 <!-- Enf of Process Part -->
 
 <!-- Users Part -->
-<section id="users" class="section">
-  <h1><%= t('home.users.title') %></h1>
-  <h2><%= t('home.users.packers.name') %></h2>
-  <p><%= t('home.users.packers.description') %></p>
-  <a class="btn btn-primary" href="#" role="button"><%= t('home.users.packers.call2action') %></a>
-  <h2><%= t('home.users.crews.name') %></h2>
-  <p><%= t('home.users.crews.description') %></p>
-  <a class="btn btn-primary" href="#" role="button"><%= t('home.users.crews.call2action') %></a>
-  <h2><%= t('home.users.others.name') %></h2>
-  <p><%= t('home.users.others.description') %></p>
-  <a class="btn btn-primary" href="#" role="button"><%= t('home.users.others.call2action') %></a>
+<section id="users" class="section section_path section_left_path">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1><%= t('home.users.title') %></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class='col-xs-12 col-md-4'>
+        <h2><%= t('home.users.packers.name') %></h2>
+        <p><%= t('home.users.packers.description') %></p>
+        <a class="btn btn-primary" href="#" role="button"><%= t('home.users.packers.call2action') %></a>
+      </div>
+      <div class='col-xs-12 col-md-4'>
+        <h2><%= t('home.users.crews.name') %></h2>
+        <p><%= t('home.users.crews.description') %></p>
+        <a class="btn btn-primary" href="#" role="button"><%= t('home.users.crews.call2action') %></a>
+      </div>
+      <div class='col-xs-12 col-md-4'>
+        <h2><%= t('home.users.others.name') %></h2>
+        <p><%= t('home.users.others.description') %></p>
+        <a class="btn btn-primary" href="#" role="button"><%= t('home.users.others.call2action') %></a>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Enf of Users Part -->
 

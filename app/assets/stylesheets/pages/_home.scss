@@ -15,6 +15,83 @@
 /*  0. GLOBAL STYLES
 /*---------------------------------------------------------------------*/
 
+h1 {
+  font-weight:600;
+  text-transform:capitalize;
+}
+h2 {
+  font-weight:400;
+  text-transform:capitalize;
+}
+p {
+  font-weight:300;
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size:40px;
+  }
+  p {
+    font-size:21px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size:30px;
+  }
+  p {
+    font-size:18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size:18px;
+  }
+  p {
+    font-size:14px;
+  }
+}
+
+.red_call2action {
+  color: white;
+  border: solid 1px white;
+  background:$brand-color;
+}
+
+.red_call2action:hover {
+  color: $brand-color;
+  border: solid 1px $brand-color;
+  background:rgba(255,255,255,0.5);
+}
+
+
+.section_path:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: auto 100% ;
+  position:absolute;
+  bottom:0;
+  left:0;
+  @media screen and (min-width: 768px) {
+    height:100px;
+    width:100%;
+  }
+  @media screen and (max-width: 767px) {
+    height:70px;
+    width:100%;
+  }
+}
+
+.section_left_path:after {
+  background-image: url("/home.path_from_left.png");
+  background-position: 35% 50%;
+}
+
+.section_right_path:after {
+  background-image: url("/home.path_from_right.png");
+  background-position: 65% 50%;
+}
 
 /*---------------------------------------------------------------------*/
 /*  1. BANNER PART
@@ -38,45 +115,35 @@
 
   h2 {
     margin:0;
-    font-weight:100px;
+    font-weight:300px;
     line-height:1;
   }
 
+  a{
+    text-decoration:none;
+    text-transform: uppercase;
+  }
   .container {
     margin:0;
     width:100%;
-    padding-top:20vh;
   }
   .slogan_part1 {
-    font-weight:500;
+    font-weight:400;
   }
 
   .slogan_part2 {
-    font-weight:900;
+    font-weight:700;
   }
 
   #img_can {
     width:auto;
   }
 
-  a{
-    color: white;
-    text-transform: uppercase;
-    text-decoration:none;
-    border: solid 1px white;
-    background:$brand-color;
-  }
-
-  a:hover{
-    color: $brand-color;
-    border: solid 1px $brand-color;
-    background:rgba(255,255,255,0.5);
-  }
-
   @media screen and (min-width: 992px) {
     .container{
-      // padding-top:150px;
+      padding-top:20vh;
     }
+
     h2 {
       font-size:21px;
     }
@@ -93,7 +160,7 @@
       height:45px;
     }
 
-    .call2action {
+    .row_call2action {
       margin-top:25px;
     }
 
@@ -104,6 +171,10 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 991px) {
+    .container{
+      padding-top:30vh;
+    }
+
     h2 {
       font-size:16px;
     }
@@ -120,7 +191,7 @@
       height:42px;
     }
 
-    .call2action {
+    .row_call2action {
       margin-top:20px;
     }
 
@@ -131,6 +202,10 @@
   }
 
   @media screen and (max-width: 767px) {
+    .container{
+      padding-top:35vh;
+    }
+
     h2 {
       font-size:12px;
     }
@@ -146,7 +221,7 @@
       height:37px;
     }
 
-    .call2action {
+    .row_call2action {
       margin-top:15px;
     }
 
@@ -184,3 +259,202 @@
   bottom:0;
   left:0;
 }
+
+
+/*---------------------------------------------------------------------*/
+/*  2. MISSION PART
+/*---------------------------------------------------------------------*/
+
+#mission {
+  min-height:300px;
+  position:relative;
+  padding-bottom:120px;
+  img {
+    max-height:250px;
+    max-width:120%;
+    float:right;
+    margin-top:30px
+  }
+}
+
+#mission::before {
+  content: "";
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:-20px;
+  @media screen and (min-width: 768px) {
+    background-image: url("/home.green_yellow_md.png");
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/home.green_yellow_xs.png");
+  }
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+}
+
+/*---------------------------------------------------------------------*/
+/*  3. BENEFITS PART
+/*---------------------------------------------------------------------*/
+
+#benefits {
+  min-height:300px;
+  position:relative;
+  padding-bottom:120px;
+  padding-top:20px;
+  @media screen and (min-width: 768px) {
+    img {
+      max-height:250px;
+      max-width:120%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    img {
+      display:none;
+    }
+  }
+  p {
+    margin:0;
+  }
+}
+
+#benefits::before {
+  content: "";
+  position:absolute;
+  width:100%;
+  background-image: url("/home.red1.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    height:130%;
+    top:-15%;
+  }
+  @media screen and (max-width: 767px) {
+    height:80%;
+    top:0px;
+  }
+}
+
+/*---------------------------------------------------------------------*/
+/*  3. PROCESS PART
+/*---------------------------------------------------------------------*/
+
+#process {
+  min-height:300px;
+  position:relative;
+  padding-bottom:120px;
+  padding-top:20px;
+  h1 {
+    text-align:center;
+  }
+  img {
+    max-height:100px;
+    max-width:90%;
+    margin:5px;
+  }
+  p {
+    margin:0;
+  }
+  a{
+    text-decoration:none;
+    padding:10px 60px 10px 60px;
+  }
+
+  .row_call2action{
+    margin-top:25px;
+    margin-bottom:15px;
+  }
+  @media screen and (min-width: 992px) {
+    text-align:center;
+  }
+  @media screen and (max-width: 991px) {
+    text-align:left;
+  }
+
+}
+
+#process::before {
+  content: "";
+  position:absolute;
+  left:0;
+  width:100%;
+  z-index:-1;
+  background-image: url("/home.blue1.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 60% ;
+  @media screen and (min-width: 768px) {
+    height:80%;
+    top:0%;
+  }
+  @media screen and (max-width: 767px) {
+    height:80%;
+    top:0px;
+  }
+}
+
+/*---------------------------------------------------------------------*/
+/*  4. USERS PART
+/*---------------------------------------------------------------------*/
+
+#users {
+  min-height:300px;
+  position:relative;
+  padding-bottom:120px;
+  padding-top:20px;
+  h1 {
+    text-align:center;
+  }
+  img {
+    max-height:100px;
+    max-width:90%;
+    margin:5px;
+  }
+  p {
+    margin:0;
+  }
+  a{
+    text-decoration:none;
+    padding:10px 60px 10px 60px;
+  }
+
+  .row_call2action{
+    margin-top:25px;
+    margin-bottom:15px;
+  }
+  @media screen and (min-width: 992px) {
+    text-align:center;
+  }
+  @media screen and (max-width: 991px) {
+    text-align:left;
+  }
+
+}
+
+#users::before {
+  content: "";
+  position:absolute;
+  left:0;
+  top:-10%;
+  width:100%;
+  height:120%;
+  z-index:-1;
+  background-image: url("/home.bluebig.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover ;
+}
+/*---------------------------------------------------------------------
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+}
+---------------------------------------------------------------------*/

@@ -66,7 +66,7 @@ en:
         call2action: "I AM A PACKER"
       crews:
         name: "CREWS"
-        descrition: "You are the team of a startup or charity. Your primary mission is to solve a societal issue. You need key skills to develop your project. You can host a skilled traveler."
+        description: "You are the team of a startup or charity. Your primary mission is to solve a societal issue. You need key skills to develop your project. You can host a skilled traveler."
         call2action: "WE ARE A CREW"
       others:
         name: "OTHERS"
