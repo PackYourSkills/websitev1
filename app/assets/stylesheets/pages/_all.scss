@@ -1,0 +1,144 @@
+/* -------------------------------------
+ * CSS code for all page
+ * ------------------------------------- */
+
+/*-----------------------------------------------------------------------
+/*  Theme Name  : Pack Your Skills by Milica
+/*  Version     : 1.O
+/*  Date        : Aout 2017
+/*-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------*/
+/*  0. GLOBAL STYLES
+/*---------------------------------------------------------------------*/
+
+h1,h2,h3,p{
+  color:$black;
+}
+h1 {
+  font-weight:600;
+  text-transform:capitalize;
+}
+h2 {
+  font-weight:400;
+  text-transform:capitalize;
+}
+p {
+  font-weight:300;
+  margin-top:4px;
+  margin-bottom:0;
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size:40px;
+  }
+  p {
+    font-size:21px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size:30px;
+  }
+  p {
+    font-size:18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size:18px;
+  }
+  p {
+    font-size:14px;
+  }
+}
+
+.red_call2action {
+  color: white;
+  border: solid 1px white;
+  background:$brand-color;
+}
+
+.red_call2action:hover {
+  color: $brand-color;
+  border: solid 1px $brand-color;
+  background:rgba(255,255,255,0.5);
+}
+
+.green_call2action {
+  color: white;
+  border: solid 1px white;
+  background:$green;
+}
+
+.green_call2action:hover {
+  color: $green;
+  border: solid 1px $green;
+  background:rgba(255,255,255,0.5);
+}
+
+.white_call2action {
+  color: $black;
+  border: solid 2px white;
+  background:white;
+}
+
+.white_call2action:hover {
+  color: $black;
+  border: solid 2px $black;
+  background:rgba(255,255,255,0);
+}
+
+.empty_call2action {
+  color: $black;
+  border: solid 2px $black;
+  background:rgba(255,255,255,0);
+}
+
+.empty_call2action:hover {
+  color: $black;
+  border: solid 2px white;
+  background:white;
+}
+
+.hide_for_phone{
+  @media screen and (max-width: 767px) {
+    display:none;
+  }
+}
+
+.logo_social_network {
+  height:39px;
+  width:37px;
+  @media screen and (max-width: 767px) {
+    padding:7px;
+  }
+}
+.logo_fb{
+  content:url("/logo.fb.white.png");
+}
+.logo_fb:hover{
+  content:url("/logo.fb.black.png");
+}
+.logo_insta{
+  content:url("/logo.insta.white.png");
+}
+.logo_insta:hover{
+  content:url("/logo.insta.black.png");
+}
+.logo_youtube{
+  content:url("/logo.youtube.white.png");
+}
+.logo_youtube:hover{
+  content:url("/logo.youtube.black.png");
+}
+.logo_twitter{
+  content:url("/logo.twitter.white.png");
+}
+.logo_twitter:hover{
+  content:url("/logo.twitter.black.png");
+}

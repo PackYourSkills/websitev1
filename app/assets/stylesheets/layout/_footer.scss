@@ -1,1 +1,113 @@
-// Your footer style
+/* -------------------------------------
+ * CSS code specific to footer
+ * ------------------------------------- */
+
+/*-----------------------------------------------------------------------
+/*  Theme Name  : Pack Your Skills by Milica
+/*  Version     : 1.O
+/*  Date        : Aout 2017
+/*-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------*/
+/*  Footer
+/*---------------------------------------------------------------------*/
+
+.footer {
+  position:relative;
+  h1 {
+    font-weight:800;
+    text-transform:capitalize;
+    @media screen and (min-width: 768px) {font-size:16px;}
+    @media screen and (max-width: 767px) {font-size:12px;}
+  }
+  p {
+    font-weight:400;
+    margin:0px;
+    @media screen and (min-width: 768px) {font-size:14px;}
+    @media screen and (max-width: 767px) {font-size:10px;}
+  }
+
+  a{
+    text-decoration:underline;
+    color:$black;
+  }
+
+  .container{
+    width:90%;
+    margin:auto;
+  }
+
+  .logo_social_network {
+    height:30px;
+    width:30px;
+  }
+  .designby {
+    margin-top:10px;
+    text-align:center;
+  }
+  .copyright {
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align:center;
+    p {
+      font-size:10px;
+      font-weight:300;
+    }
+  }
+  .email_logo {
+    @media screen and (min-width: 768px) {
+      margin:10px 10px 10px 0px;
+      height:20px;
+    }
+    @media screen and (max-width: 767px) {
+      margin:5px 5px 5px 0px;
+      height:15px;
+    }
+  }
+
+  /*----------------------------------------------------------------*/
+  //  Newsletter
+  /*----------------------------------------------------------------*/
+
+  #mce-EMAIL { //  champs email
+    border:solid 1px $green;
+    @media screen and (min-width: 768px) {
+      height:30px;
+      width:100%;
+      margin:10px 10px 10px 0px
+    }
+    @media screen and (max-width: 767px) {
+      height:20px;
+      width:100%;
+      margin:5px 5px 5px 0px
+    }
+  }
+
+  /*----------------------------------------------------------------*/
+
+  .green_call2action {
+    @media screen and (min-width: 768px) {font-size:16px;}
+    @media screen and (max-width: 767px) {font-size:12px;}
+  }
+}
+
+.footer::before {
+  content: "";
+  position:absolute;
+  top:0;
+  width:100%;
+  background-image: url("/footer.green.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    height:54%;
+  }
+  @media screen and (max-width: 767px) {
+    height:30%;
+  }
+}
+
+
