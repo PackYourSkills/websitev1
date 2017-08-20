@@ -4,6 +4,27 @@
     <title>Pack Your Skills</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/home.logo.1cm.png" />
+    <meta name="description" content="Pack Your Skills is the new web platform that allows travelers to join the team of a project for the duration of a mission in exchange for food and accommodation. #Volunteering #PositiveImpact #SocialEntrepreneurship">
+
+    <!-- Facebook -->
+    <meta property="og:url"                content="http://www.packyourskills.com/missions" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Pack Your Skills <> 10 opportunities in Paris" />
+    <meta property="og:description"        content="Pack Your Skills allows travelers (Packers) to join social startups or charities (Crews) to do a mission based on their skills and get hosted in exchange. 10 opportunities in Paris from June 18, 2017 #Volunteering #PositiveImpact #SocialEntrepreneurship" />
+    <meta property="og:image"              content="http://www.packyourskills.com/assets/img/10opportunities.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@PackYourSkills">
+    <meta name="twitter:title" content="Pack Your Skills">
+    <meta name="twitter:description" content="Pack Your Skills is the new web platform that allows travelers to join the team of a project for the duration of a mission in exchange for food and accommodation. #Volunteering #PositiveImpact #SocialEntrepreneurship">
+    <meta name="twitter:creator" content="@PackYourSkills">
+    <meta name="twitter:image" content="https://www.packyourskills.com/assets/img/Social-card.jpg">
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -12,6 +33,7 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>

@@ -21,6 +21,10 @@
 
 en:
   footer:
+    designby:
+      part1: "designed with"
+      part2: "by Milica"
+      part3: "First Packer, March 2017"
     aboutus:
       title: "ABOUT US"
       content: "Pack Your Skills is a web platform that enables travelers to get involved in social or environmental projects by ofering their skills in exchange for food and accommodation."
@@ -37,8 +41,9 @@ en:
       slogan2: "SKILLS"
       slogan3: "CHANGE"
       slogan4: "THE WORLD"
-      baseline: "Volunteer your skills within a social project and get hosted in exchange"
-      call2action: "See opportunities"
+      baseline1: "Volunteer your skills within a social project"
+      baseline2: "and get hosted in exchange"
+      call2action: "Join the next edition"
     mission:
       title: "WHY DID WE CREATE PACK YOUR SKILLS?"
       text1: "We dream about a world in which everyone can do what they are the best at for projects that make sense for them, so they are fulfilled at work."
@@ -60,23 +65,24 @@ en:
     users:
       title: "WHO CAN USE PACK YOUR SKILLS?"
       packers:
-        name: "PACKERS"
+        name: "Packers"
         description: "You want to travel and to ofer your skills to local projects with positive impact, in exchange for food and accommodation"
         call2action: "I AM A PACKER"
       crews:
-        name: "CREWS"
-        descrition: "You are the team of a startup or charity. Your primary mission is to solve a societal issue. You need key skills to develop your project. You can host a skilled traveler."
+        name: "Crews"
+        description: "You are the team of a startup or charity. Your primary mission is to solve a societal issue. You need key skills to develop your project. You can host a skilled traveler."
         call2action: "WE ARE A CREW"
       others:
-        name: "OTHERS"
+        name: "Others"
         description: "You are neither a Packer nor a Crew but would like to contribute to Pack Your Skills in another way."
         call2action: "CONTACT US"
     testimonies:
       title: "THEY DID IT!"
     team:
       title: "WE ARE REAL PEOPLE"
-      maxime: "Maxime The geek of the duet, he is as creative as passionate about strategy, company culture and management. Full of enthusiasm and resolutely optimistic, he keeps the flame of ideas burning so that Pack Your Skills remains dynamic. With his dreams of changing the world and a parisian green and « bobo » (bourgeois-bohemian) lifestyle, he likes alternative places and attends events on social and solidarity economy as ofen as he can. When he needs to let go a bit, you’ll find him with a fresh beer in his hands, in a music gig or at the top of a mountain !"
-      isis: "Isis Bathing in the web and startup environment since she started her studies, she majored in Marketing and is passionate about self-actualization. The younger of the duet, she yet is the one who makes everything we imagine possible by going into details of the execution. She reads a lot, likes hiking in the nature, and cannot prevent herself from having several projects in mind. As she care about her 8-hours sleep and her personal balance, she prefers to sharpen her efectiveness rather than spending long inefective hours of work."
-      call2action: "SEE MORE ON…"
+      maxime: "The geek of the duet, he is as creative as passionate about strategy, company culture and management. Full of enthusiasm and resolutely optimistic, he keeps the flame of ideas burning so that Pack Your Skills remains dynamic. With his dreams of changing the world and a parisian green and « bobo » (bourgeois-bohemian) lifestyle, he likes alternative places and attends events on social and solidarity economy as ofen as he can. When he needs to let go a bit, you’ll find him with a fresh beer in his hands, in a music gig or at the top of a mountain !"
+      isis: "Bathing in the web and startup environment since she started her studies, she majored in Marketing and is passionate about self-actualization. The younger of the duet, she yet is the one who makes everything we imagine possible by going into details of the execution. She reads a lot, likes hiking in the nature, and cannot prevent herself from having several projects in mind. As she care about her 8-hours sleep and her personal balance, she prefers to sharpen her efectiveness rather than spending long inefective hours of work."
+    social_network:
+      title: "SEE MORE ON…"
     partners:
       title: "THEY BELIEVE IN US"

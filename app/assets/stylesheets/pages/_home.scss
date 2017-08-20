@@ -1,6 +1,5 @@
 /* -------------------------------------
  * CSS code specific to home page
- * (margin/padding adjustments)
  * ------------------------------------- */
 
 /*-----------------------------------------------------------------------
@@ -15,8 +14,41 @@
 /*  0. GLOBAL STYLES
 /*---------------------------------------------------------------------*/
 
-body {
-  background-color: blue;
+.section {
+  padding-bottom:120px;
+}
+
+.section {
+  min-height:300px;
+  position:relative;
+}
+
+.section_path:after {
+  z-index:1;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: auto 100% ;
+  position:absolute;
+  bottom:0;
+  left:0;
+  @media screen and (min-width: 768px) {
+    height:100px;
+    width:100%;
+  }
+  @media screen and (max-width: 767px) {
+    height:70px;
+    width:100%;
+  }
+}
+
+.section_left_path:after {
+  background-image: url("/home.path_from_left.png");
+  background-position: 35% 50%;
+}
+
+.section_right_path:after {
+  background-image: url("/home.path_from_right.png");
+  background-position: 65% 50%;
 }
 
 /*---------------------------------------------------------------------*/
@@ -24,3 +56,576 @@ body {
 /*---------------------------------------------------------------------*/
 
 
+#banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/home.banner.background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom:0px;
+
+  h1,h2 {
+    margin:0;
+    color:white;
+  }
+
+  h1 {
+    line-height:0.9;
+  }
+
+  h2 {
+    font-weight:300px;
+    line-height:1;
+  }
+
+  a{
+    text-decoration:none;
+    text-transform: uppercase;
+  }
+  .container {
+    margin:0;
+    width:100%;
+  }
+  .slogan_part1 {
+    font-weight:400;
+  }
+
+  .slogan_part2 {
+    font-weight:700;
+  }
+
+  #img_can {
+    width:auto;
+  }
+
+  #home_exclamation {
+    width:auto;
+  }
+
+  .footer_banner {
+    z-index:1;
+    width:100%;
+    position:absolute;
+    text-align:center;
+    bottom:60px;
+    img {
+      height:15px;
+    }
+  }
+
+  .comment {
+    font-family: 'Indie Flower', cursive;
+    color:white;
+    @media screen and (min-width: 768px) {font-size:20px;}
+    @media screen and (max-width: 767px) {font-size:14px;}
+  }
+
+  .comment_3nd_edition {
+    img {
+      height:40px;
+      width:auto;
+    }
+  }
+
+  .comment_crews {
+    position:relative;
+    top:-10px;
+    padding-left:60px;
+  }
+
+  @media screen and (min-width: 992px) {
+    background-position: bottom center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    background-position-y: bottom;
+    background-position-x: +30%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container{
+      padding-top:20vh;
+    }
+
+    h2 {
+      font-size:21px;
+    }
+
+    .slogan_part1 {
+      font-size:60px;
+    }
+
+    .slogan_part2 {
+      font-size:70px;
+    }
+
+    #img_can {
+      height:45px;
+    }
+
+    #home_exclamation {
+      height:70px;
+      position: relative;
+      bottom: 10px;
+    }
+
+    .row_call2action {
+      margin-top:25px;
+    }
+
+    a{
+      font-size:25px;
+      padding:5px 60px 5px 60px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    background-position-y: bottom;
+    background-position-x: +35%;
+
+    .container{
+      padding-top:15vh;
+    }
+
+    h2 {
+      font-size:12px;
+    }
+    .slogan_part1 {
+      font-size:40px;
+    }
+
+    .slogan_part2 {
+      font-size:45px;
+    }
+
+    #img_can {
+      height:37px;
+    }
+
+    #home_exclamation {
+      height:45px;
+      position: relative;
+      bottom: 7px;
+    }
+
+    .row_call2action {
+      margin-top:15px;
+    }
+
+    a{
+      font-size:18px;
+      padding:5px 35px 5px 35px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #banner::before {
+    content: url('/home.logo.1cm.png');
+    text-align:center;
+    padding:4px;
+    height:50px;
+    width:100%;
+    background-image: url("/home.white-shapeheader.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+  }
+}
+
+
+#banner::after {
+  content: "";
+  height:150px;
+  width:100%;
+  background-image: url("/home.white-wave.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  2. MISSION PART
+/*---------------------------------------------------------------------*/
+
+#mission {
+  img {
+    max-height:250px;
+    max-width:120%;
+    float:right;
+    margin-top:30px
+  }
+}
+
+#mission::before {
+  content: "";
+  width:100%;
+  position:absolute;
+  @media screen and (min-width: 768px) {
+    height:130%;
+    top:0px;
+    background-image: url("/home.green_yellow_md.png");
+  }
+  @media screen and (max-width: 767px) {
+    height:100%;
+    top:-20px;
+    background-image: url("/home.green_yellow_xs.png");
+  }
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+}
+
+/*---------------------------------------------------------------------*/
+/*  3. BENEFITS PART
+/*---------------------------------------------------------------------*/
+
+#benefits {
+  padding-top:20px;
+  @media screen and (min-width: 768px) {
+    img {
+      max-height:250px;
+      max-width:120%;
+    }
+  }
+}
+
+#benefits::before {
+  content: "";
+  position:absolute;
+  width:100%;
+  background-image: url("/home.red1.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100% ;
+  @media screen and (min-width: 992px) {
+    height:180%;
+    top:-35%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    height:150%;
+    top:-25%;
+  }
+  @media screen and (max-width: 767px) {
+    height:110%;
+    top:-10%;
+  }
+}
+
+/*---------------------------------------------------------------------*/
+/*  3. PROCESS PART
+/*---------------------------------------------------------------------*/
+
+#process {
+  padding-top:20px;
+  h1 {
+    text-align:center;
+  }
+  img {
+    max-height:170px;
+    max-width:90%;
+  }
+  a{
+    text-decoration:none;
+    padding:10px 60px 10px 60px;
+  }
+
+  .row_call2action{
+    margin-top:25px;
+    margin-bottom:15px;
+    text-align:center;
+  }
+
+  @media screen and (min-width: 992px) {
+    text-align:center;
+    img {
+      margin:50px 5px 15px 5px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    text-align:left;
+    img {
+      margin:5px 5px 5px 5px;
+    }
+  }
+}
+
+#process::before {
+  content: "";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:80%;
+  z-index:-1;
+  background-image: url("/home.blue1.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 60% ;
+}
+
+/*---------------------------------------------------------------------*/
+/*  4. USERS PART
+/*---------------------------------------------------------------------*/
+
+#users {
+  background-image: url("/home.bluebig.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover ;
+  min-height:65vh;
+  position:relative;
+  padding-top:60px;
+  h1 {
+    text-align:center;
+  }
+  img {
+    max-height:200px;
+    max-width:110%;
+    margin:5px;
+  }
+  p {
+    text-align:left;
+  }
+  a{
+    text-decoration:none;
+    display:inline-block;
+    font-weight:600;
+    margin:10px 0px 30px 0px;
+    padding:10px 60px 10px 60px;
+  }
+}
+
+#users::before {
+  content: "";
+  position:absolute;
+  left:0;
+  top:-10%;
+  width:100%;
+  height:120%;
+  background-image: url("/home.bluebigLayer.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100% ;
+}
+
+#users::after {
+  bottom:-15%;
+}
+
+@media screen and (min-width: 992px) {
+  .arrow {
+    padding-top:60px;
+  }
+  .arrow_right:before{
+    height:60px;
+    position:absolute;
+    top:0;
+    left:30px;
+    content:url('/home.arrow_right.png');
+  }
+
+  .arrow_left:before{
+    height:60px;
+    position:absolute;
+    top:0;
+    right:30px;
+    content:url('/home.arrow_left.png');
+  }
+}
+
+/*---------------------------------------------------------------------*/
+/*  5. TESTIMONIES PART
+/*---------------------------------------------------------------------*/
+
+#testimonies {
+  padding-top:100px;
+  h1 {
+    text-align:left;
+  }
+  img {
+    max-height:150px;
+    max-width:100%;
+    border-radius: 50%;
+  }
+  .video_testimonies {
+    position: relative;
+    height:0;
+    width:100%;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    overflow: hidden;
+  }
+
+  .video_testimonies iframe,
+  .video_testimonies object,
+  .video_testimonies embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .text_testimonies{
+    @media screen and (max-width: 767px) {
+      margin-top:30px;
+    }
+  }
+  .text_portrait{
+    @media screen and (min-width: 768px) {
+      text-align:right;
+    }
+  }
+  .info_portrait {
+    p{font-size:14px};
+  }
+}
+
+#testimonies::before {
+  content: "";
+  position:absolute;
+  left:0;
+  width:100%;
+  z-index:0;
+  background-image: url("/home.red2.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    height:110%;
+    top:15%;
+  }
+  @media screen and (max-width: 767px) {
+    height:60%;
+    bottom:25%;
+  }
+}
+
+/*---------------------------------------------------------------------*/
+/*  6. TEAM PART
+/*---------------------------------------------------------------------*/
+
+#team {
+  padding-bottom:0px;
+  h1 {
+    text-align:left;
+  }
+  img {
+    max-width:100%;
+  }
+}
+
+.text_team {
+  @media screen and (min-width: 992px) {
+    p{font-size:16px;}
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    p{font-size:14px;}
+  }
+  @media screen and (max-width: 767px) {
+    p{font-size:12px;}
+  }
+}
+
+#team::before {
+  content: "";
+  position:absolute;
+  right:0px;
+  width:100%;
+  background-image: url("/home.green2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    height:70%;
+    top:5%;
+  }
+  @media screen and (max-width: 767px) {
+    height:60%;
+    bottom:25%;
+  }
+}
+
+/*---------------------------------------------------------------------*/
+/*  7. SOCIAL NETWORK PART
+/*---------------------------------------------------------------------*/
+
+#social_network {
+  padding-bottom:100px;
+  h1 {
+    text-align:left;
+  }
+  .col-xs-4{
+    padding:0px;
+  }
+  img {
+    max-width:100%;
+    height:auto;
+    padding:5px;
+  }
+}
+
+.img_insta{
+  padding-left:10px;
+}
+
+#social_network::before {
+  content: "";
+  position:absolute;
+  left:0;
+  width:100%;
+  z-index:-1;
+  background-image: url("/home.yellow1.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    height:100%;
+    top:-50%;
+  }
+  @media screen and (max-width: 767px) {
+    height:100%;
+    top:-50%;
+  }
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  7. PARTNERS PART
+/*---------------------------------------------------------------------*/
+
+#partners {
+  padding-bottom: 50px;
+  h1 {
+    text-align:center;
+  }
+  img {
+    max-width:100%;
+    height:auto;
+    padding:5px;
+  }
+}
+
+.container_logo{
+  padding-left:10%;
+  padding-right:10%;
+}
+
+/*---------------------------------------------------------------------
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media screen and (max-width: 767px) {
+
+}
+---------------------------------------------------------------------*/
