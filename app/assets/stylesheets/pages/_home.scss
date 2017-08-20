@@ -114,6 +114,26 @@
     }
   }
 
+  .comment {
+    font-family: 'Indie Flower', cursive;
+    color:white;
+    @media screen and (min-width: 768px) {font-size:20px;}
+    @media screen and (max-width: 767px) {font-size:14px;}
+  }
+
+  .comment_3nd_edition {
+    img {
+      height:40px;
+      width:auto;
+    }
+  }
+
+  .comment_crews {
+    position:relative;
+    top:-10px;
+    padding-left:60px;
+  }
+
   @media screen and (min-width: 992px) {
     background-position: bottom center;
   }
@@ -164,7 +184,7 @@
     background-position-x: +35%;
 
     .container{
-      padding-top:30vh;
+      padding-top:15vh;
     }
 
     h2 {
@@ -435,9 +455,24 @@
     border-radius: 50%;
   }
   .video_testimonies {
+    position: relative;
+    height:0;
     width:100%;
-    height:100%;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    overflow: hidden;
   }
+
+  .video_testimonies iframe,
+  .video_testimonies object,
+  .video_testimonies embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .text_testimonies{
     @media screen and (max-width: 767px) {
       margin-top:30px;
