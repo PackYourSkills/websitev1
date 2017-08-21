@@ -15,12 +15,9 @@
 /*---------------------------------------------------------------------*/
 
 .section {
-  padding-bottom:120px;
-}
-
-.section {
   min-height:300px;
   position:relative;
+  padding-bottom:120px;
 }
 
 .section_path:after {
@@ -56,7 +53,7 @@
 /*---------------------------------------------------------------------*/
 
 
-#banner {
+#home_banner {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -220,7 +217,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  #banner::before {
+  #home_banner::before {
     content: url('/home.logo.1cm.png');
     text-align:center;
     padding:4px;
@@ -236,7 +233,7 @@
 }
 
 
-#banner::after {
+#home_banner::after {
   content: "";
   height:150px;
   width:100%;
@@ -254,7 +251,7 @@
 /*  2. MISSION PART
 /*---------------------------------------------------------------------*/
 
-#mission {
+#home_mission {
   img {
     max-height:250px;
     max-width:120%;
@@ -263,7 +260,7 @@
   }
 }
 
-#mission::before {
+#home_mission::before {
   content: "";
   width:100%;
   position:absolute;
@@ -286,7 +283,7 @@
 /*  3. BENEFITS PART
 /*---------------------------------------------------------------------*/
 
-#benefits {
+#home_benefits {
   padding-top:20px;
   @media screen and (min-width: 768px) {
     img {
@@ -296,7 +293,7 @@
   }
 }
 
-#benefits::before {
+#home_benefits::before {
   content: "";
   position:absolute;
   width:100%;
@@ -322,7 +319,7 @@
 /*  3. PROCESS PART
 /*---------------------------------------------------------------------*/
 
-#process {
+#home_process {
   padding-top:20px;
   h1 {
     text-align:center;
@@ -356,7 +353,7 @@
   }
 }
 
-#process::before {
+#home_process::before {
   content: "";
   position:absolute;
   left:0;
@@ -374,7 +371,7 @@
 /*  4. USERS PART
 /*---------------------------------------------------------------------*/
 
-#users {
+#home_users {
   background-image: url("/home.bluebig.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -402,7 +399,7 @@
   }
 }
 
-#users::before {
+#home_users::before {
   content: "";
   position:absolute;
   left:0;
@@ -415,7 +412,7 @@
   background-size: auto 100% ;
 }
 
-#users::after {
+#home_users::after {
   bottom:-15%;
 }
 
@@ -444,7 +441,7 @@
 /*  5. TESTIMONIES PART
 /*---------------------------------------------------------------------*/
 
-#testimonies {
+#home_testimonies {
   padding-top:100px;
   h1 {
     text-align:left;
@@ -488,7 +485,7 @@
   }
 }
 
-#testimonies::before {
+#home_testimonies::before {
   content: "";
   position:absolute;
   left:0;
@@ -512,7 +509,7 @@
 /*  6. TEAM PART
 /*---------------------------------------------------------------------*/
 
-#team {
+#home_team {
   padding-bottom:0px;
   h1 {
     text-align:left;
@@ -534,7 +531,7 @@
   }
 }
 
-#team::before {
+#home_team::before {
   content: "";
   position:absolute;
   right:0px;
@@ -557,7 +554,7 @@
 /*  7. SOCIAL NETWORK PART
 /*---------------------------------------------------------------------*/
 
-#social_network {
+#home_social_network {
   padding-bottom:100px;
   h1 {
     text-align:left;
@@ -576,7 +573,7 @@
   padding-left:10px;
 }
 
-#social_network::before {
+#home_social_network::before {
   content: "";
   position:absolute;
   left:0;
@@ -601,7 +598,7 @@
 /*  7. PARTNERS PART
 /*---------------------------------------------------------------------*/
 
-#partners {
+#home_partners {
   padding-bottom: 50px;
   h1 {
     text-align:center;
