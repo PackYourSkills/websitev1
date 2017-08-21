@@ -27,7 +27,7 @@ en:
       part3: "First Packer, March 2017"
     aboutus:
       title: "ABOUT US"
-      content: "Pack Your Skills is a web platform that enables travelers to get involved in social or environmental projects by ofering their skills in exchange for food and accommodation."
+      content: "Pack Your Skills is a web platform that enables travelers to get involved in social or environmental projects by offering their skills in exchange for food and accommodation."
     contact:
       title: "GET IN TOUCH"
       content: "We will be very happy to talk more about our project with you."
@@ -45,9 +45,9 @@ en:
       baseline2: "and get hosted in exchange"
       call2action: "Join the next edition"
     mission:
-      title: "WHY DID WE CREATE PACK YOUR SKILLS?"
+      title: "WHY DID WE CREATE PACK YOUR SKILLS ?"
       text1: "We dream about a world in which everyone can do what they are the best at for projects that make sense for them, so they are fulfilled at work."
-      text2: "Our mission is to give you the opportunity to try your skills in another context and to discover yourself better to find what would suit you the best"
+      text2: "Our mission is to give you the opportunity to try your skills in another context and to discover yourself better to find what would suit you the best."
     benefits:
       title: "WHAT’S INTERESTING ABOUT DOING PACK YOUR SKILLS ?"
       1strong: "You live at the heart of the local culture"
@@ -55,7 +55,7 @@ en:
       2strong: "You discover the social entrepreneurship"
       2underline: "by helping a social entrepreneur"
       3strong: "You make yourself useful during your trip"
-      3underline: "by ofering skills you master"
+      3underline: "by offering skills you master"
     process:
       title: "I WANT TO GO, HOW DO I DO ?"
       step1: "Discover the awesome projects that need your skills"
@@ -63,10 +63,10 @@ en:
       step3: "Pack Your Skills & enjoy your journey"
       call2action: "Start now"
     users:
-      title: "WHO CAN USE PACK YOUR SKILLS?"
+      title: "WHO CAN USE PACK YOUR SKILLS ?"
       packers:
         name: "Packers"
-        description: "You want to travel and to ofer your skills to local projects with positive impact, in exchange for food and accommodation"
+        description: "You want to travel and to offer your skills to local projects with positive impact, in exchange for food and accommodation"
         call2action: "I AM A PACKER"
       crews:
         name: "Crews"
@@ -77,11 +77,11 @@ en:
         description: "You are neither a Packer nor a Crew but would like to contribute to Pack Your Skills in another way."
         call2action: "CONTACT US"
     testimonies:
-      title: "THEY DID IT!"
+      title: "THEY DID IT !"
     team:
       title: "WE ARE REAL PEOPLE"
-      maxime: "The geek of the duet, he is as creative as passionate about strategy, company culture and management. Full of enthusiasm and resolutely optimistic, he keeps the flame of ideas burning so that Pack Your Skills remains dynamic. With his dreams of changing the world and a parisian green and « bobo » (bourgeois-bohemian) lifestyle, he likes alternative places and attends events on social and solidarity economy as ofen as he can. When he needs to let go a bit, you’ll find him with a fresh beer in his hands, in a music gig or at the top of a mountain !"
-      isis: "Bathing in the web and startup environment since she started her studies, she majored in Marketing and is passionate about self-actualization. The younger of the duet, she yet is the one who makes everything we imagine possible by going into details of the execution. She reads a lot, likes hiking in the nature, and cannot prevent herself from having several projects in mind. As she care about her 8-hours sleep and her personal balance, she prefers to sharpen her efectiveness rather than spending long inefective hours of work."
+      maxime: "The geek of the duet, he is as creative as passionate about strategy, company culture and management. Full of enthusiasm and resolutely optimistic, he keeps the flame of ideas burning so that Pack Your Skills remains dynamic. With his dreams of changing the world and a parisian green and « bobo » (bourgeois-bohemian) lifestyle, he likes alternative places and attends events on social and solidarity economy as often as he can. When he needs to let go a bit, you’ll find him with a fresh beer in his hands, in a music gig or at the top of a mountain !"
+      isis: "Bathing in the web and startup environment since she started her studies, she majored in Marketing and is passionate about self-actualization. The younger of the duet, she yet is the one who makes everything we imagine possible by going into details of the execution. She reads a lot, likes hiking in the nature, and cannot prevent herself from having several projects in mind. As she care about her 8-hours sleep and her personal balance, she prefers to sharpen her efectiveness rather than spending long ineffective hours of work."
     social_network:
       title: "SEE MORE ON…"
     partners:

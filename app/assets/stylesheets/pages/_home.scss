@@ -91,6 +91,33 @@
   .slogan_part2 {
     font-weight:700;
   }
+  .header {
+    position:absolute;
+    width:100%;
+    top:0px;
+    left:0px;
+
+    #header_logo {
+      img {
+        display:block;
+        height:45px;
+        padding:5px;
+        margin:auto;
+      }
+    }
+
+    a {
+      padding:0px;
+      text-transform: capitalize;
+      font-weight:600;
+      color:$black;
+      @media screen and (min-width: 768px) {font-size:18px;}
+      @media screen and (max-width: 767px) {font-size:16px;}
+    }
+    a:hover {
+      color:white;
+    }
+  }
 
   #img_can {
     width:auto;
@@ -132,7 +159,8 @@
   }
 
   @media screen and (min-width: 992px) {
-    background-position: bottom center;
+    background-position-y: +10%;
+    background-position-x: center;
   }
 
   @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -218,7 +246,7 @@
 
 @media screen and (min-width: 768px) {
   #home_banner::before {
-    content: url('/home.logo.1cm.png');
+    content:"";
     text-align:center;
     padding:4px;
     height:50px;
@@ -334,7 +362,7 @@
   }
 
   .row_call2action{
-    margin-top:25px;
+    margin-top:50px;
     margin-bottom:15px;
     text-align:center;
   }
@@ -444,7 +472,7 @@
 #home_testimonies {
   padding-top:100px;
   h1 {
-    text-align:left;
+    text-align:center;
   }
   img {
     max-height:150px;
