@@ -17,10 +17,9 @@
 /*---------------------------------------------------------------------*/
 
   .section {
-    min-height:300px;
     position:relative;
     padding-bottom:0px;
-    margin:50px 0px;
+    margin:0px;
   }
 
   /*---------------------------------------------------------------------*/
@@ -56,7 +55,33 @@
     p {
       font-weight:300px;
     }
+    .header {
+      position:absolute;
+      width:100%;
+      top:0px;
+      left:0px;
 
+      #header_logo {
+        img {
+          display:block;
+          height:45px;
+          padding:5px;
+          margin:auto;
+        }
+      }
+
+      a {
+        padding:0px;
+        text-transform: capitalize;
+        font-weight:600;
+        color:white;
+        @media screen and (min-width: 768px) {font-size:18px;}
+        @media screen and (max-width: 767px) {font-size:16px;}
+      }
+      a:hover {
+        color:$red;
+      }
+    }
     @media screen and (min-width: 992px) {
       .container {
         padding-top:25vh
@@ -86,7 +111,7 @@
         padding-top:25vh
       }
       h1 {
-        font-size:28px;
+        font-size:24px;
       }
       p {
         font-size:14px;
@@ -108,7 +133,7 @@
 
   @media screen and (min-width: 768px) {
     #november_banner::before {
-      content: url('/home.logo.1cm.png');
+      content: "";
       text-align:center;
       padding:4px;
       height:50px;
@@ -142,30 +167,49 @@
 
   #november_intro {
     .container {
+      @media screen and (min-width: 992px) {
+        padding-top:35px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px)  {
+        padding-top:15px;
+      }
       @media screen and (max-width: 767px) {
-        padding-top:25vh;
+        padding-top:40vh;
       }
     }
   }
+
   #november_intro::before {
     content: "";
     width:100%;
     position:absolute;
-    top:-50px;
+    top:-30px;
     background-repeat: no-repeat;
     background-position: top right;
     background-image: url("/november/november.redshape.png");
-    @media screen and (min-width: 768px) {
-      height:150%;
+    @media screen and (min-width: 992px) {
+      height:140%;
+      background-size: auto 100% ;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      height:110%;
       background-size: auto 100% ;
     }
     @media screen and (max-width: 767px) {
-      height:100%;
-      background-size: auto 50% ;
+      height:140%;
+      background-size: 80% auto ;
     }
   }
 
+  /*---------------------------------------------------------------------*/
+  /*  2. TITLE PART
+  /*---------------------------------------------------------------------*/
 
+  #november_title {
+    text-align:center;
+    min-height:25px;
+    margin:10px 0px 20px 0px;
+  }
 
   /*---------------------------------------------------------------------*/
   /*  3. DESCRIPTION PART
@@ -178,17 +222,18 @@
     content: "";
     width:100%;
     position:absolute;
-    top:0px;
     background-repeat: no-repeat;
     background-position: left;
-    background-size: auto 100% ;
     @media screen and (min-width: 768px) {
-      height:100%;
+      height:180%;
+      top:-40%;
       background-image: url("/november/november.blueshape.png");
+      background-size: 40% auto ;
     }
     @media screen and (max-width: 767px) {
       height:75%;
       background-image: url("/november/november.blueshape.phone.png");
+      background-size: auto 100% ;
     }
   }
 
@@ -199,14 +244,13 @@
 
 
   #november_call2action {
-    z-index:-1;
     background-image: url("/november/november.background.map.paris2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover ;
     position:relative;
     margin-top:100px;
-    padding-top:60px;
+    padding:60px 0px;
     h1 {
       text-align:center;
     }
@@ -224,6 +268,22 @@
       font-weight:600;
       margin:10px 0px 30px 0px;
       padding:10px 60px 10px 60px;
+    }
+
+    #mc-embedded-subscribe{
+      @media screen and (min-width: 992px) {
+        padding:10px 10px 10px 10px;
+      }
+      @media screen and (max-width: 991px) {
+        padding:10px 80px 10px 80px;
+      }
+    }
+    #mc_embed_signup form{
+      text-align:left;
+    }
+    #mc_embed_signup input.email{
+      height:44px;
+      border-radius:0px;
     }
   }
 
@@ -267,7 +327,7 @@
 
   #november_social_network {
     min-height:25px;
-    margin:75px 0px;
+    padding:50px 0px;
     .col-xs-4{
       padding:0px;
     }

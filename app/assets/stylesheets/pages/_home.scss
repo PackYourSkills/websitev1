@@ -14,11 +14,14 @@
 /*  0. GLOBAL STYLES
 /*---------------------------------------------------------------------*/
 
-.section {
-  min-height:300px;
-  position:relative;
-  padding-bottom:120px;
+#home{
+  .section {
+    min-height:300px;
+    position:relative;
+    padding-bottom:120px;
+  }
 }
+
 
 .section_path:after {
   z-index:1;

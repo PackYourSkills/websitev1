@@ -1,4 +1,129 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
 fr:
-  hello: "Bonjour le monde"
+  footer:
+    designby:
+      part1: "design réalisé avec"
+      part2: "par Milica"
+      part3: "Première Packer, mars 2017"
+    aboutus:
+      title: "A PROPOS DE NOUS"
+      content: "Pack Your Skills est une plateforme web qui permet aux voyageurs de s'investir dans des projets sociaux ou environnementaux en offrant leurs compétences en échange du gîte et du couvert."
+    contact:
+      title: "CONTACTEZ-NOUS"
+      content: "Nous serons très heureux de discuter davantage du projet avec vous."
+    newsletter:
+      title: "GARDEZ UN OEIL SUR NOTRE EVOLUTION"
+      content: "Restez proches de nous. Nous avons créé une newsletter mensuelle authentique, dans laquelle nous racontons les dernières évolutions du projet, en toute transparence."
+
   home:
-    welcome: "Bienvenu ici!"
+    banner:
+      slogan1: "VOS"
+      slogan2: "COMPETENCES"
+      slogan3: "CHANGER"
+      slogan4: "LE MONDE"
+      baseline1: "Prêtez vos compétences à un projet social"
+      baseline2: "en échange de l'hébergement"
+      call2action: "Rejoignez la prochaine édition"
+      date: 'Paris, 5-19 novembre 2017'
+      message2crews: 'Vous avez un projet à Paris ? Hébergez un voyageur en échange de ses compéteces !'
+    mission:
+      title: "Pourquoi avons-nous créé PACK YOUR SKILLS ?"
+      text1: "Nous avons la conviction que si chacun était pleinement aligné avec lui-même, il serait plus épanoui et contribuerait de ce fait à une société plus équilibrée."
+      text2: "Notre mission est d'aider chacun à développer une bonne connaissance d’eux-mêmes, de comprendre le contexte dans lequel ils sont, de découvrir les possibilités qui leur sont offertes et/ou de se mettre en mouvement en testant ou en adoptant une posture d’ouverture."
+      text3: "Pack Your Skills donne l'opportunité à chacun de vivre une expérience dans laquelle il se teste, à la fois personnellement et professionnellement, dans un nouveau contexte."
+    benefits:
+      title: "QUELS SONT LES AVANTAGES DE CETTE expérience ?"
+      1strong: "Tu vis au coeur de la culture locale"
+      1underline: "en étant hébergé chez l'habitant"
+      2strong: "Tu découvres l'entrepreneuriat social"
+      2underline: "en aidant un entrepreneur social"
+      3strong: "Tu te rends utile pendant ton voyage"
+      3underline: "en prêtant les compétences que tu maîtrises"
+    process:
+      title: "JE VEUX Y ALLER, COMMENT JE FAIS ?"
+      step1: "Découvre les super projets qui ont besoin de tes compétences"
+      step2: "Candidate pour te présenter et parler de tes talents"
+      step3: "Pack Your Skills* et profite du voyage"
+      call2action: "Commencer maintenant"
+    users:
+      title: "QUI PEUT UTILISER PACK YOUR SKILLS ?"
+      packers:
+        name: "Packers"
+        description: "Tu veux voyager and prêter tes compétences à des projets locaux qui ont un impact positif, en échange du gîte et du couvert"
+        call2action: "JE SUIS UN PACKER"
+      crews:
+        name: "Crews"
+        description: "Vous êtes une équipe (startup ou association). Votre mission première est de résoudre un problème de société. Vous avez besoin de compétences pour développer votre projet. Vous pouvez héberger un voyageur qui a les compétences requises."
+        call2action: "NOUS SOMMES UN CREW"
+      others:
+        name: "Autres"
+        description: "Tu n'es ni un Packer ni un Crew mais aimerais contribuer à Pack Your Skills d'une autre manière."
+        call2action: "CONTACTE-NOUS"
+    testimonies:
+      title: "ILS L'ONT FAIT !"
+    team:
+      title: "NOUS SOMMES DE VRAIES PERSONNES"
+      maxime: "Le plus geek du duo, il est aussi créatif et passionné par la stratégie, la culture d’entreprise et le management. Plein d’enthousiasme et résolument optimiste, il maintient la flamme des idées pour que Pack Your Skills reste dynamique. Avec ses rêves de changer le monde et un mode de vie bobo écolo parisien, il aime les lieux alternatifs et participe dès qu’il peut à des évènements de l’économie sociale et solidaire. Quand il s’agit de lâcher prise vous le trouverez autour d’une bonne bière, dans une salle de concert ou en haut d’une montagne !"
+      isis: "Nourrie au web et à l’univers startup depuis le début de ses études elle s’est spécialisé en marketing et s’est passionnée de réalisation de soi. La plus jeune du duo, elle n'en est pas moins celle qui s’attache à rendre tout ce qu’on imagine possible en allant dans le détail de l’exécution. Elle lit beaucoup, aime les balades en nature, et ne peut pas s’empêcher de mener plusieurs projets en même temps. Comme elle tient à ses 8h de sommeil et à son équilibre perso, elle préfère affûter son efficacité que passer de longues heures improductives à travailler."
+    social_network:
+      title: "PLUS D'INFOS SUR…"
+    partners:
+      title: "ILS CROIENT EN NOUS"
+
+
+  november:
+    banner:
+      title1: "Pack your skills*"
+      title2: "& viens en voyage à Paris"
+      underline: "5-19 novembre 2017"
+    intro:
+      paragraph1: "Pack Your Skills lance sa troisième et dernière édition de 2017. Plus importante que les deux premières, elle comptera davantage d'opportunités et plus de compétences que lors des éditions de juin et mars ! Rejoins cette expérience unique."
+      paragraph2: "Tu trouves que novembre est ennuyeux ? En 2017 et grâce à Pack Your Skills..."
+      title: "November is the new cool* !"
+    description:
+      1_strong: "15 jours à Paris"
+      1_normal: "Du 5 au 19 novembre 2017"
+      2_strong: "5 compétences"
+      2_normal: "WebMarketing, Développement web, Photo, Video & Graphisme"
+      3_strong: "8 types de missions"
+      3_normal: "Créer une charte graphique, Prendre des photos, Tourner et éditer une vidéo, Lancer une campagne Adwords, Booster le SEO, Améliorer l'expérience utilisateur (UX), Coder un siste statique avec CMS"
+      4_strong: "15 missions"
+      4_normal: "dans 15 projets dédié à résoudre des problèmes de sociétés"
+      5_strong: "3+ événements"
+      5_normal: "Meet-up, Visite du Paris alternatif, Apéros"
+    call2action:
+      title: "Fais partie de l'aventure !"
+      crews:
+        name: "Crew"
+        text: "Vous avez un projet dédié à résoudre un problème de société, basé à Paris, et vous avez besoin de compétences ? Vous êtes partants pour sortir de la monotonie et aimeriez héberger un voyageur ?"
+        call2action: "Recevoir un Packer"
+      packers:
+        name: "Packer"
+        text: "Tu veux te sentir utile et avoir un impact ? Tu veux gagner en expérience dans un nouveau pays et découvrir Paris avec des habitants locaux ? Tu veux découvrir l'entrepreneuriat social ?"
+        call2action: "M'inscrire"
+    follow: "Suivez tout ce qu'il se passe :"
+
+
+
+
+
