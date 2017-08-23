@@ -37,13 +37,14 @@ fr:
 
   home:
     banner:
-      slogan1: "VOS"
-      slogan2: "COMPETENCES"
-      slogan3: "CHANGER"
-      slogan4: "LE MONDE"
+      slogan1: "YOUR"
+      slogan2: "SKILLS"
+      slogan3: "CHANGE"
+      slogan4: "THE WORLD*"
+      translate: "*vos compétences peuvent changer le monde"
       baseline1: "Prêtez vos compétences à un projet social"
       baseline2: "en échange de l'hébergement"
-      call2action: "Rejoignez la prochaine édition"
+      call2action: "Rejoignez la 3e édition"
       date: 'Paris, 5-19 novembre 2017'
       message2crews: 'Vous avez un projet à Paris ? Hébergez un voyageur en échange de ses compéteces !'
     mission:
@@ -94,12 +95,14 @@ fr:
   november:
     banner:
       title1: "Pack your skills*"
-      title2: "& viens en voyage à Paris"
+      title2: "&Travel to Paris"
+      translate: "*Emporte tes compétences et pars à Paris"
       underline: "5-19 novembre 2017"
     intro:
       paragraph1: "Pack Your Skills lance sa troisième et dernière édition de 2017. Plus importante que les deux premières, elle comptera davantage d'opportunités et plus de compétences que lors des éditions de juin et mars ! Rejoins cette expérience unique."
       paragraph2: "Tu trouves que novembre est ennuyeux ? En 2017 et grâce à Pack Your Skills..."
       title: "November is the new cool* !"
+      translate: "*Novembre est à nouveau cool!"
     description:
       1_strong: "15 jours à Paris"
       1_normal: "Du 5 au 19 novembre 2017"
@@ -120,7 +123,7 @@ fr:
       packers:
         name: "Packer"
         text: "Tu veux te sentir utile et avoir un impact ? Tu veux gagner en expérience dans un nouveau pays et découvrir Paris avec des habitants locaux ? Tu veux découvrir l'entrepreneuriat social ?"
-        call2action: "M'inscrire"
+        call2action: "Envoyer"
     follow: "Suivez tout ce qu'il se passe :"
 
 

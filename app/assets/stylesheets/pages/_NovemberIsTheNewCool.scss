@@ -55,6 +55,9 @@
     p {
       font-weight:300px;
     }
+    .translate {
+      color:white;
+    }
     .header {
       position:absolute;
       width:100%;
@@ -87,7 +90,7 @@
         padding-top:25vh
       }
       h1 {
-        font-size:48px;
+        font-size:40px;
       }
       p {
         font-size:18px;
@@ -99,7 +102,7 @@
         padding-top:25vh
       }
       h1 {
-        font-size:42px;
+        font-size:36px;
       }
       p {
         font-size:16px;
@@ -209,6 +212,13 @@
     text-align:center;
     min-height:25px;
     margin:10px 0px 20px 0px;
+    .translate {
+      color:$black;
+      text-align:left;
+      position:relative;
+      top:-10px;
+      padding-left:20%;
+    }
   }
 
   /*---------------------------------------------------------------------*/
@@ -216,7 +226,7 @@
   /*---------------------------------------------------------------------*/
 
   #november_description {
-
+    z-index:2;
   }
   #november_description::before {
     content: "";
@@ -261,6 +271,9 @@
     }
     p {
       text-align:left;
+    }
+    .comment {
+
     }
     a{
       text-decoration:none;

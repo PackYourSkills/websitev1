@@ -29,6 +29,13 @@ p {
   margin-top:4px;
   margin-bottom:0;
 }
+.comment {
+  font-family: 'Indie Flower', cursive;
+}
+.translate {
+  font-weight:300;
+  margin:0;
+}
 
 @media screen and (min-width: 992px) {
   h1 {
@@ -36,6 +43,9 @@ p {
   }
   p {
     font-size:21px;
+  }
+  .translate {
+    font-size:12px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -45,6 +55,9 @@ p {
   p {
     font-size:18px;
   }
+  .translate {
+    font-size:10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -53,6 +66,9 @@ p {
   }
   p {
     font-size:14px;
+  }
+  .translate {
+    font-size:9px;
   }
 }
 

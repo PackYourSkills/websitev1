@@ -41,6 +41,7 @@ en:
       slogan2: "SKILLS"
       slogan3: "CHANGE"
       slogan4: "THE WORLD"
+      translate: ""
       baseline1: "Volunteer your skills within a social project"
       baseline2: "and get hosted in exchange"
       call2action: "Join the next edition"
@@ -95,11 +96,13 @@ en:
     banner:
       title1: "Pack your skills"
       title2: "& travel to Paris"
+      translate: ""
       underline: "November 5 to 19, 2017"
     intro:
       paragraph1: "Pack Your Skills launches its third and last edition for 2017. Bigger than the 2 first ones, it will count more opportunities and more skills than in June and March! Be part of this unique experience."
       paragraph2: "You always had a boring november ? In 2017 and thanks to Pack Your Skills..."
       title: "November is the new cool !"
+      translate: ""
     description:
       1_strong: "15 days in Paris"
       1_normal: "November 5 to 19, 2017"
@@ -115,12 +118,14 @@ en:
       title: "Be part of this unique adventure !"
       crews:
         name: "Crew"
-        text: "You have a mission-driven project in Paris and need skills ? You want to break free from your routine and would like to host a traveller ?"
-        call2action: "Receive a Packer"
+        text: "You have a mission-driven project in Paris and need skills ? You want to break free from your routine and would like to host a traveller?"
+        comment: "Apply before September 5th to have a chance to receive a Packer. It takes only 1 min!"
+        call2action: "Apply"
       packers:
         name: "Packer"
-        text: "You want to feel useful and impactful ? You want to gain experience in a new country and discover Paris with local people ? You want to discover social entrepreneurship ?"
-        call2action: "Register"
+        text: "You want to discover social entrepreneurship, feel useful and impactful while you gain experience and discover Paris with local people?"
+        comment: "Give us your email, we will send you one (and only one) email when the missions will be online."
+        call2action: 'Send'
     follow: "Follow everything that's going on :"
 
 

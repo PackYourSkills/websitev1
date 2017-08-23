@@ -77,7 +77,11 @@
       font-weight:300px;
       line-height:1;
     }
-
+    .translate {
+      color:white;
+      position:relative;
+      top:-10px;
+    }
     a{
       text-decoration:none;
       text-transform: uppercase;
@@ -141,7 +145,6 @@
     }
 
     .comment {
-      font-family: 'Indie Flower', cursive;
       color:white;
       @media screen and (min-width: 768px) {font-size:20px;}
       @media screen and (max-width: 767px) {font-size:14px;}
@@ -222,7 +225,7 @@
       }
 
       .slogan_part2 {
-        font-size:45px;
+        font-size:43px;
       }
 
       #img_can {
@@ -425,7 +428,8 @@
       display:inline-block;
       font-weight:600;
       margin:10px 0px 30px 0px;
-      padding:10px 60px 10px 60px;
+      @media screen and (min-width: 768px) {padding:10px 60px 10px 60px;}
+      @media screen and (max-width: 767px) {padding:10px 40px 10px 40px;}
     }
   }
 
@@ -566,15 +570,16 @@
     position:absolute;
     right:0px;
     width:100%;
-    background-image: url("/home.green2.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto 100% ;
     @media screen and (min-width: 768px) {
+      background-image: url("/home.green2.png");
       height:70%;
       top:5%;
     }
     @media screen and (max-width: 767px) {
+      background-image: url("/home.green2.phone.png");
       height:60%;
       bottom:25%;
     }
