@@ -525,15 +525,16 @@
     left:0;
     width:100%;
     z-index:0;
-    background-image: url("/home.red2.png");
     background-repeat: no-repeat;
     background-position: left;
     background-size: auto 100% ;
     @media screen and (min-width: 768px) {
+      background-image: url("/home.red2.png");
       height:110%;
       top:15%;
     }
     @media screen and (max-width: 767px) {
+      background-image: url("/home.red2.phone.png");
       height:60%;
       bottom:25%;
     }
