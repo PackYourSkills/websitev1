@@ -123,7 +123,7 @@ fr:
         call2action: "Recevoir un Packer"
       packers:
         name: "Packer"
-        text: "Tu veux te sentir utile et avoir un impact ? Tu veux gagner en expérience dans un nouveau pays et découvrir Paris avec des habitants locaux ? Tu veux découvrir l'entrepreneuriat social ?"
+        text: "Tu veux découvrir l'entrepreneuriat social, te sentir utile et impactant pendant que tu acquiers de l'expérience et découvres Paris avec des locaux?"
         comment: "Renseignez votre adresse et nous vous enverrons un (et un seul) email lorsque les opportunités seront en ligne."
         call2action: "Envoyer"
     follow: "Suivez tout ce qu'il se passe :"
