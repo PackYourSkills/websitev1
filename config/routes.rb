@@ -3,10 +3,8 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /fr/ do #to use i18n | change /fr/ to /fr|es/ to add spanish
     root to: 'pages#home'
-    resources :pages
+    get 'NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool'
   end
-
-  get 'NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
