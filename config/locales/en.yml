@@ -119,12 +119,12 @@ en:
       crews:
         name: "Crew"
         text: "You have a mission-driven project in Paris and need skills ? You want to break free from your routine and would like to host a traveller?"
-        comment: "Apply before September 5th to have a chance to receive a Packer. It takes only 1 min!"
+        comment: "Let us know about your project before September 5th to have a chance to receive a Packer. It takes only 1 min!"
         call2action: "Apply"
       packers:
         name: "Packer"
         text: "You want to discover social entrepreneurship, feel useful and impactful while you gain experience and discover Paris with local people?"
-        comment: "Give us your email, we will send you one (and only one) email when the missions will be online."
+        comment: "Drop your email and we will send you one (and only one) email when the opportunities will be online."
         call2action: 'Send'
     follow: "Follow everything that's going on :"
 
