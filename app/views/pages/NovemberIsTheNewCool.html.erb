@@ -5,18 +5,23 @@
       <div class="row">
         <div class="header">
           <div class="col-xs-12 col-sm-5">
-            <a href="/">PackYourSkills</a>
+            <%= link_to "Pack Your Skills", root_path %>
           </div>
           <div class="col-xs-12 col-sm-2 hide_for_phone" id="header_logo">
-             <a href="/"><%= image_tag "/home.logo.5cm.png" %></a>
+             <%= link_to image_tag("/home.logo.5cm.png"), root_path %>
+          </div>
+          <div class="col-xs-6 col-sm-5 language">
+            <% if I18n.locale == I18n.default_locale %>
+              <p><u>EN</u> <%= link_to "FR", { :locale=>'fr' } %></p>
+            <% else %>
+              <p><%= link_to "EN", { :locale=>'' } %> <u>FR</u></p>
+            <%end%>
           </div>
         </div>
         <div class="col-xs-offset-2 col-xs-10 col-sm-offset-6 col-sm-6 col-md-offset-7 col-md-5">
           <h1><%= t('november.banner.title1') %></h1>
           <h1><%= t('november.banner.title2') %></h1>
-          <% unless I18n.locale.to_s=="en" %>
-            <div class="translate"><%= t('november.banner.translate') %></div>
-          <% end %>
+          <div class="translate"><%= t('november.banner.translate') %></div>
           <p><%= t('november.banner.underline') %></p>
         </div>
       </div>
@@ -42,9 +47,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1><%= t('november.intro.title') %></h1>
-          <% unless I18n.locale.to_s=="en" %>
-            <div class="translate"><%= t('november.intro.translate') %></div>
-          <% end %>
+          <div class="translate"><%= t('november.intro.translate') %></div>
         </div>
       </div>
     </div>

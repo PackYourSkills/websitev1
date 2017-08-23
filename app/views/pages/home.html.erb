@@ -4,11 +4,18 @@
     <div class="container">
       <div class="row">
         <div class="header">
-          <div class="col-xs-12 col-sm-5">
-            <a href="/">PackYourSkills</a>
+          <div class="col-xs-6 col-sm-5">
+            <%= link_to "Pack Your Skills", root_path %>
           </div>
           <div class="col-xs-12 col-sm-2 hide_for_phone" id="header_logo">
-             <a href="/"><%= image_tag "/home.logo.5cm.png" %></a>
+             <%= link_to image_tag("/home.logo.5cm.png"), root_path %>
+          </div>
+          <div class="col-xs-6 col-sm-5 language">
+            <% if I18n.locale == I18n.default_locale %>
+              <p><u>EN</u> <%= link_to "FR", { :locale=>'fr' } %></p>
+            <% else %>
+              <p><%= link_to "EN", { :locale=>'' } %> <u>FR</u></p>
+            <%end%>
           </div>
         </div>
         <div class="col-xs-12 col-sm-8">
@@ -16,16 +23,14 @@
           <h1 class="slogan_part1"><%= t('home.banner.slogan2') %> <%= image_tag "/home.can.png", id: 'img_can' %></h1>
           <h1 class="slogan_part2"><%= t('home.banner.slogan3') %></h1>
           <h1 class="slogan_part2"><%= t('home.banner.slogan4') %><%= image_tag "/home.exclamation.png", id: 'home_exclamation'  %></h1>
-          <% unless I18n.locale.to_s=="en" %>
-            <div class="translate"><%= t('home.banner.translate') %></div>
-          <% end %>
+          <div class="translate"><%= t('home.banner.translate') %></div>
           <h2><%= t('home.banner.baseline1') %></h2>
           <h2><%= t('home.banner.baseline2') %></h2>
         </div>
       </div>
       <div class="row row_call2action">
         <div class="col-xs-12 col-sm-8">
-          <a class="red_call2action" href='/NovemberIsTheNewCool' role="button"><%= t('home.banner.call2action') %></a>
+          <%= link_to t('home.banner.call2action'), novemberisthenewcool_path, :class => "red_call2action"%>
           <p class='comment comment_3nd_edition'><%= image_tag "/home.banner.arrowslogan.png" %> <%= t('home.banner.date') %></p>
           <p class='comment comment_crews'><%= t('home.banner.message2crews') %></p>
         </div>
@@ -128,7 +133,7 @@
         </div>
       </div>
       <div class="row row_call2action">
-        <a class="red_call2action" href='/NovemberIsTheNewCool' role="button"><%= t('home.process.call2action') %></a>
+        <%= link_to t('home.process.call2action'), novemberisthenewcool_path, :class => "red_call2action"%>
       </div>
     </div>
   </section>
@@ -151,7 +156,7 @@
             <div class='col-xd-12 col-sm-9 col-md-12'>
               <p><strong><%= t('home.users.packers.name') %></strong></p>
               <p><%= t('home.users.packers.description') %></p>
-              <a class="white_call2action" href='/NovemberIsTheNewCool' role="button"><%= t('home.users.packers.call2action') %></a>
+              <%= link_to t('home.users.packers.call2action'), novemberisthenewcool_path, :class => "white_call2action"%>
             </div>
           </div>
         </div>
@@ -163,7 +168,7 @@
             <div class='col-xd-12 col-sm-9 col-md-12'>
               <p><strong><%= t('home.users.crews.name') %></strong></p>
               <p><%= t('home.users.crews.description') %></p>
-              <a class="white_call2action" href='/NovemberIsTheNewCool' role="button"><%= t('home.users.crews.call2action') %></a>
+              <%= link_to t('home.users.crews.call2action'), novemberisthenewcool_path, :class => "white_call2action"%>
             </div>
           </div>
         </div>
