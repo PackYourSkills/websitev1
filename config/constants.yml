@@ -1,0 +1,19 @@
+#pour charger le fichier YML dans une variable
+#@constants = YAML.load_file(Rails.root.join('config', 'constants.yml'))
+
+skills:
+  Photography:
+    url: 'photography_video'
+    picto: 'fa fa-camera'
+  Video:
+    url: 'photography_video'
+    picto: 'fa fa-camera'
+  Graphic Design:
+    url: 'graphic_design'
+    picto: 'fa fa-pencil-square-o'
+  Web Development:
+    url: 'web_development'
+    picto: 'fa fa-laptop'
+  Web Marketing:
+    url: 'marketing_studies'
+    picto: 'fa fa-area-chart'

@@ -1,0 +1,9 @@
+<h2>Hello there, you are a <%= current_user.role %></h2>
+
+<p><%= link_to destroy_user_session_path, method: :delete do %>logout<% end %></p>
+<p><%= link_to "Change password", edit_user_password_path %></p>
+<p><%= link_to "Edit info", edit_packer_path(current_user.id) %></p>
+<p><%= link_to "See profile", packer_path(current_user.id) %></p>
+
+<p></p>
+
