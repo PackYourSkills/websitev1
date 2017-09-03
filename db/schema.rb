@@ -10,10 +10,107 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170813160330) do
+ActiveRecord::Schema.define(version: 20170903012702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "crews", force: :cascade do |t|
+    t.string   "name"
+    t.string   "mission"
+    t.text     "description"
+    t.date     "creation_date"
+    t.integer  "nb_collaborators"
+    t.integer  "average_age"
+    t.integer  "percentage_women"
+    t.text     "team_description"
+    t.integer  "percentage_english"
+    t.string   "value1"
+    t.string   "value2"
+    t.string   "value3"
+    t.string   "quote"
+    t.string   "quote_author"
+    t.string   "city"
+    t.string   "country"
+    t.string   "address"
+    t.string   "zip_code"
+    t.string   "phone"
+    t.string   "skype"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "instagram"
+    t.string   "website"
+    t.boolean  "newsletter"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_crews_on_user_id", using: :btree
+  end
+
+  create_table "missions", force: :cascade do |t|
+    t.string   "title"
+    t.text     "context"
+    t.text     "description"
+    t.string   "duration"
+    t.string   "skill"
+    t.text     "material"
+    t.string   "referent_first_name"
+    t.string   "referent_last_name"
+    t.string   "referent_role"
+    t.string   "referent_phone"
+    t.string   "referent_email"
+    t.text     "description_working_place"
+    t.string   "city_working_place_working_place"
+    t.string   "country_working_place"
+    t.string   "address_working_place"
+    t.string   "zip_code_working_place"
+    t.string   "closest_metro_working_place"
+    t.string   "host_first_name"
+    t.string   "host_last_name"
+    t.string   "host_role"
+    t.string   "host_phone"
+    t.text     "description_hosting_place"
+    t.string   "city_working_place_hosting_place"
+    t.string   "country_hosting_place"
+    t.string   "address_hosting_place"
+    t.string   "zip_code_hosting_place"
+    t.string   "closest_metro_hosting_place"
+    t.string   "nb_min_ride"
+    t.text     "other_comment"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  create_table "packers", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "sexe"
+    t.integer  "age"
+    t.string   "nationality"
+    t.text     "story"
+    t.string   "job"
+    t.string   "value1"
+    t.string   "value2"
+    t.string   "value3"
+    t.string   "quote"
+    t.string   "quote_author"
+    t.string   "city"
+    t.string   "country"
+    t.string   "address"
+    t.string   "zip_code"
+    t.string   "skype"
+    t.string   "phone"
+    t.string   "website"
+    t.string   "cv_link"
+    t.string   "facebook"
+    t.string   "instagram"
+    t.string   "other_link"
+    t.boolean  "newsletter"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_packers_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,8 +125,11 @@ ActiveRecord::Schema.define(version: 20170813160330) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "role"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "crews", "users"
+  add_foreign_key "packers", "users"
 end
