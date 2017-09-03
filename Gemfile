@@ -59,6 +59,9 @@ gem 'rails-i18n', '5.0.3'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+#Rails Admin
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
 
 #==> End
 #==================================================
