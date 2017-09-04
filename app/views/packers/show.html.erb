@@ -1,2 +1,9 @@
+<%= cl_image_tag @packer.cover_picture.path, width: 300, height: 100, crop: :fill %>
+
 <h2>Hello there, it is Packer#Show <%= current_user.role %><%= current_user.packer.id %></h2>
+
+
+<% @packer.profile_pictures.each do |photo| %>
+  <%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill %>
+<% end %>
 

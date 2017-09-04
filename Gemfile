@@ -63,6 +63,16 @@ gem 'devise-i18n-views'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+#figaro - To hide secret data
+gem 'figaro'
+
+#cloudinary - to upload image
+gem 'cloudinary', '1.1.7'
+#attachinary to upload on cloudinary
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+#gem 'coffee-rails'
+
 #==> End
 #==================================================
 
