@@ -7,12 +7,9 @@ Rails.application.routes.draw do
     get 'NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool', as: :novemberisthenewcool
     get 'test', to: 'pages#test', as: :test
 
-    resources :crews, only: [:edit, :update, :show] do
-      resources :missions, only: [:new, :show, :create]
-    end
-
-    resources :packers, only: [:edit, :update, :show] do
-    end
+    resources :crews, only: [:edit, :update, :show]
+    resources :missions, only: [:index, :new, :show, :create]
+    resources :packers, only: [:edit, :update, :show]
 
     authenticated :user do
       root 'pages#test', as: :authenticated_root

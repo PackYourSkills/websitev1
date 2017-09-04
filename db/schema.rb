@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170903025507) do
+ActiveRecord::Schema.define(version: 20170904193113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 20170903025507) do
     t.text     "other_comment"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.integer  "crew_id"
+    t.index ["crew_id"], name: "index_missions_on_crew_id", using: :btree
   end
 
   create_table "packers", force: :cascade do |t|
@@ -132,5 +134,6 @@ ActiveRecord::Schema.define(version: 20170903025507) do
   end
 
   add_foreign_key "crews", "users"
+  add_foreign_key "missions", "crews"
   add_foreign_key "packers", "users"
 end
