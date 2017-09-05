@@ -1,0 +1,5 @@
+<h2><%= current_user.role %></h2>
+
+<p><%= link_to "See your profile", packer_path(current_user.packer.id) %></p>
+<p><%= link_to "Edit your profile", edit_packer_path(current_user.packer.id) %></p>
+<p><%= link_to "See all missions", missions_path %></p>

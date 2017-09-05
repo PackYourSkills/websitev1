@@ -1,0 +1,8 @@
+<h2>Welcome in your room</h2>
+<%= current_user.role == "crew" ? (render 'room_crew') : (render 'room_packer') %>
+
+<% if current_user.admin %>
+  <p><%= link_to "Hey Nelson, you have all the power", rails_admin_path %></p>
+<% end %>
+
+<p><%= link_to destroy_user_session_path, method: :delete do %>logout<% end %></p>

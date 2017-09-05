@@ -1,0 +1,11 @@
+<h2><%= current_user.role %></h2>
+
+<p><%= link_to "Edit your info about your project", edit_packer_path(current_user.crew.id) %></p>
+<% @missions.each_with_index do |mission, index| %>
+  <p><%= index %> - <%= mission.title %> -
+  <%= link_to "See details", mission_path(mission.id) %> -
+  <%= link_to "edit", edit_mission_path(mission.id) %></p>
+<% end %>
+
+<p><%= link_to "create new mission", new_mission_path %></p>
+
