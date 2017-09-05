@@ -76,7 +76,8 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 #gem 'coffee-rails'
 
-
+# Geocoding
+gem "geocoder"
 
 #==> End
 #==================================================

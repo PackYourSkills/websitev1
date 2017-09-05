@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905162546) do
+ActiveRecord::Schema.define(version: 20170905171516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,9 +56,17 @@ ActiveRecord::Schema.define(version: 20170905162546) do
     t.string   "instagram"
     t.string   "website"
     t.boolean  "newsletter"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "user_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "description_working_place"
+    t.string   "city_working_place_working_place"
+    t.string   "country_working_place"
+    t.string   "address_working_place"
+    t.string   "zip_code_working_place"
+    t.string   "closest_metro_working_place"
     t.index ["user_id"], name: "index_crews_on_user_id", using: :btree
   end
 
@@ -74,12 +82,6 @@ ActiveRecord::Schema.define(version: 20170905162546) do
     t.string   "referent_role"
     t.string   "referent_phone"
     t.string   "referent_email"
-    t.text     "description_working_place"
-    t.string   "city_working_place_working_place"
-    t.string   "country_working_place"
-    t.string   "address_working_place"
-    t.string   "zip_code_working_place"
-    t.string   "closest_metro_working_place"
     t.string   "host_first_name"
     t.string   "host_last_name"
     t.string   "host_role"
@@ -96,6 +98,8 @@ ActiveRecord::Schema.define(version: 20170905162546) do
     t.datetime "updated_at",                       null: false
     t.integer  "crew_id"
     t.string   "status"
+    t.float    "latitude"
+    t.float    "longitude"
     t.index ["crew_id"], name: "index_missions_on_crew_id", using: :btree
   end
 
@@ -127,6 +131,8 @@ ActiveRecord::Schema.define(version: 20170905162546) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "user_id"
+    t.float    "latitude"
+    t.float    "longitude"
     t.index ["user_id"], name: "index_packers_on_user_id", using: :btree
   end
 
