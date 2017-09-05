@@ -1,15 +1,24 @@
 class MissionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_crew, only: [ :create, :destroy ]
+  before_action :set_mission, only: [ :show, :edit, :update, :destroy]
 
   def index
     # selection of the mission
-    @missions = Mission.all
+    @all_missions = policy_scope(Mission)
+    @public_missions = @all_missions.where(status: 'online')
   end
 
   def new
+    @mission = Mission.new
+    authorize @mission
   end
 
   def create
+    @mission = @crew.missions.build(mission_params)
+    params[:commit] == 'Publish' ? (@mission.status = 'online') : (@mission.status = 'draft')
+    authorize @mission
+    @mission.save ? (redirect_to mission_path @mission) : (render :new)
   end
 
   def show
@@ -19,7 +28,21 @@ class MissionsController < ApplicationController
   def edit
   end
 
+  def update
+    params[:commit] == 'Publish' ? (@mission.status = 'online') : (@mission.status = 'draft')
+    @mission.update(mission_params) ? (redirect_to mission_path @mission) : (render :edit)
+  end
+
   private
+
+  def set_mission
+    @mission = Mission.find(params[:id])
+    authorize @mission
+  end
+
+  def set_crew
+    @crew = Crew.find(current_user.crew)
+  end
 
   def mission_params
     params.require(:mission).permit(:title, :context, :description, :duration, :skill, :material,

@@ -1,6 +1,5 @@
 class CrewsController < ApplicationController
-  before_action :set_crew, only: [ :edit, :update, :show, :destroy ]
-  before_action :set_editable, only: [ :show ]
+  before_action :set_crew, only: [ :edit, :update, :destroy ]
 
   def index
   end
@@ -10,20 +9,14 @@ class CrewsController < ApplicationController
 
   def update
     @crew.update(crew_params)
-    @crew.save ? (redirect_to crew_path(@crew)) : (render :edit)
-  end
-
-  def show
+    @crew.save ? (redirect_to :root) : (render :edit)
   end
 
   private
 
-  def set_editable
-    @editable = user_signed_in? ? (current_user == @crew.user || current_user.admin) : false
-  end
-
   def set_crew
     @crew = Crew.find(params[:id])
+    authorize @crew
   end
 
   def crew_params

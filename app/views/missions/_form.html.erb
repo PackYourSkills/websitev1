@@ -1,0 +1,33 @@
+<%= simple_form_for (@mission) do |a| %>
+  <%= a.input :title %>
+  <%= a.input :context %>
+  <%= a.input :description %>
+  <%= a.input :duration %>
+  <%= a.input :skill %>
+  <%= a.input :material %>
+  <%= a.input :referent_first_name %>
+  <%= a.input :referent_last_name %>
+  <%= a.input :referent_role %>
+  <%= a.input :referent_phone %>
+  <%= a.input :referent_email %>
+  <%= a.input :description_working_place %>
+  <%= a.input :city_working_place_working_place %>
+  <%= a.input :country_working_place, as: :string  %>
+  <%= a.input :address_working_place %>
+  <%= a.input :zip_code_working_place %>
+  <%= a.input :closest_metro_working_place %>
+  <%= a.input :host_first_name %>
+  <%= a.input :host_last_name %>
+  <%= a.input :host_role %>
+  <%= a.input :host_phone %>
+  <%= a.input :description_hosting_place %>
+  <%= a.input :city_working_place_hosting_place %>
+  <%= a.input :country_hosting_place, as: :string  %>
+  <%= a.input :address_hosting_place %>
+  <%= a.input :zip_code_hosting_place %>
+  <%= a.input :closest_metro_hosting_place %>
+  <%= a.input :nb_min_ride %>
+  <%= a.input :other_comment %>
+  <%= a.submit 'Save & keep offline', class: "btn btn-default" if (@mission.status == nil || @mission.status == 'draft' || @mission.status == 'suspended') %>
+  <%= a.submit 'Publish', class: "btn btn-primary" %>
+<% end %>

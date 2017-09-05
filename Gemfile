@@ -59,6 +59,9 @@ gem 'rails-i18n', '5.0.3'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
+#Pundit - Autorization
+gem "pundit"
+
 #Rails Admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
@@ -73,13 +76,16 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 #gem 'coffee-rails'
 
+
+
 #==> End
 #==================================================
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # gem 'pry'
   gem 'byebug', platform: :mri
-  gem 'pry-byebug'
+  # gem 'pry-byebug'
 end
 
 group :development do

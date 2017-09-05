@@ -1,0 +1,29 @@
+<%= simple_form_for (@packer) do |a| %>
+  <%= a.input :first_name %>
+  <%= a.input :last_name %>
+  <%= a.input :sexe, as: :radio_buttons,
+  collection: ['Male', 'Female'], wrapper: :vertical_radio_and_checkboxes %>
+  <%= a.input :age %>
+  <%= a.input :nationality %>
+  <%= a.input :story %>
+  <%= a.input :job %>
+  <%= a.input :value1 %>
+  <%= a.input :value2 %>
+  <%= a.input :value3 %>
+  <%= a.input :quote %>
+  <%= a.input :quote_author %>
+  <%= a.input :city %>
+  <%= a.input :country, as: :string %>
+  <%= a.input :address %>
+  <%= a.input :zip_code %>
+  <%= a.input :skype %>
+  <%= a.input :phone %>
+  <%= a.input :website %>
+  <%= a.input :facebook %>
+  <%= a.input :instagram %>
+  <%= a.input :other_link %>
+  <%= a.input :newsletter %>
+  <%= a.input :cover_picture, as: :attachinary %>
+  <%= a.input :profile_pictures, as: :attachinary %>
+<%= a.submit class: "btn btn-secondary" %>
+<% end %>
