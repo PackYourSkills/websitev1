@@ -1,6 +1,9 @@
 class Mission < ApplicationRecord
   belongs_to :crew
 
+  geocoded_by :full_address
+  after_validation :geocode, if: :full_address_changed?
+
   def draft?
     self.status == 'draft'
   end
@@ -54,5 +57,15 @@ class Mission < ApplicationRecord
 
   def validated?
     self.status == 'validated'
+  end
+
+  private
+
+  def full_address
+    self.address.to_s + ', ' + self.city.to_s + ', ' + self.country.to_s
+  end
+
+  def full_address_changed?
+    address_changed? || city_changed? || country_changed?
   end
 end

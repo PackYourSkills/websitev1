@@ -76,7 +76,15 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 #gem 'coffee-rails'
 
+# Geocoding
+gem "geocoder"
 
+# Map Gmaps4Rails
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 #==> End
 #==================================================
@@ -84,8 +92,10 @@ gem 'jquery-fileupload-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'pry'
-  gem 'byebug', platform: :mri
-  # gem 'pry-byebug'
+  # gem 'byebug', platform: :mri
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'pry-byebug'
 end
 
 group :development do

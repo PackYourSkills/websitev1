@@ -1,21 +1,25 @@
 <%= simple_form_for (@packer) do |a| %>
-  <%= a.input :first_name %>
-  <%= a.input :last_name %>
-  <%= a.input :sexe, as: :radio_buttons,
+  <%= a.input :first_name, required: true %>
+  <%= a.input :last_name, required: true %>
+  <%= a.input :sexe, as: :radio_buttons, required: true,
   collection: ['Male', 'Female'], wrapper: :vertical_radio_and_checkboxes %>
-  <%= a.input :age %>
-  <%= a.input :nationality %>
-  <%= a.input :story %>
-  <%= a.input :job %>
-  <%= a.input :value1 %>
-  <%= a.input :value2 %>
-  <%= a.input :value3 %>
-  <%= a.input :quote %>
-  <%= a.input :quote_author %>
-  <%= a.input :city %>
-  <%= a.input :country, as: :string %>
-  <%= a.input :address %>
-  <%= a.input :zip_code %>
+  <%= a.input :age, required: true %>
+  <%= a.input :nationality, required: true %>
+  <%= a.input :story, required: true %>
+  <%= a.input :job, required: true %>
+  <p>What are your main values (3 maximum)</p>
+  <%= a.input :value1, label: false, required: true %>
+  <%= a.input :value2, label: false %>
+  <%= a.input :value3, label: false %>
+  <p>What is your favorite quote</p>
+  <%= a.input :quote, label: false, required: true %>
+  <%= a.input :quote_author, label: "who said that ?", required: true %>
+  <p>Address </p>
+  <%= a.input :address, required: true %>
+  <%= a.input :city, required: true %>
+  <%= a.input :zip_code, required: true %>
+  <%= a.input :country, as: :string, required: true %>
+
   <%= a.input :skype %>
   <%= a.input :phone %>
   <%= a.input :website %>
