@@ -1,0 +1,37 @@
+<div class="navbar navbar-fixed transparent">
+
+  <div class='nav_md_lg hidden-xs hidden-sm'>
+    <div class="col-sm-5 nav_text">
+      <%= link_to "Pack Your Skills", root_path %>
+    </div>
+    <div class="col-sm-2" id="navbar_logo">
+      <%= link_to image_tag("/home.logo.5cm.png"), root_path %>
+    </div>
+    <div class="col-sm-offset-2 col-sm-1 nav_text">
+      <%= link_to "Log In", root_path %>
+    </div>
+    <div class="col-sm-1 nav_text">
+      <%= link_to "Sign Up", root_path %>
+    </div>
+    <div class="col-sm-1 nav_text">
+      <% if I18n.locale == I18n.default_locale %>
+        <p><u>EN</u> <%= link_to "FR", { :locale=>'fr' } %></p>
+      <% else %>
+        <p><%= link_to "EN", { :locale=>'' } %> <u>FR</u></p>
+      <%end%>
+    </div>
+  </div>
+
+
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+        <li><a href="<%= new_user_session_path(role: :crew)%>" >I'm a crew</a></li>
+        <li><a href="<%= new_user_session_path(role: :packer)%>" >I'm a packer</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

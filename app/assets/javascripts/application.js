@@ -18,5 +18,6 @@
 //= require attachinary
 //= require underscore
 //= require gmaps/google
+//= require navbar
 //= require_tree .
 

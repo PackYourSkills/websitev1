@@ -1,0 +1,5 @@
+<% if signed_in? %>
+  <%= render 'shared/navbar/authenticated_navbar' %>
+<% else %>
+  <%= render 'shared/navbar/visitor_navbar' %>
+<% end %>
