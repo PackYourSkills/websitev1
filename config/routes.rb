@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   devise_for :users,
-    controllers: { registrations: 'users/registrations'}
+    controllers: { registrations: 'users/registrations', omniauth_callbacks: 'users/omniauth_callbacks'}
 
   scope '(:locale)', locale: /fr/ do #to use i18n | change /fr/ to /fr|es/ to add spanish
     get 'NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool', as: :novemberisthenewcool
