@@ -8,7 +8,7 @@ class PackersController < ApplicationController
 
   def update
     @packer.update(packer_params)
-    @packer.save ? (redirect_to packer_path @packer) : (render :edit)
+    @packer.save ? (redirect_to :root) : (render :edit)
   end
 
   def show
@@ -27,10 +27,11 @@ private
   end
 
   def packer_params
-    params.require(:packer).permit(:first_name, :last_name, :sexe, :age, :nationality,
-    :story, :job, :value1, :value2, :value3, :quote, :quote_author,
+    params.require(:packer).permit(:first_name, :last_name, :sexe, :age, :nationality, :story, :job,
+    :value1, :value2, :value3, :quote, :quote_author,
     :city, :country, :address, :zip_code,
-    :skype, :phone, :website, :cv_link, :facebook, :instagram, :other_link, :newsletter,
-    :cover_picture, profile_pictures: [])
+    :skype, :phone, :website, :cv_link, :facebook, :instagram, :other_link,
+    :newsletter, :latitude, :longitude,:cover_picture, profile_pictures: [])
   end
 end
+
