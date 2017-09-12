@@ -1,15 +1,15 @@
 function checkScroll(){
-    var startY = $('.navbar.transparent').height() * 3;
+    var startY = $('.navbar_sm_md_lg.transparent').height() * 3;
 
     if($(window).scrollTop() > startY){
-        $('.navbar.transparent').addClass("scrolled");
+        $('.navbar_sm_md_lg.transparent').addClass("scrolled");
     }else{
-        $('.navbar.transparent').removeClass("scrolled");
+        $('.navbar_sm_md_lg.transparent').removeClass("scrolled");
     }
 }
 
 $(function () {
-  if($('.navbar.transparent').length > 0){
+  if($('.navbar_sm_md_lg.transparent').length > 0){
       $(window).on("scroll load resize", function(){
           checkScroll();
       });
