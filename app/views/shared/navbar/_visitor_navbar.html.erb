@@ -1,0 +1,53 @@
+<div class="navbar_pys">
+  <div class='navbar-fixed navbar_sm_md_lg transparent hidden-xs'>
+    <div class='navbar_brand'>
+      <%= link_to "Pack Your Skills", root_path %>
+    </div>
+    <div class="navbar_logo">
+      <%= link_to image_tag("/home.logo.5cm.png"), root_path %>
+    </div>
+    <div class="navbar_right">
+      <div class="navbar_link">
+        <%= link_to "Log In", root_path %>
+      </div>
+      <div class="navbar_button">
+        <%= link_to "Sign Up", root_path %>
+      </div>
+      <div class="navbar_language">
+        <% if I18n.locale == I18n.default_locale %>
+          <p><u>EN</u> <%= link_to "FR", { :locale=>'fr' }, class: "navbar-link" %></p>
+        <% else %>
+          <p><%= link_to "EN", { :locale=>'' }, class: "navbar-link" %> <u>FR</u></p>
+        <%end%>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar_xs navbar-top hidden-sm hidden-md hidden-lg">
+    <div class="navbar_logo">
+      <%= link_to image_tag("/home.logo.5cm.png"), root_path %>
+    </div>
+    <div class='navbar_brand'>
+      <%= link_to "Pack Your Skills", root_path %>
+    </div>
+    <div class="navbar_button">
+      <%= link_to "Sign Up", root_path %>
+    </div>
+    <div class="navbar_dropdown">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+          <li><%= link_to "Log In", root_path %></li>
+          <% if I18n.locale == I18n.default_locale %>
+            <li><%= link_to "French version", { :locale=>'fr' }%></li>
+          <% else %>
+            <li><%= link_to "English version", { :locale=>'' }%></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>

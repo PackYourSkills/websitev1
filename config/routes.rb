@@ -14,7 +14,6 @@ Rails.application.routes.draw do
     get '/missions/:id/suspend', to:'missions#suspend', as: 'suspend_mission'
     get '/missions/:id/close', to:'missions#close', as: 'close_mission'
     get '/missions/:id/cancel', to:'missions#cancel', as: 'cancel_mission'
-
     resources :packers, only: [:edit, :update, :show]
 
     authenticated :user do
@@ -22,8 +21,6 @@ Rails.application.routes.draw do
       get '/home', to: 'pages#home', as: :authentificated_home
     end
     root to: 'pages#home'
-
-
   end
 
 end
