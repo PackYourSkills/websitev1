@@ -89,6 +89,17 @@ end
 # Facebook connect
 gem 'omniauth-facebook'
 
+# Letter opener - Send email for development
+
+gem "letter_opener", group: :development
+
+# Postmark - Send email for production
+gem 'postmark-rails'
+
+# MailChimp
+gem 'gibbon'
+
+
 #==> End
 #==================================================
 
