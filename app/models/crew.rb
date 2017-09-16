@@ -4,6 +4,11 @@ class Crew < ApplicationRecord
 
   validates :website, :allow_blank => true, format: { :with => /((http|ftp)s?:\/\/)?([a-zA-Z0-9<>\.,!@#$%^:;&*()\-_+=]+:[a-zA-Z0-9<>\.,!@#$%^;:&*()\-_+=]+\@)?([a-zA-Z0-9\-\_]+(\/|\.)){2,}[:a-zA-Z0-9\#\?\=\_\.\-\/]*/i, message: "it has to be an url" }
 
+  has_attachment :logo
+  has_attachment :team_picture
+  has_attachment :working_place_picture
+
+
   geocoded_by :full_address
   after_validation :geocode, if: :full_address_changed?
 

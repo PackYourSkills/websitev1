@@ -1,5 +1,5 @@
 <div class="navbar_pys">
-  <div class='navbar-fixed navbar_sm_md_lg transparent hidden-xs'>
+  <div class="navbar-fixed navbar_sm_md_lg hidden-xs <%= 'transparent' if current_page?(controller: 'pages', action: 'home') %>">
     <div class='navbar_brand'>
       <%= link_to "Pack Your Skills", root_path %>
     </div>
@@ -8,18 +8,20 @@
     </div>
     <div class="navbar_right">
       <div class="navbar_link">
-        <%= link_to "Log In", root_path %>
+        <%= link_to "Log In", new_user_session_path %>
       </div>
       <div class="navbar_button">
-        <%= link_to "Sign Up", root_path %>
+        <%= link_to "Sign Up", new_user_registration_path %>
       </div>
-      <div class="navbar_language">
-        <% if I18n.locale == I18n.default_locale %>
-          <p><u>EN</u> <%= link_to "FR", { :locale=>'fr' }, class: "navbar-link" %></p>
-        <% else %>
-          <p><%= link_to "EN", { :locale=>'' }, class: "navbar-link" %> <u>FR</u></p>
-        <%end%>
-      </div>
+      <% if controller_name == "pages" %>
+        <div class="navbar_language">
+          <% if I18n.locale == I18n.default_locale %>
+            <p><u>EN</u> <%= link_to "FR", { :locale=>'fr' } %></p>
+          <% else %>
+            <p><%= link_to "EN", { :locale=>'' } %> <u>FR</u></p>
+          <%end%>
+        </div>
+      <% end %>
     </div>
   </div>
 
@@ -33,18 +35,20 @@
       <%= link_to "Pack Your Skills", root_path %>
     </div>
     <div class="navbar_button">
-      <%= link_to "Sign Up", root_path %>
+      <%= link_to "Sign Up", new_user_registration_path %>
     </div>
     <div class="navbar_dropdown">
       <div class="dropdown">
         <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
-          <li><%= link_to "Log In", root_path %></li>
-          <% if I18n.locale == I18n.default_locale %>
-            <li><%= link_to "French version", { :locale=>'fr' }%></li>
-          <% else %>
-            <li><%= link_to "English version", { :locale=>'' }%></li>
-          <%end%>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+          <% if controller_name == "pages" %>
+            <% if I18n.locale == I18n.default_locale %>
+              <li><%= link_to "French version", { :locale=>'fr' }%></li>
+            <% else %>
+              <li><%= link_to "English version", { :locale=>'' }%></li>
+            <%end%>
+          <% end %>
         </ul>
       </div>
     </div>

@@ -1,7 +1,171 @@
-<h2>Hello there, it is Mission <%= @mission.id %> from project <%= @mission.crew.name %></h2>
-<p>Status : <%= @mission.status %></p>
+<div id="mission_show">
 
-<div id="map" style="width: 300px; height: 300px;"></div>
+<!-- Banner Part -->
+  <section id="banner" class="banner" style="background-image: linear-gradient(rgba(1,1,1,0.5), rgba(1,1,1,0.5)), url('<%= @url_cover %>')" >
+    <div class="banner_content">
+      <h1><%= @mission.title %></h1>
+    </div>
+  </section>
+
+<!-- Second Navbar Part -->
+  <section id="secondary_navbar" class='section_gray'>
+    <div class="nav_bar_items">
+      <%= link_to t('mission.show.crew.section_title'), '#crew_mission_show' %>
+    </div>
+    <div class="nav_bar_items">
+      <%= link_to t('mission.show.crew.mission'), '#mission_mission_show' %>
+    </div>
+    <div class="nav_bar_items">
+      <%= link_to t('mission.show.workplace.section_title'), '#workplace_mission_show' %>
+    </div>
+    <div class="nav_bar_items">
+      <%= link_to t('mission.show.team.section_title'), '#team_mission_show' %>
+    </div>
+    <div class="nav_bar_items">
+      <%= link_to t('mission.show.host.section_title'), '#host_mission_show' %>
+    </div>
+    <div class="nav_bar_items boutton">
+      <%= link_to t('mission.show.apply'), 'root_path' %>
+    </div>
+  </section>
+
+<!-- crew_mission_show Part -->
+  <section id="summary_mission_show" class="section_blue">
+    <div class='logo'>
+      <div class='box box_ratio_1_1' style="background-image: url('<%= @url_logo %>')">
+      </div>
+    </div>
+    <div class='social_media'>
+      <ul class="social-icon-list list-unstyled">
+        <li><a href="https://www.facebook.com/PackYourSkills/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.facebook.com/PackYourSkills/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.facebook.com/PackYourSkills/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      </ul>
+    </div>
+    <div class='information'>
+      <p><strong><%= @mission.crew.name %></strong></p>
+      <p><%= t('mission.show.summary.created') %><%= @mission.crew.creation_date %></p>
+      <p>#<%= @mission.skill.capitalize %></p>
+      <p>#<%= @mission.city %></p>
+      <p><%= @mission.duration %> days - November 5-19,2017</p>
+    </div>
+  </section>
+
+<!-- crew_mission_show Part -->
+  <section id="crew_mission_show" class="section section_path section_right_path">
+    <div class='container'>
+      <h2><%= t('mission.show.crew.title') %></h2>
+      <p><%= @mission.crew.name %> <%= @mission.crew.mission %></p>
+      <p><%= @mission.crew.description %></p>
+      <p><%= t('mission.show.mission.equipment') %><br><%= @mission.material %></p>
+    </div>
+  </section>
+
+<!-- mission_mission_show Part -->
+  <section id="mission_mission_show" class="section section_path section_left_path">
+    <div class='container'>
+      <h2><%= t('mission.show.mission.title') %></h2>
+      <p><%= @mission.context %></p>
+      <p><%= @mission.description %></p>
+    </div>
+  </section>
+
+<!-- workplace_mission_show Part -->
+  <section id="workplace_mission_show" class="section section_path section_right_path">
+    <div class='container'>
+      <h2><%= t('mission.show.workplace.title') %></h2>
+      <p><%= @mission.crew.description_working_place %></p>
+      <%= image_tag @url_working_place_picture %>
+    </div>
+  </section>
+
+<!-- team_mission_show Part -->
+  <section id="team_mission_show" class="section">
+    <div class='container'>
+      <div class='row'>
+        <h2><%= t('mission.show.team.title') %></h2>
+        <%= image_tag @url_team_picture %>
+      </div>
+      <div class='row'>
+        <table>
+          <tr>
+            <th><%= @mission.crew.nb_collaborators %> <%= t('mission.show.team.nb_people') %></th>
+            <th><%= @mission.crew.average_age %> <%= t('mission.show.team.average_age') %></th>
+          </tr>
+          <tr>
+            <th><%= @mission.crew.percentage_women %>% <i class="fa fa-female" aria-hidden="true"></i> <%= (100 - @mission.crew.percentage_women) %>% <i class="fa fa-male" aria-hidden="true"></i></th>
+            <th><%= @mission.crew.percentage_english %>% <%= t('mission.show.team.percentage_en') %></th>
+          </tr>
+        </table>
+      </div>
+      <div class='row'>
+        <p><%= @mission.crew.team_description %></p>
+      </div>
+      <div class='row'>
+        <div class='col-xs-3'>
+          <%= image_tag @url_referent_picture %>
+        </div>
+        <div class='col-xs-0'>
+          <p><strong><%= @mission.referent_first_name %> <%= @mission.referent_last_name %></strong></p>
+          <p><%= @mission.referent_role %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Values Part -->
+  <section id="value_mission_show" class="section section_path section_left_path section_yellow">
+    <div class='container'>
+      <h2><%= t('mission.show.values.title') %></h2>
+      <p><%= t('mission.show.values.why') %></p>
+      <p><%= @mission.crew.value1 %></p>
+      <p><%= @mission.crew.value2 %></p>
+      <p><%= @mission.crew.value3 %></p>
+    </div>
+  </section>
+
+<!-- host_mission_show Part -->
+  <section id="host_mission_show" class="section">
+    <div class='container'>
+      <div class='row'>
+        <h2><%= t('mission.show.host.title') %></h2>
+      </div>
+      <div class='row'>
+        <div class='col-xs-3'>
+          <%= image_tag @url_host_picture %>
+        </div>
+        <div class='col-xs-0'>
+          <p><strong><%= @mission.host_first_name %> <%= @mission.host_last_name %></strong></p>
+          <p><%= @mission.host_role %></p>
+        </div>
+      </div>
+      <div class='row'>
+        <p><%= @mission.description_hosting_place %></p>
+      </div>
+      <div class='row'>
+        <table>
+          <tr>
+            <th>????</th>
+            <th><%= t('mission.show.host.distance_paris') %> ??<%= t('mission.show.host.min_by_metro') %></th>
+          </tr>
+          <tr>
+            <th><%= t('mission.show.host.distance_workplace') %> ??<%= t('mission.show.host.min_by_metro') %></th>
+            <th><%= @mission.closest_metro_hosting_place %>% <%= t('mission.show.host.close_subway') %></th>
+          </tr>
+        </table>
+      </div>
+      <div class='row'>
+        <div id="map">
+        </div>
+      </div>
+      <div class='row'>
+        <%= image_tag @url_hosting_place_picture %>
+      </div>
+    </div>
+  </section>
+</div>
+
+
 
 <% content_for(:after_js) do %>
   <script>
@@ -20,3 +184,5 @@
     });
   </script>
 <% end %>
+
+

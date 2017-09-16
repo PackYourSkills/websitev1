@@ -1,0 +1,228 @@
+/* -------------------------------------
+ * CSS code for all page
+ * ------------------------------------- */
+
+/*-----------------------------------------------------------------------
+/*  Theme Name  : Pack Your Skills by Milica
+/*  Version     : 1.O
+/*  Date        : Aout 2017
+/*-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------*/
+/*  TEXT
+/*---------------------------------------------------------------------*/
+
+h1,h2,h3,p{
+  color:$black;
+}
+h1 {
+  font-weight:600;
+  text-transform:uppercase;
+}
+h2 {
+  font-weight:400;
+}
+p {
+  font-weight:300;
+  margin-top:4px;
+  margin-bottom:0;
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size:40px;
+  }
+  p {
+    font-size:21px;
+  }
+  .translate {
+    font-size:12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size:30px;
+  }
+  p {
+    font-size:18px;
+  }
+  .translate {
+    font-size:10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size:18px;
+  }
+  p {
+    font-size:14px;
+  }
+  .translate {
+    font-size:9px;
+  }
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  SECTION & SECTION_PATH
+/*---------------------------------------------------------------------*/
+
+.section {
+  min-height:300px;
+  position:relative;
+}
+
+
+.section_red {
+  background-color: $red;
+}
+
+.section_blue {
+  background-color: $blue;
+}
+
+.section_green {
+  background-color: $green;
+}
+
+.section_yellow {
+  background-color: $yellow;
+}
+
+.section_gray {
+  background-color: $gray;
+}
+
+.section_path {
+  padding-bottom:120px;
+}
+
+.section_path:after {
+  z-index:1;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: auto 100% ;
+  position:absolute;
+  bottom:0;
+  left:0;
+  @media screen and (min-width: 768px) {
+    height:100px;
+    width:100%;
+  }
+  @media screen and (max-width: 767px) {
+    height:70px;
+    width:100%;
+  }
+}
+
+.section_left_path:after {
+  background-image: url("/home.path_from_left.png");
+  background-position: 35% 50%;
+}
+
+.section_right_path:after {
+  background-image: url("/home.path_from_right.png");
+  background-position: 65% 50%;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  BACKGROUND SHAPE
+/*---------------------------------------------------------------------*/
+
+.section_green_yellow_left::before {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    background-image: url("/home.green_yellow_md.png");
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/home.green_yellow_xs.png");
+  }
+}
+
+.section_red1_right::before {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  right:0px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100% ;
+  background-image: url("/home.red1.png");
+}
+
+.section_blue1_left::before {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+  background-image: url("/home.blue1.png");
+}
+
+.section_red2_left::before {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    background-image: url("/home.red2.png");
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/home.red2.phone.png");
+  }
+}
+
+.section_green2_right::before {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  right:0px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100% ;
+  @media screen and (min-width: 768px) {
+    background-image: url("/home.green2.png");
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/home.green2.phone.png");
+  }
+}
+
+.section_yellow1_left::before {
+  content: "";
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100% ;
+  background-image: url("/home.yellow1.png");
+}
+

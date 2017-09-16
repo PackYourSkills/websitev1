@@ -4,6 +4,11 @@ class Mission < ApplicationRecord
   geocoded_by :full_address
   after_validation :geocode, if: :full_address_changed?
 
+  has_attachment :cover_picture
+  has_attachment :referent_picture
+  has_attachment :host_picture
+  has_attachment :hosting_place_picture
+
   def draft?
     self.status == 'draft'
   end

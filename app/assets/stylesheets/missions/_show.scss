@@ -1,0 +1,103 @@
+/* -------------------------------------
+ * CSS code specific to Missions page
+ * ------------------------------------- */
+
+/*-----------------------------------------------------------------------
+/*  Theme Name  : Pack Your Skills by Milica
+/*  Version     : 1.O
+/*  Date        : Aout 2017
+/*-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------*/
+
+#mission_show {
+
+/*---------------------------------------------------------------------*/
+/*  0. GLOBAL STYLES
+/*---------------------------------------------------------------------*/
+
+  #map {
+    height:300px;
+    width:300px;
+  }
+
+  img {
+    max-width:100%;
+    height: auto;
+  }
+
+/*---------------------------------------------------------------------*/
+/*  BANNER MISSION
+/*---------------------------------------------------------------------*/
+
+  #banner {
+    .banner_content h1 {
+      color:white;
+    }
+  }
+
+
+/*---------------------------------------------------------------------*/
+/*  SUMMARY MISSION
+/*---------------------------------------------------------------------*/
+
+  #summary_mission_show {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    p {
+      color:white;
+      text-align:right;
+    }
+
+    .social_media {
+      text-align:center;
+      li {
+        margin:3px;
+        padding:20px;
+      }
+      a {
+        border:solid;
+        border-radius:50%;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      padding: 20px 60px;
+      .logo {
+        flex: 0 0 20%;
+      }
+      .social_media {
+        flex: 0 0 10%;
+      }
+      .information {
+        flex: 0 0 60%;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      padding: 20px 30px;
+      .logo {
+        flex: 0 0 25%;
+      }
+      .social_media {
+        flex: 0 0 10%;
+      }
+      .information {
+        flex: 0 0 55%;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      padding: 5px 5px;
+      .logo {
+        flex: 0 0 30%;
+      }
+      .social_media {
+        flex: 0 0 10%;
+      }
+      .information {
+        flex: 0 0 50%;
+        p { font-size: 10px; margin: 2px 0px;}
+      }
+    }
+  }
+
+}

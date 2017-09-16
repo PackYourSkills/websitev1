@@ -1,6 +1,6 @@
 #pour charger le fichier YML dans une variable
 #@constants = YAML.load_file(Rails.root.join('config', 'constants.yml'))
-
+#then @constants["texture_url"][1]
 skills:
   Photography:
     url: 'photography_video'
@@ -17,3 +17,19 @@ skills:
   Web Marketing:
     url: 'marketing_studies'
     picto: 'fa fa-area-chart'
+
+texture_url:
+  1: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383045/texture/texture1_eh4j8f.jpg'
+  2: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383045/texture/texture2_cfzade.jpg'
+  3: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383045/texture/texture3_voklvq.jpg'
+  4: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383045/texture/texture4_zqx2fb.jpg'
+  5: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383045/texture/texture5_pzlmyr.jpg'
+  6: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383045/texture/texture6_bdfbjy.jpg'
+  7: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383046/texture/texture7_fykxdo.jpg'
+  8: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383046/texture/texture8_x8pj7v.jpg'
+  9: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383046/texture/texture9_dohs8t.jpg'
+  10: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383046/texture/texture10_xgxiwj.jpg'
+  11: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383046/texture/texture11_zajsmd.jpg'
+  12: 'http://res.cloudinary.com/packyourskills/image/upload/v1505383046/texture/texture12_kngv9u.jpg'
+
+
