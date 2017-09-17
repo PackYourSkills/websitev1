@@ -149,8 +149,8 @@ en:
         average_age: ' years old in average'
         percentage_en: 'speak English'
       values:
-        title: 'values'
-        why: 'Sharing the same values within a team is important to trust each other on making the right decisions and on feeling well with each other. Our values are'
+        title: 'Team values'
+        why_html: 'Sharing the same values within a team is important to trust each other on making the right decisions and on feeling well with each other.<br> Our values are'
       host:
         section_title: 'Host'
         title: 'Your host'

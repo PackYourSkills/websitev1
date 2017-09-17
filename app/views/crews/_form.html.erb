@@ -1,43 +1,46 @@
-<%= simple_form_for (@crew) do |a| %>
-  <%= a.input :name, required: true %>
-  <%= a.input :logo, as: :attachinary %>
-  <%= a.input :mission, required: true %>
-  <%= a.input :description, required: true %>
-  <%= a.input :creation_date, required: true %>
-<!-- team -->
-  <%= a.input :nb_collaborators, required: true %>
-  <%= a.input :average_age, required: true %>
-  <%= a.input :percentage_women, required: true %>
-  <%= a.input :team_description, required: true %>
-  <%= a.input :percentage_english, required: true %>
-  <%= a.input :team_picture, as: :attachinary %>
+<section id="mission_form" class="form">
+  <div class="container">
+    <%= simple_form_for (@crew) do |a| %>
+      <%= a.input :name, required: true %>
+      <%= a.input :logo, as: :attachinary %>
+      <%= a.input :mission, required: true %>
+      <%= a.input :description, required: true %>
+      <%= a.input :creation_date, required: true %>
+    <!-- team -->
+      <%= a.input :nb_collaborators, required: true %>
+      <%= a.input :average_age, required: true %>
+      <%= a.input :percentage_women, required: true %>
+      <%= a.input :team_description, required: true %>
+      <%= a.input :percentage_english, required: true %>
+      <%= a.input :team_picture, as: :attachinary %>
 
-  <p>What are your main values (3 maximum)</p>
-  <%= a.input :value1, label: false, required: true %>
-  <%= a.input :value2, label: false %>
-  <%= a.input :value3, label: false %>
-  <p>What is your favorite quote</p>
-  <%= a.input :quote, label: false, required: true %>
-  <%= a.input :quote_author, label: "who said that ?", required: true %>
-  <p>How to contact you</p>
-  <%= a.input :phone %>
-  <%= a.input :skype %>
-  <%= a.input :twitter, required: true %>
-  <%= a.input :facebook, required: true %>
-  <%= a.input :instagram, required: true %>
-  <%= a.input :website, required: true %>
-  <%= a.input :newsletter %>
+      <p>What are your main values (3 maximum)</p>
+      <%= a.input :value1, label: false, required: true %>
+      <%= a.input :value2, label: false %>
+      <%= a.input :value3, label: false %>
+      <p>What is your favorite quote</p>
+      <%= a.input :quote, label: false, required: true %>
+      <%= a.input :quote_author, label: "who said that ?", required: true %>
+      <p>How to contact you</p>
+      <%= a.input :phone %>
+      <%= a.input :skype %>
+      <%= a.input :twitter, required: true %>
+      <%= a.input :facebook, required: true %>
+      <%= a.input :instagram, required: true %>
+      <%= a.input :website, required: true %>
+      <%= a.input :newsletter %>
 
-<!-- Working place -->
-  <%= a.input :description_working_place, required: true %>
-  <%= a.input :working_place_picture, as: :attachinary %>
-  <p>Address </p>
-  <%= a.input :address, required: true %>
-  <%= a.input :city, required: true %>
-  <%= a.input :zip_code, required: true %>
-  <%= a.input :country, as: :string, required: true %>
+    <!-- Working place -->
+      <%= a.input :description_working_place, required: true %>
+      <%= a.input :working_place_picture, as: :attachinary %>
+      <p>Address </p>
+      <%= a.input :address, required: true %>
+      <%= a.input :city, required: true %>
+      <%= a.input :zip_code, required: true %>
+      <%= a.input :country, as: :string, required: true %>
 
-  <%= a.input :closest_metro_working_place, required: true %>
-  <%= a.submit class: "btn btn-secondary" %>
-<% end %>
-
+      <%= a.input :closest_metro_working_place, required: true %>
+      <%= a.submit class: "btn btn-secondary" %>
+    <% end %>
+  </div>
+</section>

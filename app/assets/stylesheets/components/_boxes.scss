@@ -1,10 +1,6 @@
 .box {
   height:auto;
   width:100%;
-  padding: 5px;
-  margin: 5px 5px;
-
-  border-radius: 4px;
   background-color:white;
 
   background-size: cover !important;
@@ -34,4 +30,22 @@
   content: "";
   display: block;
   padding-top: 100%;  /* initial ratio of 1:1*/
+}
+
+.box_ratio_2_3{
+  position: relative;
+  width: 100%; /* desired width */
+  .content_box {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.box_ratio_2_3:before{
+  content: "";
+  display: block;
+  padding-top: 66%;  /* initial ratio of 1:1*/
 }
