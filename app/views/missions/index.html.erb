@@ -1,6 +1,43 @@
-<h2>List of missions</h2>
+<section id="banner" class="banner" style="background-image: linear-gradient(rgba(1,1,1,0.5), rgba(1,1,1,0.5)), url('<%= @url_cover %>')" >
+  <div class="banner_content">
+    <h1>List missions</h1>
+  </div>
+</section>
 
-<% @public_missions.each_with_index do |mission, index| %>
-  <p><%= index %> - <%= mission.title %> <%= mission.crew.name %> <%= mission.status %></p>
-  <p><%= link_to "See details", mission_path(mission.id) %></p>
-<% end %>
+<section class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="main col-md-12">
+        <!-- isotope filters start -->
+        <div class="filters">
+          <ul class="nav nav-pills">
+            <li class="active"><a href="#" data-filter="*">All</a></li>
+            <li><a href="#" data-filter=".webdevelopment">Web Development</a></li>
+            <li><a href="#" data-filter=".graphicdesign">Graphic design</a></li>
+            <li><a href="#" data-filter=".video">Video</a></li>
+          </ul>
+        </div>
+        <!-- isotope filters end -->
+        <div class="isotope-container">
+          <% @public_missions.each_with_index do |mission, index| %>
+            <div class="col-xs-12 col-sm-6 col-md-4 isotope-item <%= mission.skill.downcase.gsub(/\s+/, "") %>">
+              <div class= "card_mission">
+                <div class= "banner_card_mission" style="background-image: url('<%= mission.url_cover %>')" >
+                  <div class= "box box_ratio_1_1" style="background-image: url('<%= mission.crew.url_logo %>')" >
+                  </div>
+                </div>
+                <div class= "info_card_mission">
+                  <p><%= mission.crew.name %></p>
+                  <p><strong><%= mission.title %></strong></p>
+                  <p>#<%= mission.skill %></p>
+                  <p>#</p>
+                </div>
+                <%= link_to "", mission_path(mission.id) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

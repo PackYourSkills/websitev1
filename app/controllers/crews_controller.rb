@@ -20,11 +20,11 @@ class CrewsController < ApplicationController
   end
 
   def crew_params
-    params.require(:crew).permit(:name, :mission, :description, :creation_date,
+    params.require(:crew).permit(:name, :logo, :mission, :description, :creation_date,
     :nb_collaborators, :average_age, :percentage_women, :team_description, :percentage_english,
-    :value1, :value2, :value3, :quote, :quote_author,
+    :team_picture, :value1, :value2, :value3, :quote, :quote_author,
     :phone, :skype, :twitter, :facebook, :instagram, :website, :newsletter,
-    :latitude, :longitude, :description_working_place,
+    :latitude, :longitude, :description_working_place, :working_place_picture,
     :city, :country, :address, :zip_code, :closest_metro_working_place)
   end
 end

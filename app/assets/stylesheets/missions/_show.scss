@@ -1,0 +1,375 @@
+/* -------------------------------------
+ * CSS code specific to Missions page
+ * ------------------------------------- */
+
+/*-----------------------------------------------------------------------
+/*  Theme Name  : Pack Your Skills by Milica
+/*  Version     : 1.O
+/*  Date        : Aout 2017
+/*-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------*/
+
+#mission_show {
+
+/*---------------------------------------------------------------------*/
+/*  0. GLOBAL STYLES
+/*---------------------------------------------------------------------*/
+
+  img {
+    max-width:100%;
+    height: auto;
+  }
+
+  h2 {
+    text-transform:uppercase;
+    font-size:22px;
+    font-weight:600;
+  }
+
+  table {
+    margin: 20px 0px;
+    width:100%;
+    color: $black;
+    p {
+      text-align:center;
+      @media screen and (min-width: 992px) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 10px;
+      }
+    }
+    th {
+      border:solid 3px $blue;
+      padding:10px;
+      background-color: rgba(255,255,255,0.75);
+    }
+  }
+
+  .row {
+    padding: 0px 15px;
+  }
+
+/*---------------------------------------------------------------------*/
+/*  BANNER MISSION
+/*---------------------------------------------------------------------*/
+
+  #banner {
+    .banner_content h1 {
+      color:white;
+    }
+  }
+
+
+/*---------------------------------------------------------------------*/
+/*  SUMMARY MISSION
+/*---------------------------------------------------------------------*/
+
+  #summary_mission_show {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    p {
+      color:white;
+    }
+    .box {
+      padding: 5px;
+      margin: 5px 5px;
+      border-radius: 4px;
+    }
+    .social_media {
+      text-align:center;
+      .social-icon-list a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color:white;
+        margin:10px;
+        border: 1px solid white;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        @media screen and (min-width: 768px) {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+        }
+        @media screen and (max-width: 767px) {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+        }
+      }
+      .social-icon-list a:hover {
+        color: $black;
+        border: 1px solid $black;
+        opacity: 0.7;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      padding: 20px 150px;
+      .logo {
+        flex: 0 0 20%;
+      }
+      .social_media {
+        flex: 0 0 10%;
+      }
+      .information {
+        flex: 0 0 60%;
+        p { font-size: 18px; margin: 3px 0px;text-align:left;}
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      padding: 20px 30px;
+      .logo {
+        flex: 0 0 25%;
+      }
+      .social_media {
+        flex: 0 0 10%;
+      }
+      .information {
+        flex: 0 0 55%;
+        p { font-size: 15px; margin: 2px 0px;text-align:right;}
+      }
+    }
+    @media screen and (max-width: 767px) {
+      padding: 5px 5px;
+      .logo {
+        flex: 0 0 30%;
+      }
+      .social_media {
+        flex: 0 0 10%;
+      }
+      .information {
+        flex: 0 0 50%;
+        p { font-size: 10px; margin: 2px 0px;text-align:right;}
+      }
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/*  CREW
+/*---------------------------------------------------------------------*/
+
+  .section_yellow1_left {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:200px;
+        padding-right:75px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:150px;
+        padding-right:50px;
+      }
+    }
+  }
+
+  .section_yellow1_left::before {
+      bottom:0px;
+
+    @media screen and (min-width: 768px) {
+      height:80%;
+    }
+    @media screen and (max-width: 767px) {
+      height:60%;
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/*  MISSION
+/*---------------------------------------------------------------------*/
+
+  .section_red1_right {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:75px;
+        padding-right:200px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:50px;
+        padding-right:150px;
+      }
+    }
+  }
+
+
+  .section_red1_right::before {
+    @media screen and (min-width: 768px) {
+      height:150%;
+      top:-25%;
+    }
+    @media screen and (max-width: 767px) {
+      height:100%;
+      top:0px;
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/*  WORPLACE
+/*---------------------------------------------------------------------*/
+
+  .section_blue1_left {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:200px;
+        padding-right:100px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:150px;
+        padding-right:75px;
+      }
+    }
+  }
+
+
+  .section_blue1_left::before {
+    @media screen and (min-width: 768px) {
+      height:50%;
+      bottom:10%;
+    }
+    @media screen and (max-width: 767px) {
+      height:50%;
+      bottom:10%;
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/*  TEAM
+/*---------------------------------------------------------------------*/
+
+  .section_green2_right{
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:75px;
+        padding-right:200px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:50px;
+        padding-right:150px;
+      }
+    }
+  }
+
+
+  .section_green2_right::before {
+    @media screen and (min-width: 768px) {
+      height:50%;
+      bottom:10%;
+    }
+    @media screen and (max-width: 767px) {
+      height:50%;
+      top:25px;
+    }
+  }
+
+  .referent_and_host{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px;
+    .portrait{
+      flex: 0 0 20%;
+      .avatar {
+        max-width: 100%;
+        width:100%;
+        height:auto;
+        display:block;
+        padding-top:100%;
+        border-radius:50%;
+        background-position-y: center;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    .info{
+      flex: 0 0 70%;
+    }
+  }
+
+  #value_mission_show {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:75px;
+        padding-right:200px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:50px;
+        padding-right:150px;
+      }
+    }
+    h2 {
+      margin-top:0px;
+    }
+    .section_yellow {
+      padding: 22px 0px;
+    }
+    ul {
+      color: $black;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 90px;
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 60px;
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/*  HOST
+/*---------------------------------------------------------------------*/
+
+  #host_mission_show {
+    margin-bottom:40px;
+
+    .col-xs-12, .col-sm-6 {
+      padding-left:0px;
+      padding-right:0px;
+    }
+
+    #map {
+      width:100%;
+      height:100%;
+    }
+
+    .hosting_place_picture{
+      background-position-y: center;
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .section_red2_left {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:200px;
+        padding-right:100px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:150px;
+        padding-right:75px;
+      }
+    }
+  }
+
+
+  .section_red2_left::before {
+    @media screen and (min-width: 768px) {
+      height:80%;
+      top:10%;
+    }
+    @media screen and (max-width: 767px) {
+      height:50%;
+      top:10%;
+    }
+  }
+}

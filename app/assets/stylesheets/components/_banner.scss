@@ -1,0 +1,22 @@
+.banner {
+  position: relative;
+  width: 100%;
+  background-color: $green;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top:60px;
+  padding-bottom:10px;
+  @media screen and (min-width: 768px) {  min-height:300px;}
+  @media screen and (max-width: 767px) {  min-height:150px;}
+  display:flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.banner_content {
+  text-align:center;
+  @media screen and (min-width: 992px) {width: 60%;}
+  @media screen and (min-width: 768px) and (max-width: 991px) {width: 75%;}
+  @media screen and (max-width: 767px) {width: 90%;}
+}

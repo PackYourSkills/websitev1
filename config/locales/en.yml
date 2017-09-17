@@ -128,7 +128,35 @@ en:
         call2action: 'Send'
     follow: "Follow everything that's going on :"
 
-
-
-
+  mission:
+    show:
+      summary:
+        created: 'Created in '
+      crew:
+        section_title: 'Crew'
+        title: 'Our positive impact'
+      mission:
+        section_title: 'Mission'
+        title: 'Why do we need you'
+        equipment: 'Equipment we can provide:'
+      workplace:
+        section_title: 'Workplace'
+        title: 'Where you will work'
+      team:
+        section_title: 'Team'
+        title: 'Your future team'
+        nb_people: ' people in the team'
+        average_age: ' years old in average'
+        percentage_en: 'speak English'
+      values:
+        title: 'Team values'
+        why_html: 'Sharing the same values within a team is important to trust each other on making the right decisions and on feeling well with each other.<br> Our values are'
+      host:
+        section_title: 'Host'
+        title: 'Your host'
+        distance_paris: 'Distance from Paris Center: '
+        min_by_metro: ' min by metro'
+        distance_workplace: 'Distance from workplace: '
+        close_subway: 'Metro nearby:'
+      apply: Apply
 

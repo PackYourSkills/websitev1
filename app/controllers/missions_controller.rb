@@ -55,9 +55,9 @@ class MissionsController < ApplicationController
     params.require(:mission).permit(:title, :context, :description, :duration, :skill, :material,
     :referent_first_name, :referent_last_name, :referent_role, :referent_phone, :referent_email,
     :host_first_name, :host_last_name, :host_role, :host_phone,
-    :description_hosting_place, :city, :country, :address, :zip_code,
+    :description_hosting_place, :hosting_place_picture, :city, :country, :address, :zip_code,
     :closest_metro_hosting_place, :nb_min_ride, :other_comment, :status,
-    :latitude, :longitude)
+    :latitude, :longitude, :cover_picture, :referent_picture, :host_picture)
   end
 end
 

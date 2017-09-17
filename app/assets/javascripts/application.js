@@ -19,5 +19,9 @@
 //= require underscore
 //= require gmaps/google
 //= require navbar
+//= require isotope/isotope.pkgd.min
+//= require custom.js
+//= require modernizr.js
+//= require template.js
 //= require_tree .
 

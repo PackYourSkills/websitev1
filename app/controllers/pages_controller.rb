@@ -9,10 +9,20 @@ class PagesController < ApplicationController
   end
 
   def room
-    current_user.crew? ? crew_room : packer_room
+    if current_user.admin
+      admin_room
+    else
+      current_user.crew? ? crew_room : packer_room
+    end
   end
 
   private
+
+  def admin_room
+    @packers = Packer.all
+    @crews = Crew.all
+    @missions = Mission.all
+  end
 
   def packer_room
     @packer = current_user.packer
