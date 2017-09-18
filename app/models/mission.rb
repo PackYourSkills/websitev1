@@ -1,10 +1,11 @@
 class Mission < ApplicationRecord
   belongs_to :crew
+  has_many :connections, dependent: :destroy
 
   geocoded_by :full_address
   after_validation :geocode, if: :full_address_changed?
 
-  has_attachment :cover_picture
+  has_attachment :cover_mission
   has_attachment :referent_picture
   has_attachment :host_picture
   has_attachment :hosting_place_picture
@@ -12,22 +13,22 @@ class Mission < ApplicationRecord
 
   def url_cover
     open_constants
-    self.cover_picture.nil? ? @constants["texture_url"][1]  : (cl_image_path self.cover_picture.path)
+    self.cover_mission.nil? ? @constants["img_placeholder_url"][0]  : self.cover_mission.path
   end
 
   def url_referent_picture
     open_constants
-    self.referent_picture.nil? ? @constants["texture_url"][2] : (cl_image_path self.referent_picture.path)
+    self.referent_picture.nil? ? @constants["img_placeholder_url"][1] :  self.referent_picture.path
   end
 
   def url_host_picture
     open_constants
-    self.host_picture.nil? ? @constants["texture_url"][3] : (cl_image_path self.host_picture.path)
+    self.host_picture.nil? ? @constants["img_placeholder_url"][2] :  self.host_picture.path
   end
 
   def url_hosting_place_picture
     open_constants
-    self.hosting_place_picture.nil? ? @constants["texture_url"][4] : (cl_image_path self.hosting_place_picture.path)
+    self.hosting_place_picture.nil? ? @constants["img_placeholder_url"][3] :  self.hosting_place_picture.path
   end
 
   def draft?

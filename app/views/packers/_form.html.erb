@@ -1,33 +1,45 @@
-<%= simple_form_for (@packer) do |a| %>
-  <%= a.input :first_name, required: true %>
-  <%= a.input :last_name, required: true %>
-  <%= a.input :sexe, as: :radio_buttons, required: true,
-  collection: ['Male', 'Female'], wrapper: :vertical_radio_and_checkboxes %>
-  <%= a.input :age, required: true %>
-  <%= a.input :nationality, required: true %>
-  <%= a.input :story, required: true %>
-  <%= a.input :job, required: true %>
-  <p>What are your main values (3 maximum)</p>
-  <%= a.input :value1, label: false, required: true %>
-  <%= a.input :value2, label: false %>
-  <%= a.input :value3, label: false %>
-  <p>What is your favorite quote</p>
-  <%= a.input :quote, label: false, required: true %>
-  <%= a.input :quote_author, label: "who said that ?", required: true %>
-  <p>Address </p>
-  <%= a.input :address, required: true %>
-  <%= a.input :city, required: true %>
-  <%= a.input :zip_code, required: true %>
-  <%= a.input :country, as: :string, required: true %>
+<section id="packer_form" class="form">
+  <div class="container_form">
+    <%= simple_form_for (@packer) do |a| %>
+      <p>Let's start from the beggining.</p>
+      <p>Who are you ?</p>
+      <%= a.input :first_name %>
+      <%= a.input :last_name %>
+      <%= a.input :sexe, as: :radio_buttons,
+      collection: ['Male', 'Female'], wrapper: :vertical_radio_and_checkboxes %>
+      <%= a.input :age %>
+      <%= a.input :nationality %>
+      <p>What is your activities today ?</p>
+      <%= a.input :job %>
+      <p>Can you present a bit yourself ? You can tell whatever you want from your story</p>
+      <%= a.input :story %>
+      <p>Can you explain about your skills (and education if you want to) ?</p>
+      <p>What about your experience ?</p>
 
-  <%= a.input :skype %>
-  <%= a.input :phone %>
-  <%= a.input :website %>
-  <%= a.input :facebook %>
-  <%= a.input :instagram %>
-  <%= a.input :other_link %>
-  <%= a.input :newsletter %>
-  <%= a.input :cover_picture, as: :attachinary %>
-  <%= a.input :profile_pictures, as: :attachinary %>
-<%= a.submit class: "btn btn-secondary" %>
-<% end %>
+      <p>To give the opportunity to
+      <p>What are your main values (3 maximum)</p>
+      <%= a.input :value1, label: false %>
+      <%= a.input :value2, label: false %>
+      <%= a.input :value3, label: false %>
+      <p>What is your favorite quote</p>
+      <%= a.input :quote, label: false %>
+      <%= a.input :quote_author, label: "who said that ?" %>
+      <p>Address </p>
+      <%= a.input :address %>
+      <%= a.input :city %>
+      <%= a.input :zip_code %>
+      <%= a.input :country, as: :string %>
+
+      <%= a.input :skype %>
+      <%= a.input :phone %>
+      <%= a.input :website %>
+      <%= a.input :facebook %>
+      <%= a.input :instagram %>
+      <%= a.input :other_link %>
+      <%= a.input :newsletter %>
+      <%= a.input :cover_packer, as: :attachinary %>
+      <%= a.input :profile_picture, as: :attachinary %>
+    <%= a.submit class: "btn btn-secondary" %>
+    <% end %>
+  </div>
+</section>

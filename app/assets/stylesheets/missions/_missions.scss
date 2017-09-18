@@ -1,0 +1,70 @@
+#mission_index {
+  .banner {
+    h1{
+      margin: 0px 0px 10px 0px;
+      font-weight:600;
+    }
+    h2 {
+      margin: 0px;
+      font-weight:300;
+    }
+    @media screen and (max-width: 767px) {
+      h1 {font-size: 20px}
+      h2 {font-size: 18px}
+    }
+  }
+
+  .filters{
+    margin: 10px 0px;
+    a {
+      padding: 5px 0px;
+      margin: 0px 10px;
+      color: $black;
+      @media screen and (min-width: 992px) {font-size: 14px}
+      @media screen and (min-width: 768px) and (max-width: 991px) {font-size: 12px}
+      @media screen and (max-width: 767px) {font-size: 11px}
+    }
+    li.active > a{
+      color: $black;
+      background-color: white;
+      border-bottom: 3px solid $blue;
+    }
+  }
+
+  #introduction {
+    padding: 10px 0px;
+    text-align:center;
+    p {
+      margin:0;
+    }
+    h2 {
+      margin:5px 0px;
+      text-transform:none;
+    }
+    .introduction_container {
+      margin:auto;
+      @media screen and (min-width: 992px) {
+        width: 50%;
+        p {font-size: 14px}
+        h2 {font-size: 16px}
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        width: 60%;
+        p {font-size: 12px}
+        h2 {font-size: 14px}
+      }
+      @media screen and (max-width: 767px) {
+        width: 85%;
+        p {font-size: 11px}
+        h2 {font-size: 12px}
+      }
+    }
+  }
+  .isotope-container {
+    min-height: 30vh;
+    margin-bottom:25px;
+  }
+}
+
+
+

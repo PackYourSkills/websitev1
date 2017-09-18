@@ -7,6 +7,8 @@ class MissionsController < ApplicationController
     # selection of the mission
     @all_missions = policy_scope(Mission)
     @public_missions = @all_missions.where(status: 'online')
+    @constants = YAML.load_file(Rails.root.join('config', 'constants.yml'))
+    @url_cover = @constants["img_banner_url"]["paris"]
   end
 
   def new
@@ -54,10 +56,10 @@ class MissionsController < ApplicationController
   def mission_params
     params.require(:mission).permit(:title, :context, :description, :duration, :skill, :material,
     :referent_first_name, :referent_last_name, :referent_role, :referent_phone, :referent_email,
-    :host_first_name, :host_last_name, :host_role, :host_phone,
+    :host_first_name, :host_last_name, :host_role, :host_phone, :kind_of_hosting,
     :description_hosting_place, :hosting_place_picture, :city, :country, :address, :zip_code,
-    :closest_metro_hosting_place, :nb_min_ride, :other_comment, :status,
-    :latitude, :longitude, :cover_picture, :referent_picture, :host_picture)
+    :closest_metro_hosting_place, :nb_min_ride, :nb_min_to_center, :other_comment, :status,
+    :latitude, :longitude, :cover_mission, :referent_picture, :host_picture)
   end
 end
 

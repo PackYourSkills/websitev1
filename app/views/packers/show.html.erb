@@ -1,1 +1,19 @@
-<h2>Hello there, it is Packer#Show <%= @packer.first_name %></h2>
+<div id="packer_show">
+<!-- Banner Part -->
+  <section id="banner_packer" class="banner" style="background-image: linear-gradient(rgba(80,180,125,0.5), rgba(80,180,125,0.5)), url('<%= cl_image_path @packer.url_cover %>')" >
+    <div class="banner_content">
+      <h1>Your profile</h1>
+    </div>
+  </section>
+
+<!-- packer_mission_show Part -->
+  <section id="summary_packer_show" class="summary_global_show section_green">
+    <div class='logo'>
+      <div class='box box_ratio_1_1' style="background-image: url('<%= cl_image_path @packer.url_profile_picture, gravity: :face %>')">
+      </div>
+    </div>
+    <div class='information'>
+      <p><strong><%= @packer.first_name.upcase %> <%= @packer.last_name.upcase %></strong></p>
+    </div>
+  </section>
+

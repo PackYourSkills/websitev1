@@ -13,7 +13,8 @@
     right:0;
   }
   a:hover{
-    background-color:rgba(255,255,255,0.3);
+    background-color:rgba(255,255,255,0.5);
+    box-shadow: -1px 2px 5px 1px rgba(138,215,218, 0.7);
   }
   .banner_card_mission {
     position: relative;
@@ -32,7 +33,7 @@
   .info_card_mission {
     padding:5px;
     p {
-      @media screen and (min-width: 992px) {font-size:14px;}
+      @media screen and (min-width: 992px) {font-size:12px;}
       @media screen and (min-width: 768px) and (max-width: 991px) {font-size:12px;}
       @media screen and (max-width: 767px) {font-size:10px;}
     }

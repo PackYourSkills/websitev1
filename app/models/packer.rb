@@ -2,8 +2,10 @@ class Packer < ApplicationRecord
  ###### require_relative '../services/'
 
   belongs_to :user
-  has_attachments :profile_pictures, maximum: 2
-  has_attachment :cover_picture
+  has_many :connections, dependent: :destroy
+
+  has_attachment :profile_picture
+  has_attachment :cover_packer
 
   after_create :send_welcome_email
 
@@ -17,7 +19,21 @@ class Packer < ApplicationRecord
   geocoded_by :full_address
   after_validation :geocode, if: :full_address_changed?
 
+  def url_cover
+    open_constants
+    self.cover_packer.nil? ? @constants["img_placeholder_url"][0] : self.cover_packer.path
+  end
+
+  def url_profile_picture
+    open_constants
+    self.profile_picture.nil? ? @constants["img_placeholder_url"][3] : self.profile_picture.path
+  end
+
   private
+
+  def open_constants
+    @constants = YAML.load_file(Rails.root.join('config', 'constants.yml'))
+  end
 
   def subscribe_to_newsletter
     SubscribeToNewsletterService.new.call(self.user) if self.newsletter

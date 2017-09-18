@@ -191,7 +191,7 @@
 /*  SECONDARY NAVBAR
 /*---------------------------------------------------------------------*/
 
-  #secondary_navbar {
+  .secondary_navbar {
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -204,7 +204,7 @@
       width:100%;
     }
     .nav_bar_items:hover{
-      background-color:$blue;
+      background-color:$red;
     }
 
     a {

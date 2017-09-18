@@ -28,10 +28,11 @@ private
 
   def packer_params
     params.require(:packer).permit(:first_name, :last_name, :sexe, :age, :nationality, :story, :job,
+    :skills, :education, :experience,
     :value1, :value2, :value3, :quote, :quote_author,
     :city, :country, :address, :zip_code,
     :skype, :phone, :website, :cv_link, :facebook, :instagram, :other_link,
-    :newsletter, :latitude, :longitude,:cover_picture, profile_pictures: [])
+    :newsletter, :latitude, :longitude,:cover_packer, :profile_picture)
   end
 end
 

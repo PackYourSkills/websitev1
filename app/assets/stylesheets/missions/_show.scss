@@ -16,103 +16,33 @@
 /*  0. GLOBAL STYLES
 /*---------------------------------------------------------------------*/
 
-  img {
-    max-width:100%;
-    height: auto;
-  }
-
-  h2 {
-    text-transform:uppercase;
-    font-size:22px;
-    font-weight:600;
-  }
-
   table {
-    margin: 20px 0px;
-    width:100%;
-    color: $black;
-    p {
-      text-align:center;
-      @media screen and (min-width: 992px) {
-        font-size: 16px;
-      }
-      @media screen and (min-width: 768px) and (max-width: 991px) {
-        font-size: 14px;
-      }
-      @media screen and (max-width: 767px) {
-        font-size: 10px;
-      }
-    }
     th {
       border:solid 3px $blue;
-      padding:10px;
-      background-color: rgba(255,255,255,0.75);
     }
   }
 
-  .row {
-    padding: 0px 15px;
-  }
-
 /*---------------------------------------------------------------------*/
-/*  BANNER MISSION
+/*  NAVBAR MISSION
 /*---------------------------------------------------------------------*/
 
-  #banner {
-    .banner_content h1 {
-      color:white;
-    }
+#mission_show_navbar {
+  .nav_bar_items:hover{
+    background-color:$blue;
   }
+
+  .call2action:hover {
+    background-color:$gray;
+  }
+}
 
 
 /*---------------------------------------------------------------------*/
 /*  SUMMARY MISSION
 /*---------------------------------------------------------------------*/
 
+
   #summary_mission_show {
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    p {
-      color:white;
-    }
-    .box {
-      padding: 5px;
-      margin: 5px 5px;
-      border-radius: 4px;
-    }
-    .social_media {
-      text-align:center;
-      .social-icon-list a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color:white;
-        margin:10px;
-        border: 1px solid white;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
-        @media screen and (min-width: 768px) {
-          width: 40px;
-          height: 40px;
-          line-height: 40px;
-          font-size: 16px;
-        }
-        @media screen and (max-width: 767px) {
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
-          font-size: 12px;
-        }
-      }
-      .social-icon-list a:hover {
-        color: $black;
-        border: 1px solid $black;
-        opacity: 0.7;
-      }
-    }
     @media screen and (min-width: 992px) {
       padding: 20px 150px;
       .logo {
@@ -153,7 +83,6 @@
       }
     }
   }
-
 /*---------------------------------------------------------------------*/
 /*  CREW
 /*---------------------------------------------------------------------*/

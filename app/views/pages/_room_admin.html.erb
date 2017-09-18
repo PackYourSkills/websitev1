@@ -8,4 +8,11 @@
   <p> ---- </p>
 <% end %>
 
+<% @packers.each_with_index do |packer, index| %>
+  <p> -------- </p>
+  <p>Packer <%= index + 1 %> - <%= packer.first_name %> <% packer.last_name %></p>
+  <p><%= link_to "See details", packer_path(packer.id) %> - <%= link_to "Edit", edit_packer_path(packer.id) %></p>
+  <p> ---- </p>
+<% end %>
+
 <p><%= link_to "Hey Nelson, you have all the power", rails_admin_path %></p>
