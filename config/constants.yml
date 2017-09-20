@@ -28,6 +28,9 @@ img_placeholder_url:
   6: 'v1505383046/texture/texture11_zajsmd.jpg'
 
 img_banner_url:
-  packer: 'v1505688931/IApply_jfb8wq.jpg'
+  packer: 'v1505688931/IAmAPacker_uwcple.jpg'
   crew: 'v1505688931/IAmACrew_jgqmuq.jpg'
   paris: 'v1505688931/IApply_jfb8wq.jpg'
+  room_packer: 'v1505826230/Room_packer_fnv8ng.jpg'
+
+language_level: ['Basic notion','Beginner','Intermediate','Fluent','Mother tongue / bilingual']

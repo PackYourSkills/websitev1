@@ -224,31 +224,11 @@
   }
 
   #value_mission_show {
-    .container {
-      @media screen and (min-width: 992px) {
-        padding-left:75px;
-        padding-right:200px;
-      }
-      @media screen and (min-width: 768px) and (max-width: 991px) {
-        padding-left:50px;
-        padding-right:150px;
-      }
-    }
     h2 {
       margin-top:0px;
     }
-    .section_yellow {
-      padding: 22px 0px;
-    }
     ul {
       color: $black;
-    }
-
-    @media screen and (min-width: 768px) {
-      padding-bottom: 90px;
-    }
-    @media screen and (max-width: 767px) {
-      padding-bottom: 60px;
     }
   }
 
@@ -300,5 +280,10 @@
       height:50%;
       top:10%;
     }
+  }
+
+  .call2action {
+    text-align:center;
+    .btn {margin: 30px 0px;padding:25px 100px}
   }
 }

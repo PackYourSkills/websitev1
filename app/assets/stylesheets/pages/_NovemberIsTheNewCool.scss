@@ -181,13 +181,7 @@
   }
 
   #november_intro::before {
-    content: "";
-    width:100%;
-    position:absolute;
     top:-30px;
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-image: url("/november/november.redshape.png");
     @media screen and (min-width: 992px) {
       height:140%;
       background-size: auto 100% ;
@@ -226,21 +220,15 @@
   #november_description {
     z-index:2;
   }
+
   #november_description::before {
-    content: "";
-    width:100%;
-    position:absolute;
-    background-repeat: no-repeat;
-    background-position: left;
     @media screen and (min-width: 768px) {
       height:180%;
       top:-40%;
-      background-image: url("/november/november.blueshape.png");
       background-size: 40% auto ;
     }
     @media screen and (max-width: 767px) {
       height:75%;
-      background-image: url("/november/november.blueshape.phone.png");
       background-size: auto 100% ;
     }
   }

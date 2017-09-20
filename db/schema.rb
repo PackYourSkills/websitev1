@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170918010308) do
+ActiveRecord::Schema.define(version: 20170918173800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20170918010308) do
     t.string   "name"
     t.string   "mission"
     t.text     "description"
-    t.date     "creation_date"
     t.integer  "nb_collaborators"
     t.integer  "average_age"
     t.integer  "percentage_women"
@@ -75,6 +74,7 @@ ActiveRecord::Schema.define(version: 20170918010308) do
     t.string   "zip_code"
     t.string   "closest_metro_working_place"
     t.string   "cause"
+    t.string   "creation_date"
     t.index ["user_id"], name: "index_crews_on_user_id", using: :btree
   end
 
@@ -117,7 +117,6 @@ ActiveRecord::Schema.define(version: 20170918010308) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "sexe"
-    t.integer  "age"
     t.string   "nationality"
     t.text     "story"
     t.string   "job"
@@ -138,14 +137,17 @@ ActiveRecord::Schema.define(version: 20170918010308) do
     t.string   "instagram"
     t.string   "other_link"
     t.boolean  "newsletter"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "user_id"
     t.float    "latitude"
     t.float    "longitude"
     t.text     "skills"
-    t.text     "education"
     t.text     "experience"
+    t.date     "date_of_birth"
+    t.string   "level_french"
+    t.string   "level_english"
+    t.string   "other_languages"
     t.index ["user_id"], name: "index_packers_on_user_id", using: :btree
   end
 

@@ -25,38 +25,136 @@
 /*  SUMMARY MISSION
 /*---------------------------------------------------------------------*/
 
-
   #summary_packer_show {
+    text-align:left;
+    .information a {
+      color:white;
+    }
     @media screen and (min-width: 992px) {
       padding: 20px 150px;
       .logo {
-        flex: 0 0 25%;
+        flex: 0 0 20%;
       }
       .information {
         flex: 0 0 65%;
-        p { font-size: 18px; margin: 3px 0px;text-align:left;}
+        p, a { font-size: 18px; margin: 3px 0px;}
       }
     }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       padding: 20px 30px;
       .logo {
-        flex: 0 0 30%;
+        flex: 0 0 25%;
       }
       .information {
         flex: 0 0 60%;
-        p { font-size: 15px; margin: 2px 0px;text-align:right;}
+        p, a { font-size: 15px; margin: 2px 0px;}
       }
     }
     @media screen and (max-width: 767px) {
       padding: 5px 5px;
       .logo {
-        flex: 0 0 35%;
+        flex: 0 0 30%;
       }
       .information {
         flex: 0 0 55%;
-        p { font-size: 10px; margin: 2px 0px;text-align:right;}
+        p, a { font-size: 10px; margin: 2px 0px;}
       }
     }
   }
 
+/*---------------------------------------------------------------------*/
+/*  STORY
+/*---------------------------------------------------------------------*/
+
+  #packer_story {
+    margin-top:50px;
+    .container {
+      @media screen and (min-width: 768px) {
+        padding-right:200px;
+        padding-left:100px;
+      }
+      @media screen and (max-width: 767px) {
+        padding-right:100px;
+      }
+    }
+  }
+  .section_red2_right::before {
+    @media screen and (min-width: 768px) {
+      height:150%;
+      top:-10%;
+    }
+    @media screen and (max-width: 767px) {
+      height:80%;
+      top:-5%;
+    }
+  }
+
+
+/*---------------------------------------------------------------------*/
+/*  SKILLS
+/*---------------------------------------------------------------------*/
+
+  #packer_skill {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-right:150px;
+        padding-left:150px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-right:100px;
+        padding-left:200px;
+      }
+      @media screen and (max-width: 767px) {
+        padding-left:70px;
+        .language {text-align:center;}
+      }
+    }
+    .col-xs-6, .col-xs-12 {padding-left:0px;}
+  }
+
+  .section_green_yellow_left::before {
+    @media screen and (min-width: 768px) {
+      bottom:10%;
+      height:90%;
+    }
+    @media screen and (max-width: 767px) {
+      bottom:5%;
+      height:70%;
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/*  VALUES
+/*---------------------------------------------------------------------*/
+
+  #value_packer_show {
+    min-height:150px;
+    margin-bottom:20px;
+    padding-bottom:0px;
+    .section_yellow {
+      h2 {
+        text-align:center;
+      }
+      .container {
+        padding: 0px;
+      }
+    }
+    .values_packer {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        padding: 0px 10px;
+        text-align:center;
+      }
+    }
+  }
+/*---------------------------------------------------------------------*/
+/*  APPLICATION
+/*---------------------------------------------------------------------*/
+  #application_packer_show {
+    text-align:center;
+    min-height:150px;
+    margin-bottom:20px;
+  }
 }

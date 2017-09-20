@@ -1,6 +1,1 @@
-<div class="banner">
-  <div class="banner_content">
-    <h2>Welcome in your room</h2>
-  </div>
-</div>
 <%= current_user.role == "admin" ? (render 'room_admin') : (current_user.role == "crew" ? (render 'room_crew') : (render 'room_packer')) %>

@@ -17,6 +17,7 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require init_attachinary.js
+//= require template_attachinary.js.coffee
 //= require underscore
 //= require gmaps/google
 //= require navbar

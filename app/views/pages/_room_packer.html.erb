@@ -1,5 +1,76 @@
-<h2><%= current_user.role %></h2>
+<div id="room_packer" class="room">
 
-<p><%= link_to "See your profile", packer_path(current_user.packer.id) %></p>
-<p><%= link_to "Edit your profile", edit_packer_path(current_user.packer.id) %></p>
-<p><%= link_to "See all missions", missions_path %></p>
+<!-- Banner Part -->
+  <section class="banner banner_room" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @banner_url %>')">
+    <div class="banner_content">
+      <h2>Welcome on board</h2>
+      <p>We call this page your room. You can always come back here clicking on Pack Your Skills logo</p>
+    </div>
+  </section>
+
+  <section class= "call2action">
+    <div class="container">
+      <% unless @packer.progress == 100 %>
+        <p>Your profile is <%= @packer.progress %>% full, you need to reach 100% to apply to a mission.</p>
+      <% end %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="box">
+            <p><%= link_to "Edit your profile", edit_packer_path(current_user.packer.id) %></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="box">
+            <p><%= link_to "See your profile", packer_path(current_user.packer.id) %></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="box">
+            <p><%= link_to "See all missions", missions_path %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="connections_room_packer">
+    <div class="container container_flex">
+      <div class="box">
+        <h2>Your applications</h2>
+        <% if @packer.connections.size == 0 %>
+          <p>You don't have any application yet! Don't you wanna come in Paris in November ?</p>
+          <p><strong><%= link_to "Discover all the amazing opporunities", missions_path %></strong></p>
+        <% else %>
+          <% if @all_draft.size != 0 %>
+            <div class="box_application">
+              <h3> Your draft application(s) </h3>
+              <% if @packer.progress == 100 %>
+                <p class="comment comment_success">Your profile is full you can now send your application</p>
+                <% @all_draft.each_with_index do |connection, index| %>
+                  <p><%= index + 1 %> - <strong><%= connection.mission.crew.name %></strong> - <%= link_to "edit and send", edit_mission_connection_path(connection.mission.id, connection.id) %> </p>
+                <% end %>
+              <% else %>
+                <p class="comment comment_warning">Your profile is <%= @packer.progress %>% full, you need to reach 100% before sending your application</p>
+                <% @all_draft.each_with_index do |connection, index| %>
+                  <p><%= index + 1 %> - <strong><%= connection.mission.crew.name %></strong> - <%= link_to "edit", edit_mission_connection_path(connection.mission.id, connection.id) %> </p>
+                <% end %>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @all_other.size != 0 %>
+            <div class="box_application">
+              <h3> Your online application(s) </h3>
+              <p class="comment"> Isis or Maxime from Pack Your Skills will come back to you soon</p>
+              <% @all_other.each_with_index do |connection, index| %>
+                <p><%= index + 1 %> - <strong><%= connection.mission.crew.name %></strong></p>
+              <% end %>
+            </div>
+          <% end %>
+
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+</div>

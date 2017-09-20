@@ -1,0 +1,34 @@
+<div class="connection">
+  <section id="banner_packer_edit" class="banner" >
+    <div class="banner_content">
+      <h1>Application for <%= @mission.crew.name %></h1>
+    </div>
+  </section>
+  <section id="mission_form" class="form">
+    <div class="container_form">
+      <%= simple_form_for [@mission, @connection] do |a| %>
+        <%= a.hidden_field :packer_id, :value => current_user.packer.id %>
+        <p>The project will receive your profile, this text and your contact</p>
+        <p>You can tell your motivation for that mission but also everything that seems to be important for you to says to that project</p>
+        <p>Do not hesitate to express about your skills and experiences valuable for that missions</p>
+        <p>Be yourself, they are waiting for you</p>
+        <%= a.input :motivation, class:  'text_field', label: false %>
+        <p>Do you want to add any documents ? (3 maximum)
+        <%= a.input :documents, label: false, as: :attachinary %>
+
+      <% unless @connection.online? %>
+        <%= a.submit 'Save', class: "btn" %>
+      <% end %>
+        <% if current_user.packer.progress == 100 %>
+          <%= a.submit 'Send', class: "btn btn-success"  %>
+        <% else %>
+          <%= a.submit 'Save and edit my profile', class: "btn btn-primary"  %>
+          <p class="comment comment_warning">Your profile is <%= current_user.packer.progress %>% full, you need to reach 100% before sending your application</p>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+</div>
+
+
+
