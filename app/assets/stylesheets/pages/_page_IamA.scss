@@ -1,0 +1,110 @@
+.page_IamA {
+  margin-bottom:50px;
+  h2 {
+    @media screen and (min-width: 992px) {font-size:21px;}
+    @media screen and (min-width: 768px) and (max-width: 991px) {font-size:18px;}
+    @media screen and (max-width: 767px) {font-size:16px;}
+    padding-top:20px;
+    text-transform: uppercase;
+  }
+
+  p{
+    @media screen and (min-width: 992px) {font-size:16px;}
+    @media screen and (min-width: 768px) and (max-width: 991px) {font-size:14px;}
+    @media screen and (max-width: 767px) {font-size:12px;}
+  }
+
+  .banner {
+    background-repeat: no-repeat;
+    background-size: cover ;
+    @media screen and (min-width: 768px) {min-height: 400px;}
+    @media screen and (max-width: 767px) {min-height: 200px;}
+  }
+
+  .banner_iamapacker{
+    background-position-x: center;
+    background-position-y: 10%;
+  }
+
+  .banner_iamacrew{
+    background-position-x: center;
+    background-position-y: center;
+  }
+
+  .question_left {
+    .container {
+      @media screen and (min-width: 768px) {padding-right:300px;}
+      @media screen and (max-width: 767px) {padding-right:50px;}
+    }
+  }
+
+  .question_right {
+    .container {
+      @media screen and (min-width: 768px) {padding-left:300px;}
+      @media screen and (max-width: 767px) {padding-left:100px;}
+    }
+  }
+
+  .section_green2_right::before {
+    @media screen and (min-width: 768px) {
+      height:70%;
+      top:5%;
+    }
+    @media screen and (max-width: 767px) {
+      height:60%;
+      bottom:0;
+      background-size: 60% auto ;
+    }
+  }
+
+  .section_blue_shape_photo_left::before {
+    z-index:-1;
+    @media screen and (min-width: 768px) {
+      top:-25%;
+      height:150%;
+      background-size: 40% auto ;
+    }
+    @media screen and (max-width: 767px) {
+      top:-25%;
+      height:125%;
+      background-size: 80% auto ;
+    }
+  }
+
+  .section_red_shape_photo_right::before {
+    @media screen and (min-width: 768px) {
+      height:70%;
+      top:5%;
+      background-size: 30% auto ;
+    }
+    @media screen and (max-width: 767px) {
+      height:100%;
+      top:25%;
+      background-size: auto 65% ;
+      background-image: url("/home.red1.png");
+    }
+    z-index:-1;
+  }
+
+  .section_yellow1_left::before {
+    z-index:-1;
+    @media screen and (min-width: 768px) {
+      top:-25%;
+      height:150%;
+      background-size: 30% auto ;
+    }
+    @media screen and (max-width: 767px) {
+      top:-25%;
+      height:125%;
+      background-size: auto 50% ;
+    }
+  }
+  .call2action {
+    text-align:center;
+  }
+
+  .btn {
+    margin:15px;
+  }
+
+}

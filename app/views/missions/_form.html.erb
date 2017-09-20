@@ -1,44 +1,40 @@
-<section id="mission_form" class="form">
-    <div class="container">
-    <%= simple_form_for (@mission) do |a| %>
-      <%= a.input :title, required: true %>
-      <%= a.input :cover_picture, as: :attachinary %>
-      <%= a.input :context, required: true %>
-      <%= a.input :description, required: true %>
-      <%= a.input :duration, required: true %>
-      <%= a.input :skill, required: true %>
-      <%= a.input :material, required: true %>
+<%= simple_form_for (@mission) do |a| %>
+  <%= a.input :title %>
+  <%= a.input :cover_mission, as: :attachinary %>
+  <%= a.input :context %>
+  <%= a.input :description %>
+  <%= a.input :duration %>
+  <%= a.input :skill %>
+  <%= a.input :material %>
 
-    <!-- Referent -->
-      <%= a.input :referent_first_name, required: true %>
-      <%= a.input :referent_last_name, required: true %>
-      <%= a.input :referent_role, required: true %>
-      <%= a.input :referent_phone, required: true %>
-      <%= a.input :referent_email, required: true %>
-      <%= a.input :referent_picture, as: :attachinary %>
+<!-- Referent -->
+  <%= a.input :referent_first_name %>
+  <%= a.input :referent_last_name %>
+  <%= a.input :referent_role %>
+  <%= a.input :referent_phone %>
+  <%= a.input :referent_email %>
+  <%= a.input :referent_picture, as: :attachinary %>
 
-    <!-- Host -->
-      <%= a.input :host_first_name, required: true %>
-      <%= a.input :host_last_name, required: true %>
-      <%= a.input :host_role, required: true %>
-      <%= a.input :host_phone, required: true %>
-      <%= a.input :host_picture, as: :attachinary %>
+<!-- Host -->
+  <%= a.input :host_first_name %>
+  <%= a.input :host_last_name %>
+  <%= a.input :host_role %>
+  <%= a.input :host_phone %>
+  <%= a.input :host_picture, as: :attachinary %>
 
-    <!-- Hosting place -->
-      <%= a.input :description_hosting_place, required: true %>
-      <%= a.input :hosting_place_picture, as: :attachinary %>
+<!-- Hosting place -->
+  <%= a.input :description_hosting_place %>
+  <%= a.input :hosting_place_picture, as: :attachinary %>
 
-      <p>Address </p>
-      <%= a.input :address, required: true %>
-      <%= a.input :city, required: true %>
-      <%= a.input :zip_code, required: true %>
-      <%= a.input :country, as: :string, required: true %>
-      <%= a.input :closest_metro_hosting_place, required: true %>
+  <p>Address </p>
+  <%= a.input :address %>
+  <%= a.input :city %>
+  <%= a.input :zip_code %>
+  <%= a.input :country, as: :string %>
+  <%= a.input :closest_metro_hosting_place %>
 
-      <%= a.input :nb_min_ride, required: true %>
-      <%= a.input :other_comment %>
-      <%= a.submit 'Save & keep offline', class: "btn btn-default" if (@mission.status == nil || @mission.status == 'draft' || @mission.status == 'suspended') %>
-      <%= a.submit 'Publish', class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</section>
+  <%= a.input :nb_min_ride %>
+  <%= a.input :other_comment %>
+  <%= a.submit 'Save & keep offline', class: "btn btn-default" if (@mission.status == nil || @mission.status == 'draft' || @mission.status == 'suspended') %>
+  <%= a.submit 'Publish', class: "btn btn-primary" %>
+<% end %>

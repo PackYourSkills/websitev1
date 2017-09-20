@@ -1,10 +1,21 @@
-
+<div class="banner">
+  <div class="banner_content">
+    <h2>Admin</h2>
+  </div>
+</div>
 <% @missions.each_with_index do |mission, index| %>
   <p> -------- </p>
   <p>Mission <%= index + 1 %> | status: <%= mission.status %></p>
   <h1><%= mission.title %></h1>
   <p><%= link_to "See details", mission_path(mission.id) %> - <%= link_to "Edit", edit_mission_path(mission.id) %></p>
   <p>For the crew  <%= mission.crew.name %><%= link_to "Edit Crew info", edit_crew_path(mission.crew.id) %></p>
+  <p> ---- </p>
+<% end %>
+
+<% @packers.each_with_index do |packer, index| %>
+  <p> -------- </p>
+  <p>Packer <%= index + 1 %> - <%= packer.first_name %> <% packer.last_name %></p>
+  <p><%= link_to "See details", packer_path(packer.id) %> - <%= link_to "Edit", edit_packer_path(packer.id) %></p>
   <p> ---- </p>
 <% end %>
 

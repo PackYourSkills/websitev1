@@ -14,17 +14,17 @@ class Crew < ApplicationRecord
 
   def url_logo
     open_constants
-    self.logo.nil? ? @constants["texture_url"][5]  : (cl_image_path self.logo.path)
+    self.logo.nil? ? @constants["img_placeholder_url"][4]  : self.logo.path
   end
 
   def url_team_picture
     open_constants
-    self.team_picture.nil? ? @constants["texture_url"][6]  : (cl_image_path self.team_picture.path)
+    self.team_picture.nil? ? @constants["img_placeholder_url"][5]  : self.team_picture.path
   end
 
   def url_working_place_picture
     open_constants
-    self.working_place_picture.nil? ? @constants["texture_url"][7]  : (cl_image_path self.working_place_picture.path)
+    self.working_place_picture.nil? ? @constants["img_placeholder_url"][6]  : self.working_place_picture.path
   end
 
   private

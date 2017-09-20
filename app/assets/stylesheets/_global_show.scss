@@ -1,0 +1,128 @@
+.global_show {
+
+  .banner {
+    background-position:center;
+    @media screen and (min-width: 768px) {  min-height:350px;}
+    @media screen and (max-width: 767px) {  min-height:200px;}
+  }
+  img {
+    max-width:100%;
+    height: auto;
+  }
+
+  h2 {
+    text-transform:uppercase;
+    font-size:22px;
+    font-weight:600;
+  }
+
+  table {
+    margin: 20px 0px;
+    width:100%;
+    color: $black;
+    p {
+      text-align:center;
+      @media screen and (min-width: 992px) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 10px;
+      }
+    }
+    th {
+      border:solid 3px $black;
+      padding:10px;
+      background-color: rgba(255,255,255,0.75);
+    }
+  }
+
+  .row {
+    padding: 0px 15px;
+  }
+
+/*---------------------------------------------------------------------*/
+/*  SUMMARY MISSION
+/*---------------------------------------------------------------------*/
+
+  .summary_global_show {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    p {
+      color:white;
+    }
+    .box {
+      padding: 5px;
+      margin: 5px 5px;
+      border-radius: 4px;
+    }
+    .social_media {
+      text-align:center;
+      .social-icon-list a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color:white;
+        margin:10px;
+        border: 1px solid white;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        @media screen and (min-width: 768px) {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+        }
+        @media screen and (max-width: 767px) {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+        }
+      }
+      .social-icon-list a:hover {
+        color: $black;
+        border: 1px solid $black;
+        opacity: 0.7;
+      }
+    }
+  }
+/*---------------------------------------------------------------------*/
+/*  SUMMARY MISSION
+/*---------------------------------------------------------------------*/
+
+  .value_global_show {
+    .container {
+      @media screen and (min-width: 992px) {
+        padding-left:75px;
+        padding-right:200px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        padding-left:50px;
+        padding-right:150px;
+      }
+    }
+    h2 {
+      margin-top:0px;
+    }
+    .section_yellow {
+      padding: 22px 0px;
+    }
+    ul {
+      color: $black;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 90px;
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 60px;
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+<div id="iamapacker" class="page_IamA">
+  <section class="banner banner_iamapacker" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @banner_url %>')" >
+    <div class="banner_content">
+      <h1><%= t('iamapacker.title') %></h1>
+    </div>
+  </section>
+  <section class="question_left section section_green2_right section_path section_left_path" >
+    <div class="container">
+      <h2><%= t('iamapacker.q1') %></h2>
+      <p><%= t('iamapacker.a1_html') %></p>
+      <h2><%= t('iamapacker.q2') %></h2>
+      <p><%= t('iamapacker.a2_html') %></p>
+    </div>
+  </section>
+  <section class="question_right section section_blue_shape_photo_left" >
+    <div class="container">
+      <h2><%= t('iamapacker.q3') %></h2>
+      <p><%= t('iamapacker.a3_html') %></p>
+      <h2><%= t('iamapacker.q4') %></h2>
+      <p><%= t('iamapacker.a4_html') %></p>
+    </div>
+  </section>
+  <section class="call2action" >
+    <div class="container">
+      <h2><%= t('iamapacker.participate') %></h2>
+      <%= link_to t('iamapacker.call2action'), missions_path, class: "btn btn-success" %>
+      <% unless signed_in? %>
+        <p><%= t('iamapacker.later') %> - <%= link_to t('iamapacker.signup'), new_user_registration_path %></p>
+      <% end %>
+    </div>
+  </section>
+</div>

@@ -1,33 +1,214 @@
-<%= simple_form_for (@packer) do |a| %>
-  <%= a.input :first_name, required: true %>
-  <%= a.input :last_name, required: true %>
-  <%= a.input :sexe, as: :radio_buttons, required: true,
-  collection: ['Male', 'Female'], wrapper: :vertical_radio_and_checkboxes %>
-  <%= a.input :age, required: true %>
-  <%= a.input :nationality, required: true %>
-  <%= a.input :story, required: true %>
-  <%= a.input :job, required: true %>
-  <p>What are your main values (3 maximum)</p>
-  <%= a.input :value1, label: false, required: true %>
-  <%= a.input :value2, label: false %>
-  <%= a.input :value3, label: false %>
-  <p>What is your favorite quote</p>
-  <%= a.input :quote, label: false, required: true %>
-  <%= a.input :quote_author, label: "who said that ?", required: true %>
-  <p>Address </p>
-  <%= a.input :address, required: true %>
-  <%= a.input :city, required: true %>
-  <%= a.input :zip_code, required: true %>
-  <%= a.input :country, as: :string, required: true %>
+<div id="packer_edit">
+  <section id="banner_packer" class="banner" >
+    <div class="banner_content">
+      <h1>Your profile</h1>
+      <p class="quote_banner">“Be yourself, everyone else is already taken.”</p>
+      <p class="author_banner">Oscar Wilde</p>
+    </div>
+  </section>
+  <section id="packer_form" class="form">
+    <div class="container_form">
+      <%= simple_form_for (@packer) do |a| %>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">Let's start from the beggining. Behind Pack Your Skills, there are Isis and Maxime (the 2 co-founders), and you, who are you?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <p>First Name</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :first_name, label: false, required: true %>
+          </div>
+          <div class="col-xs-3">
+            <p>Last Name</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :last_name, label: false, required: true %>
+          </div>
+          <div class="col-xs-12">
+            <p class="question">Can we have a picture of you?</p>
+          </div>
+          <div class="col-xs-12">
+            <%= a.input :profile_picture, label: false, as: :attachinary, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <p>Sexe</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :sexe, label: false, as: :radio_buttons,
+            collection: ['Female', 'Male'], required: true %>
+          </div>
+          <div class="col-xs-3">
+            <p>Birthdate</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :date_of_birth, label: false, as: :date,
+            start_year: Date.today.year - 100, end_year: Date.today.year - 17,
+            order: [:month, :day, :year], required: true %>
+          </div>
+          <div class="col-xs-3">
+            <p>Nationality</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :nationality, label: false, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">Can you present a bit yourself ?</p>
+            <%= a.input :story, label: false, placeholder: 'You can tell whatever you want about you and your story', required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">What is your job (or activity) today ?</p>
+            <%= a.input :job, label: false, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">Can you explain about your education and/or skills ?</p>
+            <%= a.input :skills, label: false, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">What experiences do you have ?</p>
+            <%= a.input :experience, label: false, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">Which languages do you speak ?</p>
+          </div>
+          <div class="col-xs-2">
+            <p>English</p>
+          </div>
+          <div class="col-xs-4">
+            <%= a.input :level_english, collection: @language_level, label: false, required: true %>
+          </div>
+          <div class="col-xs-2">
+            <p>French</p>
+          </div>
+          <div class="col-xs-4">
+            <%= a.input :level_french, collection: @language_level, label: false, required: true %>
+          </div>
+          <div class="col-xs-2">
+            <p>Others</p>
+          </div>
+          <div class="col-xs-10">
+            <%= a.input :other_languages, label: false, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">Sharing the same values within a team is important to feel well with each other. Can you tell us what are your main values ? (at least one)</p>
+            <%= a.input :value1, label: false, required: true %>
+            <%= a.input :value2, label: false %>
+            <%= a.input :value3, label: false %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">What is your favorite quote?</p>
+            <%= a.input :quote, label: false, required: true %>
+          </div>
+          <div class="col-xs-4">
+            <p>Who said that?</p>
+          </div>
+          <div class="col-xs-8">
+            <%= a.input :quote_author, label: false, required: true %>
+          </div>
+          <div class="col-xs-12">
+            <p class="question">Before continuing with some practical information, let's personnalise your profile with a cover picture</p>
+          </div>
+          <div class="col-xs-12">
+            <%= a.input :cover_packer, label: false, as: :attachinary, required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">Where are you living now ?</p>
+          </div>
+          <div class="col-xs-3">
+            <p>Address</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :address, label: false, required: true %>
+          </div>
+          <div class="col-xs-3">
+            <p>City</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :city, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Zip Code</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :zip_code, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Country</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :country, label: false %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="question">And online, where can we find you ?</p>
+          </div>
+          <div class="col-xs-3">
+            <p>Skype</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :skype, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Phone</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :phone, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Website</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :website, label: false, required: true %>
+          </div>
+          <div class="col-xs-3">
+            <p>Online CV</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :cv_link, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Facebook</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :facebook, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Instagram</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :instagram, label: false %>
+          </div>
+          <div class="col-xs-3">
+            <p>Another link ?</p>
+          </div>
+          <div class="col-xs-9">
+            <%= a.input :other_link, label: false %>
+          </div>
+        </div>
+        <%= a.submit class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </section>
+</div>
 
-  <%= a.input :skype %>
-  <%= a.input :phone %>
-  <%= a.input :website %>
-  <%= a.input :facebook %>
-  <%= a.input :instagram %>
-  <%= a.input :other_link %>
-  <%= a.input :newsletter %>
-  <%= a.input :cover_picture, as: :attachinary %>
-  <%= a.input :profile_pictures, as: :attachinary %>
-<%= a.submit class: "btn btn-secondary" %>
-<% end %>

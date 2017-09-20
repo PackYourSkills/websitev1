@@ -1,14 +1,14 @@
-<div id="mission_show">
+<div id="mission_show" class="global_show">
 
 <!-- Banner Part -->
-  <section id="banner" class="banner" style="background-image: linear-gradient(rgba(138,215,218,0.5), rgba(138,215,218,0.5)), url('<%= @mission.url_cover %>')" >
+  <section id="banner_packer" class="banner" style="background-image: linear-gradient(rgba(138,215,218,0.5), rgba(138,215,218,0.5)), url('<%= cl_image_path @mission.url_cover %>')" >
     <div class="banner_content">
       <h1><%= @mission.title %></h1>
     </div>
   </section>
 
 <!-- Second Navbar Part -->
-  <section id="secondary_navbar" class='section_gray'>
+  <section id="mission_show_navbar" class='secondary_navbar section_gray'>
     <div class="nav_bar_items">
       <%= link_to t('mission.show.crew.section_title'), '#crew_mission_show' %>
     </div>
@@ -25,14 +25,14 @@
       <%= link_to t('mission.show.host.section_title'), '#host_mission_show' %>
     </div>
     <div class="nav_bar_items call2action">
-      <%= link_to t('mission.show.apply'), 'root_path' %>
+      <%= link_to t('mission.show.apply'), new_mission_connection_path(@mission.id) %>
     </div>
   </section>
 
 <!-- crew_mission_show Part -->
-  <section id="summary_mission_show" class="section_blue">
+  <section id="summary_mission_show" class="summary_global_show section_blue">
     <div class='logo'>
-      <div class='box box_ratio_1_1' style="background-image: url('<%= @mission.crew.url_logo %>')">
+      <div class='box box_ratio_1_1' style="background-image: url('<%= cl_image_path @mission.crew.url_logo %>')">
       </div>
     </div>
     <div class='social_media'>
@@ -63,7 +63,7 @@
   <section id="crew_mission_show" class="section section_path section_right_path section_yellow1_left">
     <div class='container'>
       <h2><%= t('mission.show.crew.title') %></h2>
-      <p><%= @mission.crew.name %> <%= @mission.crew.mission %></p>
+      <p><%= @mission.crew.mission %></p>
       <p><%= @mission.crew.description %></p>
       <p><u><%= t('mission.show.mission.equipment') %></u><br><%= @mission.material %></p>
     </div>
@@ -83,7 +83,7 @@
     <div class='container'>
       <h2><%= t('mission.show.workplace.title') %></h2>
       <p><%= @mission.crew.description_working_place %></p>
-      <%= image_tag @mission.crew.url_working_place_picture %>
+      <%= cl_image_tag @mission.crew.url_working_place_picture %>
     </div>
   </section>
 
@@ -92,7 +92,7 @@
     <div class='container'>
       <div class='row'>
         <h2><%= t('mission.show.team.title') %></h2>
-        <%= image_tag @mission.crew.url_team_picture %>
+        <%= cl_image_tag @mission.crew.url_team_picture %>
       </div>
       <div class='row'>
         <table>
@@ -111,7 +111,7 @@
       </div>
       <div class='row referent_and_host'>
         <div class='portrait'>
-          <div class="avatar" style="background-image: url('<%= @mission.url_referent_picture %>')" >
+          <div class="avatar" style="background-image: url('<%= cl_image_path @mission.url_referent_picture, gravity: :face %>')" >
           </div>
         </div>
         <div class='info'>
@@ -123,7 +123,7 @@
   </section>
 
 <!-- Values Part -->
-  <section id="value_mission_show" class="section section_path section_left_path">
+  <section id="value_mission_show" class="section section_path section_left_path value_global_show">
     <div class="section_yellow">
       <div class='container'>
         <h2><%= t('mission.show.values.title') %></h2>
@@ -151,7 +151,7 @@
       </div>
       <div class='row referent_and_host'>
         <div class='portrait'>
-          <div class="avatar" style="background-image: url('<%= @mission.url_host_picture %>')" >
+          <div class="avatar" style="background-image: url('<%= cl_image_path @mission.url_host_picture, gravity: :face %>')" >
           </div>
         </div>
         <div class='info'>
@@ -165,18 +165,18 @@
       <div class='row'>
         <table>
           <tr>
-            <th><p>????</p></th>
-            <th><p><%= t('mission.show.host.distance_paris') %> ??<%= t('mission.show.host.min_by_metro') %></p></th>
+            <th><p><%= @mission.kind_of_hosting %></p></th>
+            <th><p><%= t('mission.show.host.distance_paris') %><%= @mission.nb_min_to_center %></p></th>
           </tr>
           <tr>
-            <th><p><%= t('mission.show.host.distance_workplace') %> ??<%= t('mission.show.host.min_by_metro') %></p></th>
-            <th><p><%= @mission.closest_metro_hosting_place %> <%= t('mission.show.host.close_subway') %></p></th>
+            <th><p><%= t('mission.show.host.distance_workplace') %><%= @mission.nb_min_ride %></p></th>
+            <th><p><%= t('mission.show.host.close_subway') %> <%= @mission.closest_metro_hosting_place %></p></th>
           </tr>
         </table>
       </div>
       <div class='row'>
         <div class="col-xs-12 col-sm-6">
-          <div class="box_ratio_2_3 hosting_place_picture" style="background-image: url('<%= @mission.url_hosting_place_picture %>')" >
+          <div class="box_ratio_2_3 hosting_place_picture" style="background-image: url('<%= cl_image_path @mission.url_hosting_place_picture %>')" >
           </div>>
         </div>
         <div class="col-xs-12 col-sm-6">
@@ -190,6 +190,11 @@
       </div>
     </div>
   </section>
+<!-- Values Part -->
+  <section class="call2action">
+    <%= link_to t('mission.show.apply'), new_mission_connection_path(@mission.id), class: "btn btn-primary btn-lg" %>
+  </section>
+
 </div>
 
 

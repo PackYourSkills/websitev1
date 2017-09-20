@@ -128,7 +128,50 @@ en:
         call2action: 'Send'
     follow: "Follow everything that's going on :"
 
+  iamapacker:
+    title: "Who are the Packers?"
+    q1: 'WHAT DOES IT MEAN TO BE A « PACKER » ?'
+    a1_html: 'Packers are people from all over the world, whatever their age, who want to travel differently. They want to mix with the local culture and rope their skills in to feel useful during their trip.<br><br>With Pack Your Skills, Packers can volunteer to help local entrepreneurs (whom we call « Crews ») during their trip. In exchange for their help, they are hosted and fed by the entrepreneur or someone from his team. Both moments, professional and social, are a great opportunity to discover the local culture and entrepreneurial ecosystem.<br><br>Pack Your Skills sources projects who need help and have them put offers online on www.packyourskills.com, where Packers can see them and apply. We only choose entrepreneurs who are more concerned about solving a problem and having a positive impact than making tons of money.'
+    q2: 'WHY DO WE CALL THEM « PACKERS » ?'
+    a2_html: 'The name « Packers » comes from « to pack », a verb related to traveling (pack your bag, backpackers…). As pretty clear in our name, the idea is to « pack your skills » with all the other stuff in your bag, and to come use them during your trip.'
+    q3: 'HOW MUCH DOES IT COST TO BE A PACKER ?'
+    a3_html: 'For legal reasons, Packers need to become members of our association. To do so, they need to pay for a yearly 10€ subscription.<br><br> The traveling expenses (airplane, bus, Visa…) are at the expense of the Packer.'
+    q4: 'WHAT IS THE PROCESS TO BECOME A PACKER ?'
+    a4_html: 'The first step to becoming a Packer is to Sign Up as a Packer. Once you’ve signed up, you can : <br> - Participate in November’s round in Paris : you will be able to see the list of opportunities for November and apply to those you like <br> - Participate later in Paris : after November’s round, projects in Paris will be able to continuously put offers online so you will be able to apply <br>- Participate later in another European city : we will open a new European city in 2018'
+    participate: "You wanna participate ?"
+    call2action: "See all the opportunities for Paris"
+    later: "You wanna participate later"
+    signup: "Sign up"
+  iamacrew:
+    title: "Who are the Crews?"
+    q1: 'WHAT DOES IT MEAN TO BE A « CREW » ?'
+    a1_html: 'Crews are teams whose primary concern is to solve a problem and have a positive impact, and not making tons of money. They have projects they cannot conduct because they lack skills, time or money.<br><br>With Pack Your Skills, they can have someone (whom we call « Packer ») help on this project with his/her skills. In exchange for this volunteer help, Crews are asked to provide food and accommodation. Packers are foreigners who come help during their trip, so the whole experience is a great opportunity to meet someone from another culture, get a fresh viewpoint, and break from routine.'
+    q2: 'WHY DO WE CALL THEM « CREWS » ?'
+    a2_html: 'The name « Crews » refers to the teams of sailors who get on a boat to live and work together for a limited journey. For us, the teams who welcome Packers are like those crews because they form an ephemeral team for a limited time, to accomplish a specific mission together.'
+    q3: 'HOW MUCH DOES IT COST TO BE A CREW ?'
+    a3_html: 'Pack Your Skills’ business model is based on the financial participation of Crews. Since 2017 is our first year, we are testing different things. As we wanted to be inclusive and see how much Crews valued our service, we didn’t fix a price. Each Crew can choose the price he wants to pay for our work.<br>In addition, for the Packer, the Crew is asked to provide or pay for :<br>- 3 meals a day<br>- the transportation between the apartment where the Packer is hosted, and the workplace.'
+    q4: 'WHAT IS THE PROCESS TO BECOME A CREW ?'
+    a4_html: 'The first step to becoming a Crew is to Sign Up as a Crew. Once you’ve signed up, someone from the Pack Your Skills team will call you at the number you gave or on Skype. After the call the team will decide if you correspond to the type of projects we’re looking for. If you do and are based in Paris, you’ll be allowed to put offers online. If you’re not based in Paris, we will need to discuss further because we haven’t opened other cities than Paris yet.'
+    participate: "You would like to host a Packer ?"
+    email: "Can you give us your email ?"
+    name: "What is the name of your project ?"
+    city: "In which city would you like to receive a Packer ?"
+
   mission:
+    index:
+      title: 'Pack Your Skills, round 3'
+      subtitle: 'NOVEMBER 5-19 | PARIS'
+      introduction:
+        intro: "You always had a boring November? In 2017, thank's to Pack Your Skills"
+        hashtag: "#NovemberIsTheNewCool"
+        explication: "We enable travellers to volunteer in a social or environmental project by offering their skills in exchange for food and accommodation."
+        call2action: "What do you think about coming to Paris in November?"
+      filter:
+        all: 'All'
+        webdev: 'Web Development'
+        graphic: 'Graphic design'
+        video: 'Video'
+        webmarket: 'Web Marketing'
     show:
       summary:
         created: 'Created in '
@@ -155,8 +198,41 @@ en:
         section_title: 'Host'
         title: 'Your host'
         distance_paris: 'Distance from Paris Center: '
-        min_by_metro: ' min by metro'
         distance_workplace: 'Distance from workplace: '
         close_subway: 'Metro nearby:'
       apply: Apply
+
+  packer:
+    show:
+      banner:
+        title: 'Your profile'
+      summary:
+        age: 'years old'
+        city: 'Currently lives in'
+        cv: 'CV'
+      story:
+        title: 'Let me tell you a bit who I am'
+        quote: "A quote that inspire me: "
+      skill:
+        title: "Let's speak about my skills"
+        experience: 'My experience'
+        languages: "Languages"
+      values:
+        title: "My values"
+      application:
+        motivation: "I would be very happy to join you"
+        placeholder: "When you will send an application, the project will receive this page. We will only add the text you want to send them and your contact here at the bottom of the page"
+        document: "You can also download this for more about me"
+        contact: "Let\'s exchange a bit more together"
+        phone: "Phone"
+        skype: "Skype"
+        facebook: "Facebook"
+        email: "email"
+
+
+
+
+
+
+
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170910173216) do
+ActiveRecord::Schema.define(version: 20170918173800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,11 +30,21 @@ ActiveRecord::Schema.define(version: 20170910173216) do
     t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
   end
 
+  create_table "connections", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "motivation"
+    t.string   "status"
+    t.integer  "mission_id"
+    t.integer  "packer_id"
+    t.index ["mission_id"], name: "index_connections_on_mission_id", using: :btree
+    t.index ["packer_id"], name: "index_connections_on_packer_id", using: :btree
+  end
+
   create_table "crews", force: :cascade do |t|
     t.string   "name"
     t.string   "mission"
     t.text     "description"
-    t.date     "creation_date"
     t.integer  "nb_collaborators"
     t.integer  "average_age"
     t.integer  "percentage_women"
@@ -63,6 +73,8 @@ ActiveRecord::Schema.define(version: 20170910173216) do
     t.string   "address"
     t.string   "zip_code"
     t.string   "closest_metro_working_place"
+    t.string   "cause"
+    t.string   "creation_date"
     t.index ["user_id"], name: "index_crews_on_user_id", using: :btree
   end
 
@@ -96,6 +108,8 @@ ActiveRecord::Schema.define(version: 20170910173216) do
     t.string   "status"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "nb_min_to_center"
+    t.string   "kind_of_hosting"
     t.index ["crew_id"], name: "index_missions_on_crew_id", using: :btree
   end
 
@@ -103,7 +117,6 @@ ActiveRecord::Schema.define(version: 20170910173216) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "sexe"
-    t.integer  "age"
     t.string   "nationality"
     t.text     "story"
     t.string   "job"
@@ -124,11 +137,17 @@ ActiveRecord::Schema.define(version: 20170910173216) do
     t.string   "instagram"
     t.string   "other_link"
     t.boolean  "newsletter"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "user_id"
     t.float    "latitude"
     t.float    "longitude"
+    t.text     "skills"
+    t.text     "experience"
+    t.date     "date_of_birth"
+    t.string   "level_french"
+    t.string   "level_english"
+    t.string   "other_languages"
     t.index ["user_id"], name: "index_packers_on_user_id", using: :btree
   end
 
@@ -155,6 +174,8 @@ ActiveRecord::Schema.define(version: 20170910173216) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "connections", "missions"
+  add_foreign_key "connections", "packers"
   add_foreign_key "crews", "users"
   add_foreign_key "missions", "crews"
   add_foreign_key "packers", "users"

@@ -1,0 +1,13 @@
+<div class="connection">
+  <section id="banner_new_connection" class="banner" >
+    <div class="banner_content">
+      <h1>Your message for the team of <%= @mission.crew.name %>
+      <h2>for the mission <i><%= @mission.title %></i></h1>
+    </div>
+  </section>
+  <section id="connection_form" class="form">
+    <div class="container_form">
+      <%= render 'form' %>
+    </div>
+  </section>
+</div>

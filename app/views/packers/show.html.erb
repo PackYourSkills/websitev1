@@ -1,1 +1,102 @@
-<h2>Hello there, it is Packer#Show <%= @packer.first_name %></h2>
+<div id="packer_show" class='global_show'>
+<!-- Banner Part -->
+  <section id="banner_packer" class="banner" style="background-image: url('<%= cl_image_path @packer.url_cover %>')" >
+    <div class="banner_content">
+    </div>
+  </section>
+
+  <section id="summary_packer_show" class="summary_global_show section_green">
+    <div class='logo'>
+      <div class='box box_ratio_1_1' style="background-image: url('<%= cl_image_path @packer.url_profile_picture, gravity: :face %>')">
+      </div>
+    </div>
+    <div class='information'>
+      <p><strong><%= @packer.first_name.upcase %> <%= @packer.last_name.upcase %></strong></p>
+      <p><%= @packer.nationality %>, <%= @packer.age %> <%= t('packer.show.summary.age') %>, <%= @packer.sexe.downcase %></p>
+      <p><%= t('packer.show.summary.city') %> <%= @packer.city %>, <%= @packer.country %></p>
+      <p><%= @packer.job %></p>
+      <% if @packer.website != (nil || '') %>
+        <i class='fa fa-globe'></i> <%= link_to "find me online", @packer.website, target: "_blank" %>
+      <% end %>
+    </div>
+  </section>
+
+  <section id="packer_story" class="section section_path section_left_path section_red2_right">
+    <div class='container'>
+      <h2><%= t('packer.show.story.title') %></h2>
+      <p><%= @packer.story %></p>
+      <p><strong><%= t('packer.show.story.quote') %></strong></p>
+      <p>"<%= @packer.quote %>" from <%= @packer.quote_author %></p>
+    </div>
+  </section>
+
+  <section id="packer_skill" class="section section_path section_right_path section_green_yellow_left">
+    <div class='container'>
+      <div class="row">
+      <h2><%= t('packer.show.skill.title') %></h2>
+      <p><%= @packer.skills %></p>
+      <p><strong><%= t('packer.show.story.experience') %></strong></p>
+      <p><%= @packer.experience %></p>
+      </div>
+      <div class="row language">
+        <p><strong><%= t('packer.show.story.languages') %></strong></p>
+        <div class="col-xs-12 col-sm-6">
+          <p>English
+            <% @english.to_i.times do %>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            <% end %>
+            <% (5 - @english.to_i).times do %>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            <% end %>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <p>French
+            <% @french.to_i.times do %>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            <% end %>
+            <% (5 - @french.to_i).times do %>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            <% end %>
+          </p>
+        </div>
+        <div class="col-xs-12">
+          <% if @packer.other_languages != (nil || '') %>
+            <p>Other(s): <%= @packer.other_languages %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="value_packer_show" class="section value_global_show">
+    <div class="section_yellow">
+      <div class='container'>
+        <div class="row">
+          <h2><%= t('packer.show.values.title') %></h2>
+        </div>
+        <div class="row values_packer">
+          <% if @packer.value1 != (nil || '') %>
+            <p><%= @packer.value1 %></p>
+          <% end %>
+          <% if @packer.value2 != (nil || '') %>
+            <p><%= @packer.value2 %></p>
+          <% end %>
+          <% if @packer.value3 != (nil || '') %>
+            <p><%= @packer.value3 %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="application_packer_show" class="section">
+    <div class='container container_application'>
+      <div class='row row_title'>
+        <h2><%= t('packer.show.application.motivation') %></h2>
+      </div>
+      <div class='row row_placeholder'>
+        <p><%= t('packer.show.application.placeholder') %></p>
+      </div>
+    </div>
+  </section>
+</div>

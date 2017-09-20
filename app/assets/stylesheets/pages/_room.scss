@@ -1,0 +1,104 @@
+/* -------------------------------------
+ * CSS code specific Pack Your Skills
+ * ------------------------------------- */
+
+/*-----------------------------------------------------------------------
+/*  Theme Name  : Pack Your Skills by Milica
+/*  Version     : 1.O
+/*  Date        : Aout 2017
+/*-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------*/
+
+#room_packer {
+  .banner_room {
+    min-height:50vh;
+    background-position-x: center;
+    background-position-y: 25%;
+    .banner_content {
+      p { font-size:16px; color:white;}
+    }
+
+  }
+  .call2action {
+    margin: 25px 0px;
+    .box {
+      margin:15px 0px;
+      position:relative;
+      color:white;
+      width:100%;
+      min-height:100px;
+      background-color:$green;
+      border:solid 3px $green;
+      p {padding-top:29px;}
+      box-shadow: -1px 2px 5px 1px rgba(0,0,0, 0.1);
+
+    }
+    .box:hover {
+      color:$green;
+      background-color:white;
+    }
+    a {
+      font-size:21px;
+      color:white;
+      text-decoration:none;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      padding-top:29px;
+    }
+    a:hover {
+      color:$green;
+    }
+  }
+
+  #connections_room_packer {
+    text-align:center;
+    margin-bottom:25px;
+    h2 {
+      font-size: 22px;
+      margin: 0px 0px 10px 0px;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 5px 0px;
+    }
+    p {
+      font-size: 16px;
+    }
+    a {
+      margin:15px 0px;
+      text-decoration:none;
+      color:$green;
+    }
+    a:hover {
+      opacity:0.5;
+    }
+  }
+  .comment {
+    font-size:14px;
+  }
+  .comment_warning {
+    color: $red;
+  }
+  .comment_success {
+    color: $green;
+  }
+  .box {
+    padding: 20px 5px;
+    background: $gray;
+    @media screen and (min-width: 768px) {width: 400px;}
+    @media screen and (max-width: 767px) {width: 300px;}
+  }
+  .box_application {
+    background-color:white;
+    padding:10px;
+    width:90%;
+    margin:auto;
+    margin-bottom:5px;
+    margin-top:5px;
+    text-align:left;
+  }
+}

@@ -129,6 +129,20 @@ fr:
     follow: "Suivez tout ce qu'il se passe :"
 
 
-
+  mission:
+    index:
+      title: 'Pack Your Skills, round 3'
+      subtitle: 'NOVEMBER 5-19 | PARIS'
+      introduction:
+        intro: "You always had a boring November? In 2017, thank's to Pack Your Skills"
+        hashtag: "#NovemberIsTheNewCool"
+        explication: "We enable travellers to volunteer in a social or environmental projects by offering their skills in exchange for food and accommodation."
+        call2action: "What do you think about coming to Paris in November?"
+      filter:
+        all: 'All'
+        webdev: 'Web Development'
+        graphic: 'Graphic design'
+        video: 'Video'
+        webmarket: 'Web Marketing'
 
 
