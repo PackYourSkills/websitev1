@@ -5,8 +5,8 @@ class PackerMailer < ApplicationMailer
   #
   #   en.packer_mailer.welcome.subject
   #
-  def welcome(user)
-    @user = user
-    mail to: @user.email, subject: "Welcome on board #{@user.packer.first_name}"
+  def welcome(packer)
+    @packer = packer
+    mail to: @packer.user.email, subject: "Welcome on board #{@packer.first_name}"
   end
 end
