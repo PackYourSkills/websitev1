@@ -7,49 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#admin pour packer
-admin = User.new(
-  email: 'admin@packyourskills.com',
-  password: '10max89',
-  role: 'admin',
-  admin: true,
-)
-admin.save!
-
-fakepacker = User.new(
-  email: 'packer@packyourskills.com',
-  password: 'iamapacker',
-  role: 'packer',
-  admin: false,
-)
-fakepacker.save!
-
-packer = fakepacker.build_packer(
-  first_name:'Packer',
-  last_name:'Test',
-  sexe:'male',
-  nationality:'French',
-  story:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  job:'Packer',
-  value1:'Beer',
-  value2:'Music',
-  value3:'Mountain',
-  quote:'Blablabla bla bla bla blaaablabla',
-  quote_author:'myself',
-  city:'Paris',
-  country:'FR',
-  address:'55 bd de Reuilly',
-  zip_code:'75012',
-  skype:'packer.admin',
-  phone:'0689930381',
-  website:'www.packyourskills.com',
-  cv_link:'https://www.linkedin.com/in/maximebdb/',
-  facebook:'https://www.facebook.com/Maxime.PackYourSkills',
-  instagram:'https://www.facebook.com/Maxime.PackYourSkills',
-  other_link:'http://www.lemonde.fr/',
-  newsletter:false,
-)
-packer.save!
 
 ####################################
 #########       AWA       #########
