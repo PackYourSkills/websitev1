@@ -1,6 +1,6 @@
 class PackerMailerPreview < ActionMailer::Preview
   def welcome
-    user = User.first
-    PackerMailer.welcome(user)
+    packer = Packer.first
+    PackerMailer.welcome(packer)
   end
 end

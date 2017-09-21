@@ -92,7 +92,7 @@ class Packer < ApplicationRecord
   end
 
   def send_welcome_email
-    PackerMailer.welcome(self.user).deliver_now
+    PackerMailer.welcome(self).deliver_now
   end
 
   def full_address
