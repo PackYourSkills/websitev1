@@ -18,12 +18,20 @@ Rails.application.routes.draw do
 
 
   ## temporary #########
-  get 'NovemberIsTheNewCool', to: 'missions#index', as: :novemberisthenewcool
-  get 'fr/NovemberIsTheNewCool', to: 'missions#index'
+#  get 'NovemberIsTheNewCool', to: 'missions#index', as: :novemberisthenewcool
+#  get 'fr/NovemberIsTheNewCool', to: 'missions#index'
   #######################
 
-  get 'IAmAPacker', to: 'pages#IAmAPacker', as: :iamapacker
-  get 'IAmACrew', to: 'pages#IAmACrew', as: :iamacrew
+  ## temporary #########
+  get 'NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool', as: :novemberisthenewcool
+  get 'fr/NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool'
+  #######################
+
+#  get 'IAmAPacker', to: 'pages#IAmAPacker', as: :iamapacker
+#  get 'IAmACrew', to: 'pages#IAmACrew', as: :iamacrew
+
+  get 'IAmAPacker', to: 'pages#NovemberIsTheNewCool', as: :iamapacker
+  get 'IAmACrew', to: 'pages#NovemberIsTheNewCool', as: :iamacrew
 
   resources :crews, only: [:edit, :update]
   resources :missions, only: [:index, :edit, :update, :new, :show, :create] do
