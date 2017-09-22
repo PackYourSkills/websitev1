@@ -31,7 +31,11 @@
   <body data-spy="scroll" data-target=".navbar_sm_md_lg" data-offset="51">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <%= render 'devise/shared/header' if (controller_path.include?("devise/") || controller_path.include?("users/")) %>
+
     <%= yield %>
+    <%= render 'devise/shared/footer' if (controller_path.include?("devise/") || controller_path.include?("users/")) %>
+
     <%= render 'shared/footer' %>
 
     <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
