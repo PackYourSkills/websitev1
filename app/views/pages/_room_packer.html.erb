@@ -14,16 +14,18 @@
         <p>Your profile is <%= @packer.progress %>% full, you need to reach 100% to apply to a mission.</p>
       <% end %>
       <div class="row">
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 <%= 'col-sm-offset-2' if (@packer.progress <= 50) %> col-sm-4">
           <div class="box">
             <p><%= link_to "Edit your profile", edit_packer_path(current_user.packer.id) %></p>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-4">
-          <div class="box">
-            <p><%= link_to "See your profile", packer_path(current_user.packer.id) %></p>
+        <% unless @packer.progress <= 50 %>
+          <div class="col-xs-12 col-sm-4">
+            <div class="box">
+              <p><%= link_to "See your profile", packer_path(current_user.packer.id) %></p>
+            </div>
           </div>
-        </div>
+        <% end %>
         <div class="col-xs-12 col-sm-4">
           <div class="box">
             <p><%= link_to "See all missions", missions_path %></p>
