@@ -1,9 +1,72 @@
 .devise_page {
-  height:100vh;
+  min-height:100vh;
   .devise_container{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
     margin: 60px auto;
-    @media screen and (min-width: 768px) {width: 400px;}
-    @media screen and (max-width: 767px) {width: 100%;}
+  }
+  .devise_form {
+    @media screen and (min-width: 768px) {width:400px;}
+    @media screen and (max-width: 767px) {width:80%;}
+    text-align:center;
+  }
+
+  h1 {
+    font-size:30px;
+  }
+  h2 {
+    font-size:24px;
+  }
+  .subtitle_devise {
+    font-size:14px;
+  }
+  p {
+    font-size:16px;
+  }
+  img {
+    width:50%;
+    height:auto;
+  }
+  .facebook_call2action {
+    background-color:rgb(66,103,178);
+    width:80%;
+    margin:10px auto;
+    padding:10px;
+    border-radius:3px;
+    a {
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+  }
+  .facebook_call2action:hover {
+    opacity:0.6;
+  }
+  .form-group  {
+    text-align: left;
+  }
+  .btn-primary {
+    width:100%;
+    padding:10px;
+    a {
+      font-weight:600;
+    }
+  }
+  .devise_call2action{
+    background-color:$red;
+    width:100%;
+    margin:10px auto;
+    padding:10px;
+    border-radius:1px;
+    a {
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+  }
+  .devise_call2action:hover {
+    opacity:0.6;
   }
 }
 
@@ -53,4 +116,8 @@
   }
   z-index:-1;
 }
+
+
+
+
 
