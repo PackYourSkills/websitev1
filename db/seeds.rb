@@ -14,9 +14,6 @@ user = User.new(
 )
 user.save!
 
-####################################
-#########       AWA       #########
-###################################
 
 user = User.new(
   email: 'arno.canizares@hotmail.fr',
@@ -413,6 +410,169 @@ kind_of_hosting:'Shared room',
 mission.save!
 
 user = User.new(
+  email: 'mai@gribouilli.fr',
+  password: 'NovemberIsTheNewCool',
+  role: 'crew',
+  admin: false,
+)
+user.save!
+
+crew = user.build_crew(
+  name:'Gribouilli',
+  mission:'At-home child care is a vital yet controversial sector due to the lack of a real educational project. Gribouilli (\'doodle\' or \'scribble\' in French) is a charity founded by nanies whose goal is to improve their professionalization.',
+  description:'1- One-to-one coaching and workshops to foster professionalism and guide the professional nanies whithout diplomas towards training.
+2- Our online platform adds value to each nanie\'s career path and fosters their employability.',
+  cause:'Improve nanies’ professionalization',
+creation_date:'2017',
+  nb_collaborators:'3',
+  average_age:'31',
+  percentage_women:'100%',
+  team_description:'We are a family team (litteraly). We have a lot in common: openness on the world, a sense of sharing, the desire to improve, a determined mindset. Nevertheless, we have very different personalities and we always challenge each other\'s ideas. Zero stress and a lot of hysterical laughter despite the heavy workload. You are cordially invited to join us in that spirit ;) From a cultural standpoint, and depending on what you want, we can make you discover the touristic side of Paris, but also the Paris of the Africans\' community (and other communities as well) as we are of Senegalese origin.',
+  percentage_english:'67%',
+  value1:'RESPECT : Everybody deserves respect as everybody carries the beauty of our humanity.',
+  value2:'SOLIDARITY : Solidarity is vital and enriches even the one spreading out the help.',
+  value3:'POSITIVE ATTITUDE : Last but not least, we must remain positive!',
+  quote:'',
+  quote_author:'',
+  phone:'',
+  skype:'',
+  twitter:'',
+  facebook:'https://www.facebook.com/GribouilliFR/',
+  instagram:'',
+  website:'www.gribouilli.fr',
+  newsletter: false,
+  #Data pour la working place
+  description_working_place:'We work where we live... The living room is our coworking space (4 seats, 2 couches)',
+  address:'47 rue Vauvenargues',
+  city:'Paris',
+  zip_code:'75018',
+  country:'FR',
+  closest_metro_working_place:'Guy Môquet (metro 13)',
+)
+crew.save!
+
+mission = crew.missions.new(
+  title:'Drawing the nanies\' lives to illustrate our vision.',
+  context:'Our visual corporate identity and graphic charter are not completely set while we are developing infographics and other communication tools (marketing or popularization of content).',
+  description:'We need drawings of each element that are key to symbolizing the project to illustrate our communication tools (for example: newborn, child, couple, nany, park, games library, city hall, city, ...). We have set the color code and graphic style (pencil stroke on a white background ; joyful, positive and friendly drawings).',
+  duration:'15',
+  skill:'Graphic Design',
+  material:'One Acer laptop with part-time availability; no specific software for drawing available.',
+  referent_first_name:'Maïmonatou (Maï)',
+  referent_last_name:'Mar',
+  referent_role:'Founder & PR Manager',
+  referent_phone:'+33(0)6.62.19.11.80',
+  referent_email:'mai@gribouilli.fr',
+  host_first_name:'Ma¨monatou (Maï)',
+  host_last_name:'Mar',
+  host_role:'Founder & PR Manager',
+  host_phone:'+33(0)6.62.19.11.80',
+  #Data pour hosting place
+  description_hosting_place:'We only have a convertible sofa bed :s but highly comfortable (spoken by an amazing Airbnb host who will make you experience the true meaning of \'Teranga\'). Living room with shades, TV with international channels. The living room is yours from 11pm to 8am. We will do all the cooking and you will have the opportunity to taste a few exotic dishes if you wish to. We cater to specific dietary needs. We live in a dynamic and multicultural neighborhood, well connected by public transportation (subway, bus and tramways very soon).',
+  address:'47 rue Vauvenargues',
+  city:'Paris',
+  zip_code:'75018',
+  country:'FR',
+  closest_metro_hosting_place:'Guy-Môquet (metro 13)',
+  nb_min_ride:'0min',
+nb_min_to_center:'25min by metro',
+kind_of_hosting:'Living room couch',
+  other_comment:'',
+  status:'online',
+)
+mission.save!
+
+user = User.new(
+  email: 'elsa@lecarillon.org',
+  password: 'NovemberIsTheNewCool',
+  role: 'crew',
+  admin: false,
+)
+user.save!
+
+crew = user.build_crew(
+  name:'La Cloche',
+  mission:'La Cloche was created to strengthen social bonds at a local level, and restore the image of the most deprived people.',
+  description:'La Cloche has three projects : Le Carillon, La Cloche à Biscuits, and Les Clochettes. Le Carillon, first project created by the non-profit organization La Cloche, is a local solidarity network, between inhabitants, storekeepers and homeless people. The network aims at improving the everyday life of people living in the streets, and fighting against their isolation :
+Storekeepers offer micro-services and make people know about it with pictograms on their store front.
+Inhabitants contribute to better social bonds near their home; some of them are volunteers.
+Homeless people use the storekeepers\’ services, and sometimes become volunteer ambassadors
+Regularly, the “Carilloners” meet up for an event in the neighborhood : aperitive at a storekeeper’s from the network, “pétanque” (game with bowls from South of France), or board games afternoon. Those moments generate social bonds and change the eye we have on each other and on ourselves!
+
+“La Cloche à Biscuits”, the second project, is a job integration set of workshops, in which people produce and sell biscuits made of spelt flour. The purpose is to offer an adaptated and evolutive activity that will generate revenues for excluded and fragile public. Produced biscuits will be sold through the storekeepers\’ network from Le Carillon.
+
+Finally, “Les Clochettes\’, the third project, aims at creating social bonds within a neighborhood and restore the image of the most deprived people. We gather people from the neighborhood, whether they have a home or not, around gardening workshops, thanks to Paris’ “gardening licence” : plant a tree, flowers, set up a window bow to grow basil...it’s done by everyone for everyone !',
+  cause:'Strengthening social bonds at a local level',
+creation_date:'2014',
+  nb_collaborators:'20',
+  average_age:'26',
+  percentage_women:'70',
+  team_description:'Every Monday morning, we have breakfast together ! It is one of the only days where all team members are present at the same time. It’s a chilling moment during which we can talk about our week-end before starting a new week in a good mood !
+
+We love moments when we gather, not especially to work, but to decompress and share a good time, which fosters team cohesion !
+
+As for work, we advocate autonomy, but also mutual aid : “EACH FOR ALL!” ;)',
+  percentage_english:'90%',
+  value1:'Fostering social bonds',
+  value2:'Inviting to discuss and share',
+  value3:'Promoting a change in people’s eye (on themselves and on others)',
+  quote:'',
+  quote_author:'',
+  phone:'',
+  skype:'',
+  twitter:'',
+  facebook:'https://www.facebook.com/lecarillon',
+  instagram:'https://www.instagram.com/le_carillon/',
+  website:'http://www.lacloche.org',
+  newsletter: false,
+  #Data pour la working place
+  description_working_place:'We work at “Les Grands Voisins”, a former hospital transformed into an innovative and engaged neighborhood ! Today, about 2000 people live and work in this closed down hospital. There is an authentic diversity, between fragile people living here, and entrepreneurs that create cultural, solidarity and associative projects. because of this diversity, Les Grands Voisins is an urban laboratory where you can : walk in the alleys, meet people, go see the chickens, visit the campsite, participate in activities, and enjoy this place that is open to all, welcoming and benevolent !',
+  address:'82 Avenue Denfert Rochereau',
+  city:'Paris',
+  zip_code:'75014',
+  country:'FR',
+  closest_metro_working_place:'Raspail (metro 4)',
+)
+crew.save!
+
+mission = crew.missions.new(
+  title:'Creating communication supports for the project',
+  context:'We need you for the project “La Cloche à Biscuits”, which is approaching a strategic milestone : its launch ! We need to get known by the general public and start distributing the product.',
+  description:'We need you for different tasks. We can talk about it and choose more precisely the ones you will be working on according to your skills and how far we are in the project:
+Creating an illustration
+Creating the project’s brochure
+Creating a print advertisement to display on store fronts
+Conceiving and formalizing the graphic chart',
+  duration:'15',
+  skill:'Graphic Design',
+  material:'We can provide you with a desktop computer that is in our workspace.',
+  referent_first_name:'Elsa',
+  referent_last_name:'DELOUCHE',
+  referent_role:'In charge of the “insertion” department',
+  referent_phone:'+33(0)6.27.65.08.72',
+  referent_email:'elsa@lecarillon.org',
+  host_first_name:'Louis-Xavier',
+  host_last_name:'LECA',
+  host_role:'Director-founder',
+  host_phone:'',
+  #Data pour hosting place
+  description_hosting_place:'A private room with a bed and curtains in a well-located apartment',
+  address:'92 boulevard Richard Lenoir',
+  city:'Paris',
+  zip_code:'75011',
+  country:'FR',
+  closest_metro_hosting_place:'Oberkampf (metro 5 and 9)',
+  nb_min_ride:'30',
+nb_min_to_center:'20min by metro',
+kind_of_hosting:'private room',
+  other_comment:'',
+  status:'online',
+)
+mission.save!
+
+
+
+user = User.new(
   email: 'adele@lesamisdhubert.com',
   password: 'NovemberIsTheNewCool',
   role: 'crew',
@@ -655,6 +815,82 @@ kind_of_hosting:'Living room couch',
 mission.save!
 
 user = User.new(
+  email: 'sabrina.caballero@wattvalue.fr',
+  password: 'NovemberIsTheNewCool',
+  role: 'crew',
+  admin: false,
+)
+user.save!
+
+crew = user.build_crew(
+  name:'WattValue',
+  mission:'Created in 2006, the start-up WattValue helps companies find the right energy contract (gas or electricity) at the optimal tariff. WattValue also recommends the choice of renewable electricity for the new contract.',
+  description:'Since the 1990\’s, at the EU level, the energy market has gradually opened to new players. This measure was taken to drive competition. Originally, this specific market was a monopolistic one in most European countries such as France with EDF (electricity) and Engie (Gas). This directive was followed by the obligation for companies to move from regulated tariffs to market prices which means the necessity for consumers to have the necessary time and knowledge to make the better choice for their business. In parallel, global warming and its consequences on our planet becomes more and more worrying.
+With more than 10 years of experience in the energy sector, we want to help SMB to grow and adopt a more responsible behavior to limit their impact on our planet. Our team of experts offers the following services:
+- Group purchases (gas and electricity): This service allows professional consumers to aggregate their energy needs with other companies\' to get the benefit of volume pricing and contract clauses.
+- Guarantees of Origin (electricity): This service allows consumers to certify that their electricity is coming from local production and from renewable energies.
+- Green IT / Green Internet: This e-service allows adopters to certify that the electricity consumed by the internet traffic of their web site is exclusively coming from renewables.',
+  cause:'Encouraging renewable electricity in companies’ contracts',
+creation_date:'2006',
+  nb_collaborators:'5',
+  average_age:'30',
+  percentage_women:'40%',
+  team_description:'Our team is comprised of young and experimented but dynamic and fun people. In La Ruche, you will collaborate with salespeople and executive management. You can collaborate with all the entrepreneurs of La Ruche and share your experience. All passionate about innovation, entrepreneurship and…energy. “Come and join the team, it’s gonna be wonderful”. The team can speak English and a bit of Spanish.',
+  percentage_english:'100%',
+  value1:'SHARING: We like to spend time together',
+  value2:'ENTREPRENEURSHIP',
+  value3:'ENVIRONMENTAL COMPLIANCE: We all care about the environment and adopt daily gestures about it!',
+  quote:'',
+  quote_author:'',
+  phone:'',
+  skype:'',
+  twitter:'https://twitter.com/WattValue',
+  facebook:'',
+  instagram:'',
+  website:'www.wattvalue.fr',
+  newsletter: false,
+  #Data pour la working place
+  description_working_place:'Our offices are located in the 20th arrondissement of Paris (North of the city). It is a coworking space called “La Ruche”. There is a kitchen corner with a microwave to heat your lunch, a shared area, a rooftop, call rooms and meeting rooms. WattValue also enjoys its own closed office with the open space. All the coworkers benefit from the regular meeting events scheduled by La Ruche, a great opportunity to share experience, train, get new ideas or meet new people.',
+  address:'24, rue de l\'Est',
+  city:'Paris',
+  zip_code:'75020',
+  country:'FR',
+  closest_metro_working_place:'Pyrénées (metro 11)',
+)
+crew.save!
+
+mission = crew.missions.new(
+  title:'Creating an animation and transforming it into whiteboard animation',
+  context:'We recently hired a marketing manager to improve our brand and visibility on the B2B market. We have already implemented a new website as well as new supports of communication (flyers, social media …). However, we want to go further in the promotion of WattValue services and explain them in the most simple terms, and typically by using videos – that will be an opportunity to add more visibility and credibility to our business.',
+  description:'This is why we need you! We are looking for a designer who is able to transform a product description into a whiteboard animation. First, we need you to create some drawings explaining what is the core activity of WattValue and obviously the advantages of the solutions proposed to companies to manage their gas and electricity. Then, you have to transform it into a whiteboard animation. Sabrina, our Marketing manager will give you all the necessary brief. The idea is to create a support of communication that we can proliferate later on different communication media: press, website, social networks… Expected deliverable at the end of your stay: We are expecting a fully-completed whiteboard animation at the end of your stay. The support has to look very professional in order to be used for the B2B market.',
+  duration:'15',
+  skill:'Video animation',
+  material:'Equipment we can provide: We can provide you a camera, a whiteboard, a whiteboard pencil, a laptop. Unfortunately, we don\’t have any software for this kind of task. Nevertheless, we can probably find a free one on internet.',
+  referent_first_name:'Sabrina',
+  referent_last_name:'CABALLERO',
+  referent_role:'Marketing Manager',
+  referent_phone:'+33(0)1.84.25.55.04',
+  referent_email:'sabrina.caballero@wattvalue.fr',
+  host_first_name:'Air',
+  host_last_name:'Bnb',
+  host_role:'',
+  host_phone:'',
+  #Data pour hosting place
+  description_hosting_place:'It will be an Airbnb. A private studio either in the 19th or 20th arrondissement of Paris. In all cases, it will be close to La Ruche where you will work.',
+  address:'',
+  city:'Paris',
+  zip_code:'75020',
+  country:'FR',
+  closest_metro_hosting_place:'20min by metro maximum',
+  nb_min_ride:'20min by metro maximum',
+nb_min_to_center:'20min by metro',
+kind_of_hosting:'Your own studio',
+  other_comment:'',
+  status:'online',
+)
+mission.save!
+
+user = User.new(
   email: 'alex@coding-days.com',
   password: 'NovemberIsTheNewCool',
   role: 'crew',
@@ -797,5 +1033,8 @@ kind_of_hosting:'Living room couch',
   status:'online',
 )
 mission.save!
+
+
+
 
 
