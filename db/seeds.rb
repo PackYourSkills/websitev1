@@ -1120,7 +1120,7 @@ https://www.airbnb.fr/rooms/5210145',
 nb_min_to_center:'20min by metro',
 kind_of_hosting:'Living room couch',
   other_comment:'',
-  status:"online",
+  status:"draft",
 )
 mission.save!
 
