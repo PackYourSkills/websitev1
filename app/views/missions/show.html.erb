@@ -1,7 +1,7 @@
 <div id="mission_show" class="global_show">
 
 <!-- Banner Part -->
-  <section id="banner_packer" class="banner" style="background-image: linear-gradient(rgba(138,215,218,0.5), rgba(138,215,218,0.5)), url('<%= cl_image_path @mission.url_cover %>')" >
+  <section id="banner_packer" class="banner" style="background-image: linear-gradient(rgba(138,215,218,0.5), rgba(138,215,218,0.5)), url('<%= cl_image_path (@mission.url_cover, :angle=>0) %>')" >
     <div class="banner_content">
       <h1><%= @mission.title %></h1>
     </div>
