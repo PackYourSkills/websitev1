@@ -339,7 +339,7 @@ kind_of_hosting:'Living room couch',
 mission.save!
 
 user = User.new(
-  email:’frateli@packyourskills.Com’,
+  email:'frateli@packyourskills.Com',
   password: 'NovemberIsTheNewCool',
   role: 'crew',
   admin: false,
