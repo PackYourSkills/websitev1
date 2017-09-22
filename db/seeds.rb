@@ -957,7 +957,7 @@ user.save!
 crew = user.build_crew(
   name:'Etincelle',
   mission:'This project was created to enable young people from working-class backgrounds to discover an innovative mindset and to gain confidence in their capacity to create the world of the future.',
-  description:'We create inspiring online content, animate workshops around 5 attitudes to develop one's innovative mindset (\'Diggin\'it\', Doing, Exploring, Disobeying, Sweating) and set up opportunities to meet up with working professionals (fablabs, incubators, livinglabs, ...)',
+  description:'We create inspiring online content, animate workshops around 5 attitudes to develop one\'s innovative mindset (\'Diggin\'it\', Doing, Exploring, Disobeying, Sweating) and set up opportunities to meet up with working professionals (fablabs, incubators, livinglabs, ...)',
   cause:'Empowering young people from working-class backgrounds',
 creation_date:'2005',
   nb_collaborators:'20',
