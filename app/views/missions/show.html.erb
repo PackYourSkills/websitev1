@@ -1,7 +1,7 @@
 <div id="mission_show" class="global_show">
 
 <!-- Banner Part -->
-  <section id="banner_packer" class="banner" style="background-image: linear-gradient(rgba(138,215,218,0.5), rgba(138,215,218,0.5)), url('<%= cl_image_path (@mission.url_cover, :angle=>0) %>')" >
+  <section id="banner_packer" class="banner" style="background-image: linear-gradient(rgba(138,215,218,0.5), rgba(138,215,218,0.5)), url('<%= cl_image_path (@mission.url_cover) %>')" >
     <div class="banner_content">
       <h1><%= @mission.title %></h1>
     </div>
@@ -32,7 +32,7 @@
 <!-- crew_mission_show Part -->
   <section id="summary_mission_show" class="summary_global_show section_blue">
     <div class='logo'>
-      <div class='box box_ratio_1_1' style="background-image: url('<%= cl_image_path (@mission.crew.url_logo, :angle=>0) %>')">
+      <div class='box box_ratio_1_1' style="background-image: url('<%= cl_image_path (@mission.crew.url_logo) %>')">
       </div>
     </div>
     <div class='social_media'>
@@ -84,7 +84,7 @@
     <div class='container'>
       <h2><%= t('mission.show.workplace.title') %></h2>
       <p><%= @mission.crew.description_working_place %></p>
-      <%= cl_image_tag (@mission.crew.url_working_place_picture, :angle=>0) %>
+      <%= cl_image_tag (@mission.crew.url_working_place_picture) %>
     </div>
   </section>
 
@@ -93,7 +93,7 @@
     <div class='container'>
       <div class='row'>
         <h2><%= t('mission.show.team.title') %></h2>
-        <%= cl_image_tag (@mission.crew.url_team_picture, :angle=>0) %>
+        <%= cl_image_tag (@mission.crew.url_team_picture) %>
       </div>
       <div class='row'>
         <table>
@@ -112,7 +112,7 @@
       </div>
       <div class='row referent_and_host'>
         <div class='portrait'>
-          <div class="avatar" style="background-image: url('<%= cl_image_path (@mission.url_referent_picture, gravity: :face, :angle=>0) %>')" >
+          <div class="avatar" style="background-image: url('<%= cl_image_path (@mission.url_referent_picture, gravity: :face) %>')" >
           </div>
         </div>
         <div class='info'>
@@ -152,7 +152,7 @@
       </div>
       <div class='row referent_and_host'>
         <div class='portrait'>
-          <div class="avatar" style="background-image: url('<%= cl_image_path (@mission.url_host_picture, gravity: :face, :angle=>0) %>')" >
+          <div class="avatar" style="background-image: url('<%= cl_image_path (@mission.url_host_picture, gravity: :face) %>')" >
           </div>
         </div>
         <div class='info'>
@@ -177,7 +177,7 @@
       </div>
       <div class='row'>
         <div class="col-xs-12 col-sm-6">
-          <div class="box_ratio_2_3 hosting_place_picture" style="background-image: url('<%= cl_image_path (@mission.url_hosting_place_picture, :angle=>0) %>')" >
+          <div class="box_ratio_2_3 hosting_place_picture" style="background-image: url('<%= cl_image_path (@mission.url_hosting_place_picture) %>')" >
           </div>>
         </div>
         <div class="col-xs-12 col-sm-6">
