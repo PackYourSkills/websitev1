@@ -2,7 +2,7 @@ class Crew < ApplicationRecord
   belongs_to :user
   has_many :missions, dependent: :destroy
 
-  validates :website, :allow_blank => true, format: { :with => /^(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)([\/:?=&#]{1}[\da-z\.-]+)*[\/\?]?$/i, message: "it has to be an url" }
+  validates :website, :allow_blank => true, format: { :with => /(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)([\/:?=&#]{1}[\da-z\.-]+)*[\/\?]?/i, message: "it has to be an url" }
 
   has_attachment :logo
   has_attachment :team_picture

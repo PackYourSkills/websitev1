@@ -12,8 +12,8 @@ class Packer < ApplicationRecord
   after_create :subscribe_to_newsletter
   after_update :subscribe_to_newsletter
 
-  validates :website, :allow_blank => true, format: { :with => /^(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)([\/:?=&#]{1}[\da-z\.-]+)*[\/\?]?$/i, message: "it has to be an url" }
-  validates :cv_link, :allow_blank => true, format: { :with => /^(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)([\/:?=&#]{1}[\da-z\.-]+)*[\/\?]?$/i, message: "it has to be an url" }
+  validates :website, :allow_blank => true, format: { :with => /(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)([\/:?=&#]{1}[\da-z\.-]+)*[\/\?]?/i, message: "it has to be an url" }
+  validates :cv_link, :allow_blank => true, format: { :with => /(https?:\/\/)?([\da-z\.-]+\.[a-z\.]{2,6}|[\d\.]+)([\/:?=&#]{1}[\da-z\.-]+)*[\/\?]?/i, message: "it has to be an url" }
   #validates :youtube_link, :allow_blank => true, format: { :with => /(?:https?:\/\/)?(?:(?:(?:www\.?)?youtube\.com(?:\/(?:(?:watch\?.*?(v=[^&\s]+).*)|(?:v(\/.*))|(channel\/.+)|(?:user\/(.+))|(?:results\?(search_query=.+))))?)|(?:youtu\.be(\/.*)?))/i, message: "it has to be a youtube link" }
 
   geocoded_by :full_address
