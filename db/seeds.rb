@@ -9,7 +9,7 @@
 user = User.new(
   email: 'admin@packyourskills.com',
   password: 'admin',
-  role: 'admin',
+  role: 'iamnelson',
   admin: true,
 )
 user.save!
