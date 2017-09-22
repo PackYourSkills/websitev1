@@ -8,8 +8,8 @@
 
 user = User.new(
   email: 'admin@packyourskills.com',
-  password: 'admin',
-  role: 'iamnelson',
+  password: 'iamneslon',
+  role: 'admin',
   admin: true,
 )
 user.save!
