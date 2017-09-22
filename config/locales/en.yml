@@ -44,7 +44,7 @@ en:
       translate: ""
       baseline1: "Volunteer your skills within a social project"
       baseline2: "and get hosted in exchange"
-      call2action: "Join the next edition"
+      call2action: "See all opportunities"
       date: 'Paris, November 5-19, 2017'
       message2crews: 'You have a project in Paris ? Host a traveler in exchange for his skills !'
     mission:
@@ -52,6 +52,7 @@ en:
       text1: "We're convinced that, if each person were fully 'aligned' with herself, she would be more fulfilled and, as a result, would contribute to a more balanced society."
       text2: "Our mission is to help each person get to know herself better, understand the context she's in, discover the possibilities she has, and/or take action."
       text3: "Pack Your Skills gives the opportunity to each person to live an experience in which she tests herself, both personnally and professionnally, in a new context."
+      text4: "We enables travelers to get involved in projects with positive impact (social startups or charities) to do achieve a mission based on their skills, in exchange for food and accommodation."
     benefits:
       title: "WHAT’S INTERESTING ABOUT DOING PACK YOUR SKILLS ?"
       1strong: "You live at the heart of the local culture"
@@ -162,14 +163,14 @@ en:
       title: 'Pack Your Skills, round 3'
       subtitle: 'NOVEMBER 5-19 | PARIS'
       introduction:
-        intro: "You always had a boring November? In 2017, thank's to Pack Your Skills"
+        intro: "You always had a boring November? In 2017, thanks to Pack Your Skills"
         hashtag: "#NovemberIsTheNewCool"
         explication: "We enable travellers to volunteer in a social or environmental project by offering their skills in exchange for food and accommodation."
         call2action: "What do you think about coming to Paris in November?"
       filter:
         all: 'All'
         webdev: 'Web Development'
-        graphic: 'Graphic design'
+        graphic: 'Graphic Design'
         video: 'Video'
         webmarket: 'Web Marketing'
     show:

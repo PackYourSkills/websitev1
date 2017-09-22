@@ -1,8 +1,8 @@
 <h1><%= t(".sign_up") %></h1>
 <%= image_tag "/packers_devise.png", id: 'devise_packer'  %><br/>
 <h2>I want to become a Packer</h2>
-<p class="subtitle_devise">To become a crew <%= link_to "click here", iamacrew_path %></p>
-<p> By signup up as a Packer, you will be able to apply to opportunities to offer your skills in exchange for food and accomodation</p>
+<p class="subtitle_devise">To become a Crew, <%= link_to "click here", iamacrew_path %></p>
+<p>By signing up as a Packer, you will be able to apply to opportunities to offer your skills in exchange for food and accommodation.</p>
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <div class="facebook_call2action"><%= link_to "Sign up with facebook", omniauth_authorize_path(resource_name, provider) %></div>
