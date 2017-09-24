@@ -1,12 +1,13 @@
 class User < ApplicationRecord
   has_one :crew, dependent: :destroy
   has_one :packer, dependent: :destroy
-
+  validates :cgu, acceptance: true, presence: {message: "You need to accept the Terms & Conditions" }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
+
 
 
   ## Facebook Autentification
