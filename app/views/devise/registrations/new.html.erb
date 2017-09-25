@@ -14,7 +14,6 @@
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true %>
     <%= f.input :password_confirmation, required: true %>
-  <!--  <%= f.input :cgu, as: :boolean, label: ("I agree to the #{link_to 'Terms & Conditions', 'http://www.packyourskills.com/CGU_201709_PackYourSkills_Packer.pdf'}").html_safe, required: true  %> -->
     <p>By signing up you agree to the <%= link_to 'Terms & Conditions', 'http://www.packyourskills.com/CGU_201709_PackYourSkills_Packer.pdf' %></p>
     <%= f.hidden_field :role, value: "packer" %>
   </div>
