@@ -179,6 +179,7 @@ en:
       crew:
         section_title: 'Crew'
         title: 'Our positive impact'
+        what: "What do we do"
       mission:
         section_title: 'Mission'
         title: 'Why we need you'
@@ -213,9 +214,10 @@ en:
         cv: 'CV'
       story:
         title: 'Let me tell you a bit who I am'
-        quote: "A quote that inspire me: "
+        quote: "A quote that inspires me: "
       skill:
         title: "Let's speak about my skills"
+        skills: "Education & skills"
         experience: 'My experience'
         languages: "Languages"
       values:

@@ -34,12 +34,13 @@
     <div class='container'>
       <div class="row">
       <h2><%= t('packer.show.skill.title') %></h2>
+      <p><strong><%= t('packer.show.skill.skills') %></strong></p>
       <p><%= @packer.skills %></p>
-      <p><strong><%= t('packer.show.story.experience') %></strong></p>
+      <p><strong><%= t('packer.show.skill.experience') %></strong></p>
       <p><%= @packer.experience %></p>
       </div>
       <div class="row language">
-        <p><strong><%= t('packer.show.story.languages') %></strong></p>
+        <p><strong><%= t('packer.show.skill.languages') %></strong></p>
         <div class="col-xs-12 col-sm-6">
           <p>English
             <% @english.to_i.times do %>
