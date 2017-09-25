@@ -1,5 +1,5 @@
 <div class="connection">
-  <section id="banner_packer_edit" class="banner" >
+  <section id="banner_connection_edit" class="banner" >
     <div class="banner_content">
       <h1>Application for <%= @mission.crew.name %></h1>
     </div>
@@ -9,8 +9,8 @@
       <%= simple_form_for [@mission, @connection] do |a| %>
         <%= a.hidden_field :packer_id, :value => current_user.packer.id %>
         <p>The project will receive your profile, this text and your contact</p>
-        <p>You can tell your motivation for that mission but also everything that seems to be important for you to says to that project</p>
-        <p>Do not hesitate to express about your skills and experiences valuable for that missions</p>
+        <p>You can tell your motivation for that mission but also everything that seems to be important for you to say to that project</p>
+        <p>Do not hesitate to express about your skills and experiences valuable for that mission</p>
         <p>Be yourself, they are waiting for you</p>
         <%= a.input :motivation, class:  'text_field', label: false %>
         <p>Do you want to add any documents ? (3 maximum)

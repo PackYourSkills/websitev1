@@ -55,6 +55,7 @@
     .container {
       margin:0;
       width:100%;
+      z-index:3
     }
     .slogan_part1 {
       font-weight:400;
@@ -114,7 +115,6 @@
 
     @media screen and (min-width: 768px) {
       .container{
-        padding-top:15vh;
       }
 
       h2 {
@@ -153,7 +153,6 @@
       background-position-x: +35%;
 
       .container{
-        padding-top:15vh;
       }
 
       h2 {
