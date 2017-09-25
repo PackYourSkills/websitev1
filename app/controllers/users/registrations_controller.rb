@@ -1,7 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
   def create
-    binding.pry
     build_resource(sign_up_params)
     resource[:role] = params['user']['role']
     resource[:cgu]= params['user']['cgu']
