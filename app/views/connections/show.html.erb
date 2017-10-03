@@ -9,7 +9,7 @@
       </div>
       <div class='row row_placeholder'>
         <div class="motivation_placeholder">
-          <p><%= @connection.motivation %></p>
+          <p><%= @connection.motivation.nil? ? "no text yet" : @connection.motivation %></p>
         </div>
       </div>
     </div>
