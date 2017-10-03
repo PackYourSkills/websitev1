@@ -1,8 +1,8 @@
 class ConnectionsController < ApplicationController
 
-  before_action :set_connection, only: [ :edit, :update, :accept, :refuse, :confirm, :cancel, :destroy ]
-  before_action :set_mission, only: [ :new, :create, :edit, :update, :accept, :refuse, :confirm, :cancel, :destroy ]
-  before_action :set_packer, only: [ :destroy ]
+  before_action :set_connection, only: [ :edit, :show, :put_online, :put_for_admin_validation, :put_draft, :update, :accept, :refuse, :confirm, :cancel, :destroy ]
+  before_action :set_mission, only: [ :new, :show, :create, :edit, :update, :accept, :refuse, :confirm, :cancel, :destroy ]
+  before_action :set_packer, only: [ :show, :destroy ]
 
   def index
     @connections = policy_scope(Connection)
@@ -38,6 +38,27 @@ class ConnectionsController < ApplicationController
       @connection.status = 'draft'
       @connection.update(connection_params) ? (redirect_to edit_packer_path(params["connection"]["packer_id"])) : (render :edit)
     end
+  end
+
+  def put_online
+    @connection.put_online
+    redirect_to :back
+  rescue ActionController::RedirectBackError
+    redirect_to authenticated_root_path
+  end
+
+  def put_for_admin_validation
+    @connection.put_for_admin_validation
+    redirect_to :back
+  rescue ActionController::RedirectBackError
+    redirect_to authenticated_root_path
+  end
+
+  def put_draft
+    @connection.put_draft
+    redirect_to :back
+  rescue ActionController::RedirectBackError
+    redirect_to authenticated_root_path
   end
 
   def accept
@@ -77,7 +98,7 @@ class ConnectionsController < ApplicationController
   end
 
   def set_packer
-    @packer = current_user.packer
+    @packer = @connection.packer
   end
 
   def connection_params

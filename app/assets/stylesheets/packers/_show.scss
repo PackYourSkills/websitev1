@@ -10,7 +10,7 @@
 
 -----------------------------------------------------------------------*/
 
-#packer_show {
+#packer_and_connection_show {
 
 /*---------------------------------------------------------------------*/
 /*  0. GLOBAL STYLES
@@ -128,7 +128,7 @@
 /*---------------------------------------------------------------------*/
 
   #value_packer_show {
-    min-height:150px;
+    min-height:100px;
     margin-bottom:20px;
     padding-bottom:0px;
     .section_yellow {
@@ -156,5 +156,25 @@
     text-align:center;
     min-height:150px;
     margin-bottom:20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .motivation_placeholder {
+      padding:20px;
+      min-height:50px;
+      background-color: $gray;
+      text-align:left;
+      @media screen and (min-width: 992px) {flex: 0 0 50%;}
+      @media screen and (min-width: 768px) and (max-width: 991px) {flex: 0 0 75%;}
+      @media screen and (max-width: 767px) {flex: 0 0 90%;}
+    }
+  }
+
+  #admin_section {
+    min-height:50px;
+    text-align: center;
+    background-color: $green;
+    margin: 30px 0px;
+    padding:30px;
   }
 }
