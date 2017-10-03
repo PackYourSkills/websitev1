@@ -21,6 +21,27 @@ class ConnectionPolicy < ApplicationPolicy
   end
 
   def show?
+    case record.status
+      when 'draft', 'for_admin_validation'
+        concerned_packer_or_admin?
+      when 'for_admin_validation', 'online'
+        concerned_packer_or_admin? || concerned_crew_or_admin?
+      when 'suspended', 'accepted', 'refused', 'canceled', 'confirmed'
+        admin?
+      else #should have nothing here but in case of a error in code
+        admin?
+    end
+  end
+
+  def put_draft?
+    admin?
+  end
+
+  def put_for_admin_validation?
+    admin?
+  end
+
+  def put_online?
     admin?
   end
 

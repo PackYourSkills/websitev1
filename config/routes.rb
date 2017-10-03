@@ -46,6 +46,9 @@ Rails.application.routes.draw do
   get '/missions/:mission_id/connections/:id/refuse', to:'connections#refuse', as: 'refuse_connection'
   get '/missions/:mission_id/connections/:id/cancel', to:'connections#cancel', as: 'cancel_connection'
   get '/missions/:mission_id/connections/:id/confirm', to:'connections#confirm', as: 'confirm_connection'
+  get '/missions/:mission_id/connections/:id/put_online', to:'connections#put_online', as: 'put_online_connection'
+  get '/missions/:mission_id/connections/:id/put_draft', to:'connections#put_draft', as: 'put_draft_connection'
+  get '/missions/:mission_id/connections/:id/put_for_admin_validation', to:'connections#put_for_admin_validation', as: 'put_for_admin_validation_connection'
 
   resources :packers, only: [:edit, :update, :show]
 

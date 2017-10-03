@@ -57,7 +57,7 @@ class Packer < ApplicationRecord
   end
 
   def progress
-    percent = 0
+    percent = 5
     percent+=5 if self.first_name.present?
     percent+=5 if self.last_name.present?
     percent+=5 if self.sexe.present?
@@ -75,7 +75,6 @@ class Packer < ApplicationRecord
     percent+=5 if self.quote_author.present?
     percent+=5 if self.address.present?
     percent+=5 if self.phone.present?
-    percent+=5 if self.website.present?
     percent+=5 unless self.cover_packer.nil?
     percent+=5 unless self.profile_picture.nil?
     return percent

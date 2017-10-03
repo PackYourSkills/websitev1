@@ -1,4 +1,4 @@
-<div id="packer_show" class='global_show'>
+<div id="packer_and_connection_show" class='global_show'>
 
   <%= render 'packers/packer_profile' %>
 
@@ -8,22 +8,37 @@
         <h2><%= t('packer.show.application.motivation') %></h2>
       </div>
       <div class='row row_placeholder'>
-        <p><%= t('packer.show.application.placeholder') %></p>
+        <div class="motivation_placeholder">
+          <p><%= @connection.motivation %></p>
+        </div>
       </div>
     </div>
   </section>
+  <% if current_user.role == "admin" %>
+    <section id="admin_section" class="section">
+      <h2>Admin part</h2>
+
+      <p>Actual status : <%= @connection.status %> </p>
+      <p>Change to
+      <%= link_to "online",  put_online_connection_path(@connection) %> -
+      <%= link_to "draft",  put_draft_connection_path(@connection) %> -
+      <%= link_to "for_admin_validation",  put_for_admin_validation_connection_path(@connection) %>
+    <!--
+      <%= link_to "accept",  accept_connection_path(@mission,@connection) %>
+      <%= link_to "refuse",  refuse_connection_path(@mission,@connection) %>
+      <%= link_to "cancel",  cancel_connection_path(@mission,@connection) %>
+      <%= link_to "confirm",  confirm_connection_path(@mission,@connection) %>
+      <%= link_to "delete",  mission_connection_path(@mission,@connection), method: :delete, data: {confirm: "Are your sure?"} %></p>
+    -->
+
+    </section>
+  <% end %>
+
+
 </div>
 
 
-<p>Status : <%= @connection.status %> </p>
 
-<%= link_to "edit",   edit_mission_connection_path(@mission,@connection) %>
-<%= link_to "accept",  accept_connection_path(@mission,@connection) %>
-<%= link_to "refuse",  refuse_connection_path(@mission,@connection) %>
-<%= link_to "cancel",  cancel_connection_path(@mission,@connection) %>
-<%= link_to "confirm",  confirm_connection_path(@mission,@connection) %>
-
-<%= link_to "delete",  mission_connection_path(@mission,@connection), method: :delete, data: {confirm: "Are your sure?"} %>
 
 
 
