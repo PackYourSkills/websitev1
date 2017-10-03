@@ -9,7 +9,7 @@
   <%= mission.title %> - <%= link_to "Edit mission info", edit_mission_path(mission.id) %> - <%= link_to "Edit Crew info", edit_crew_path(mission.crew.id) %></p>
   <p>Application</p>
   <% mission.connections.each_with_index do |connection, index| %>
-    <p> - <%= index + 1 %> <%= connection.packer.first_name %> - <%= connection.packer.last_name %> <%= link_to "See profile", packer_path(connection.packer_id) %></p>
+    <p>=><%= index + 1 %> - Status : <%= connection.status %> - Packer : <%= connection.packer.first_name %> <%= connection.packer.last_name %> - <%= link_to "See application", mission_connection_path(mission.id, connection.id) %></p>
   <% end %>
 <% end %>
 
