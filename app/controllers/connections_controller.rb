@@ -2,7 +2,7 @@ class ConnectionsController < ApplicationController
 
   before_action :set_connection, only: [ :edit, :update, :accept, :refuse, :confirm, :cancel, :destroy ]
   before_action :set_mission, only: [ :new, :create, :edit, :update, :accept, :refuse, :confirm, :cancel, :destroy ]
-  before_action :set_packer, only: [ :destroy ]
+  before_action :set_packer, only: [ :show, :destroy ]
 
   def index
     @connections = policy_scope(Connection)

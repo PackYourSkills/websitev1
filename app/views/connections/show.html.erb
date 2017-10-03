@@ -1,9 +1,19 @@
-<h1>Connections#show</h1>
-<p>Find me in app/views/connections/show.html.erb</p>
+<div id="packer_show" class='global_show'>
 
-<p>connection from <%= @connection.packer.user.first_name %> </p>
-<p>for the mission <%= @connection.mission.title %> </p>
-<p><%= @connection.message %> </p>
+  <%= render 'packers/packer_profile' %>
+
+  <section id="application_packer_show" class="section">
+    <div class='container container_application'>
+      <div class='row row_title'>
+        <h2><%= t('packer.show.application.motivation') %></h2>
+      </div>
+      <div class='row row_placeholder'>
+        <p><%= t('packer.show.application.placeholder') %></p>
+      </div>
+    </div>
+  </section>
+</div>
+
 
 <p>Status : <%= @connection.status %> </p>
 
