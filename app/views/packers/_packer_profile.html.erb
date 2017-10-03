@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class='information'>
-      <p><strong><%= @packer.first_name.upcase %> <%= @packer.last_name.upcase %></strong></p>
+      <p><strong><%= @packer.first_name %> <%= @packer.last_name %></strong></p>
       <p><%= @packer.nationality %>, <%= @packer.age %> <%= t('packer.show.summary.age') %>, <%= @packer.sexe.downcase unless @packer.sexe.nil? %></p>
       <p><%= t('packer.show.summary.city') %> <%= @packer.city %>, <%= @packer.country %></p>
       <p><%= @packer.job %></p>
