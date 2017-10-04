@@ -42,23 +42,17 @@ class ConnectionsController < ApplicationController
 
   def put_online
     @connection.put_online
-    redirect_to :back
-  rescue ActionController::RedirectBackError
-    redirect_to authenticated_root_path
+    redirect_back(fallback_location: authenticated_root_path)
   end
 
   def put_for_admin_validation
     @connection.put_for_admin_validation
-    redirect_to :back
-  rescue ActionController::RedirectBackError
-    redirect_to authenticated_root_path
+    redirect_back(fallback_location: authenticated_root_path)
   end
 
   def put_draft
     @connection.put_draft
-    redirect_to :back
-  rescue ActionController::RedirectBackError
-    redirect_to authenticated_root_path
+    redirect_back(fallback_location: authenticated_root_path)
   end
 
   def accept

@@ -41,7 +41,7 @@
         <h2>Your applications</h2>
         <% if @packer.connections.size == 0 %>
           <p>You don't have any application yet! Don't you wanna come in Paris in November ?</p>
-          <p><strong><%= link_to "Discover all the amazing opporunities", missions_path %></strong></p>
+          <p><strong><%= link_to "Discover all the amazing opportunities", missions_path %></strong></p>
         <% else %>
           <% if @all_draft.size != 0 %>
             <div class="box_application">
@@ -65,7 +65,7 @@
               <h3> Your online application(s) </h3>
               <p class="comment"> Isis or Maxime from Pack Your Skills will come back to you soon</p>
               <% @all_other.each_with_index do |connection, index| %>
-                <p><%= index + 1 %> - <strong><%= connection.mission.crew.name %></strong></p>
+                <p><%= index + 1 %> - <strong><%= connection.mission.crew.name %></strong> - <%= link_to "preview", mission_connection_path(connection.mission.id, connection.id) %></p>
               <% end %>
             </div>
           <% end %>
