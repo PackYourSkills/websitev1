@@ -8,8 +8,46 @@
         <h2><%= t('packer.show.application.motivation') %></h2>
       </div>
       <div class='row row_placeholder'>
-        <div class="motivation_placeholder">
+        <div class="col-xs-12 motivation_placeholder">
           <p><%= @connection.motivation %></p>
+        </div>
+        <div class="contact">
+          <p><u>Contacts</u></p>
+          <% unless @connection.packer.website == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Website</strong>: <%= @connection.packer.website %></p>
+            </div>
+          <% end %>
+          <% unless @connection.packer.cv_link == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Online CV</strong>: <%= @connection.packer.cv_link %></p>
+            </div>
+          <% end %>
+          <% unless @connection.packer.facebook == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Facebook</strong>: <%= @connection.packer.facebook %></p>
+            </div>
+          <% end %>
+          <% unless @connection.packer.instagram == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Instagram</strong>: <%= @connection.packer.instagram %></p>
+            </div>
+          <% end %>
+          <% unless @connection.packer.other_link == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Other link</strong>: <%= @connection.packer.other_link %></p>
+            </div>
+          <% end %>
+          <% unless @connection.packer.skype == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Skype</strong>: <%= @connection.packer.skype %></p>
+            </div>
+          <% end %>
+          <% unless @connection.packer.phone == (nil || "") %>
+            <div class="col-xs-12 col-md-6">
+              <p><strong>Phone</strong>: <%= @connection.packer.phone %></p>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -33,8 +71,6 @@
 
     </section>
   <% end %>
-
-
 </div>
 
 
