@@ -58,9 +58,9 @@
 
       <p>Actual status : <%= @connection.status %> </p>
       <p>Change to
-      <%= link_to "online",  put_online_connection_path(@connection) %> -
-      <%= link_to "draft",  put_draft_connection_path(@connection) %> -
-      <%= link_to "for_admin_validation",  put_for_admin_validation_connection_path(@connection) %>
+      <%= link_to "online",  put_online_connection_path(@connection.mission,@connection) %> -
+      <%= link_to "draft",  put_draft_connection_path(@connection.mission,@connection) %> -
+      <%= link_to "for_admin_validation",  put_for_admin_validation_connection_path(@connection.mission,@connection) %>
     <!--
       <%= link_to "accept",  accept_connection_path(@mission,@connection) %>
       <%= link_to "refuse",  refuse_connection_path(@mission,@connection) %>
