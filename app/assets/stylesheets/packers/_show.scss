@@ -168,6 +168,15 @@
       @media screen and (min-width: 768px) and (max-width: 991px) {flex: 0 0 75%;}
       @media screen and (max-width: 767px) {flex: 0 0 90%;}
     }
+    .annexes {
+      .title{background-color:rgb(200,200,200);}
+      .content{background-color:$gray;}
+      p {
+        @media screen and (min-width: 992px) {font-size:14px;}
+        @media screen and (min-width: 768px) and (max-width: 991px) {font-size:12px;}
+        @media screen and (max-width: 767px) {font-size:10px;}
+      }
+    }
   }
 
   #admin_section {
@@ -177,12 +186,5 @@
     margin: 30px 0px;
     padding:30px;
   }
-  .contact {
-    background-color:rgb(200,200,200);
-    p {
-      @media screen and (min-width: 992px) {font-size:14px;}
-      @media screen and (min-width: 768px) and (max-width: 991px) {font-size:12px;}
-      @media screen and (max-width: 767px) {font-size:10px;}
-    }
-  }
+
 }
