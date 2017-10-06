@@ -11,43 +11,59 @@
         <div class="col-xs-12 motivation_placeholder">
           <p><%= @connection.motivation %></p>
         </div>
-        <div class="contact">
-          <p><u>Contacts</u></p>
-          <% unless @connection.packer.website == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Website</strong>: <%= @connection.packer.website %></p>
+        <div class="annexes">
+          <% if @connection.documents.size != 0 %>
+            <div class="col-xs-12 title">
+              <p><u>Attached files</u></p>
+            </div>
+            <div class="col-xs-12 content">
+              <% @connection.documents.each_with_index do |document, index| %>
+                <div class="col-xs-12 col-md-4">
+                  <p>Document <%= index + 1 %> - <%= link_to "see", "http://res.cloudinary.com/packyourskills/#{document.resource_type}/upload/v#{document.version}/#{document.public_id}#{'.'unless document.format.nil?}#{document.format}"%></p>
+                </div>
+              <% end %>
             </div>
           <% end %>
-          <% unless @connection.packer.cv_link == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Online CV</strong>: <%= @connection.packer.cv_link %></p>
-            </div>
-          <% end %>
-          <% unless @connection.packer.facebook == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Facebook</strong>: <%= @connection.packer.facebook %></p>
-            </div>
-          <% end %>
-          <% unless @connection.packer.instagram == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Instagram</strong>: <%= @connection.packer.instagram %></p>
-            </div>
-          <% end %>
-          <% unless @connection.packer.other_link == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Other link</strong>: <%= @connection.packer.other_link %></p>
-            </div>
-          <% end %>
-          <% unless @connection.packer.skype == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Skype</strong>: <%= @connection.packer.skype %></p>
-            </div>
-          <% end %>
-          <% unless @connection.packer.phone == (nil || "") %>
-            <div class="col-xs-12 col-md-6">
-              <p><strong>Phone</strong>: <%= @connection.packer.phone %></p>
-            </div>
-          <% end %>
+          <div class="col-xs-12 title">
+            <p><u>Contacts</u></p>
+          </div>
+          <div class="col-xs-12 content">
+            <% unless @connection.packer.website == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Website</strong>: <%= @connection.packer.website %></p>
+              </div>
+            <% end %>
+            <% unless @connection.packer.cv_link == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Online CV</strong>: <%= @connection.packer.cv_link %></p>
+              </div>
+            <% end %>
+            <% unless @connection.packer.facebook == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Facebook</strong>: <%= @connection.packer.facebook %></p>
+              </div>
+            <% end %>
+            <% unless @connection.packer.instagram == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Instagram</strong>: <%= @connection.packer.instagram %></p>
+              </div>
+            <% end %>
+            <% unless @connection.packer.other_link == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Other link</strong>: <%= @connection.packer.other_link %></p>
+              </div>
+            <% end %>
+            <% unless @connection.packer.skype == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Skype</strong>: <%= @connection.packer.skype %></p>
+              </div>
+            <% end %>
+            <% unless @connection.packer.phone == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Phone</strong>: <%= @connection.packer.phone %></p>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
