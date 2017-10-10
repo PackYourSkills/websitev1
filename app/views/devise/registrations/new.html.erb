@@ -20,6 +20,7 @@
 
   <div class="form-actions">
     <%= f.button :submit, t(".sign_up"), :class => "btn btn-primary" %>
+    <script>fbq('track', 'CompleteRegistration');</script>
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
