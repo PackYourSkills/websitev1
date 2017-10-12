@@ -58,6 +58,11 @@
                 <p><strong>Skype</strong>: <%= @connection.packer.skype %></p>
               </div>
             <% end %>
+            <% unless @connection.packer.user.email == (nil || "") %>
+              <div class="col-xs-12 col-md-6">
+                <p><strong>Email</strong>: <%= @connection.packer.user.email %></p>
+              </div>
+            <% end %>
             <% unless @connection.packer.phone == (nil || "") %>
               <div class="col-xs-12 col-md-6">
                 <p><strong>Phone</strong>: <%= @connection.packer.phone %></p>
