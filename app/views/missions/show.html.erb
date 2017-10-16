@@ -24,10 +24,24 @@
     <div class="nav_bar_items">
       <%= link_to t('mission.show.host.section_title'), '#host_mission_show' %>
     </div>
-    <div class="nav_bar_items call2action">
-      <%= link_to t('mission.show.apply'), new_mission_connection_path(@mission.id) %>
-    </div>
+    <% if @mission.status == 'online' %>
+      <div class="nav_bar_items call2action">
+        <%= link_to t('mission.show.apply'), new_mission_connection_path(@mission.id) %>
+      </div>
+    <% end %>
   </section>
+
+  <% unless @mission.status == 'online' %>
+    <section id="message_mission_not_online" class="section_red">
+      <% case @mission.status %>
+      <% when 'validated' %>
+        <p>This opportunity already found a Packer, so you cannot apply anymore =>
+        <strong><%= link_to "see all the other opportunities", missions_path %></strong></p>
+      <% else %>
+        <p><%= @mission.status %></p>
+      <% end %>
+    </section>
+  <% end %>
 
 <!-- crew_mission_show Part -->
   <section id="summary_mission_show" class="summary_global_show section_blue">
@@ -193,10 +207,11 @@
     </div>
   </section>
 <!-- Values Part -->
-  <section class="call2action">
-    <%= link_to t('mission.show.apply'), new_mission_connection_path(@mission.id), class: "btn btn-primary btn-lg" %>
-  </section>
-
+  <% if @mission.status == 'online' %>
+    <section class="call2action">
+      <%= link_to t('mission.show.apply'), new_mission_connection_path(@mission.id), class: "btn btn-primary btn-lg" %>
+    </section>
+  <% end %>
 </div>
 
 

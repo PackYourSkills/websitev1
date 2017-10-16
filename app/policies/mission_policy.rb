@@ -17,6 +17,10 @@ class MissionPolicy < ApplicationPolicy
     admin? || user.crew?
   end
 
+  def validate?
+    admin?
+  end
+
   def update?
     case record.status
       when 'online', 'draft', 'suspended'

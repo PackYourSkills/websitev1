@@ -31,7 +31,7 @@
           </div>
           <!-- isotope filters end -->
           <div class="isotope-container">
-            <% @public_missions.each_with_index do |mission, index| %>
+            <% @online_missions.each_with_index do |mission, index| %>
               <div class="col-xs-12 col-sm-6 col-md-4 isotope-item <%= mission.skill.downcase.gsub(/\s+/, "") %>">
                 <div class= "card_mission">
                   <div class= "banner_card_mission" style="background-image: url('<%= cl_image_path mission.url_cover, angle: 0 %>')" >
@@ -43,6 +43,28 @@
                     <p><strong><%= mission.title %></strong></p>
                     <p>#<%= mission.skill %></p>
                     <p>#<%= mission.crew.cause %></p>
+                  </div>
+                  <%= link_to "", mission_path(mission.id) %>
+                </div>
+              </div>
+            <% end %>
+            <% @validated_missions.each_with_index do |mission, index| %>
+              <div class="col-xs-12 col-sm-6 col-md-4 isotope-item <%= mission.skill.downcase.gsub(/\s+/, "") %>">
+                <div class= "card_mission">
+                  <div class= "banner_card_mission" style="background-image: url('<%= cl_image_path mission.url_cover, angle: 0 %>')" >
+                    <div class= "box box_ratio_1_1" style="background-image: url('<%= cl_image_path mission.crew.url_logo, angle: 0 %>')" >
+                    </div>
+                  </div>
+                  <div class= "info_card_mission">
+                    <p><%= mission.crew.name %></p>
+                    <p><strong><%= mission.title %></strong></p>
+                    <p>#<%= mission.skill %></p>
+                    <p>#<%= mission.crew.cause %></p>
+                  </div>
+                  <div class="validated_mission">
+                    <div class="content">
+                      <p>This missions does not accept any application anymore</p>
+                    </div>
                   </div>
                   <%= link_to "", mission_path(mission.id) %>
                 </div>
