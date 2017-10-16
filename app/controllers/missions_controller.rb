@@ -1,12 +1,13 @@
 class MissionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_crew, only: [ :create, :destroy ]
-  before_action :set_mission, only: [ :show, :edit, :update, :destroy]
+  before_action :set_mission, only: [ :show, :edit, :update, :validate, :destroy]
 
   def index
     # selection of the mission
     @all_missions = policy_scope(Mission)
-    @public_missions = @all_missions.where(status: 'online')
+    @online_missions = @all_missions.where(status: 'online')
+    @validated_missions = @all_missions.where(status: 'validated')
     @constants = YAML.load_file(Rails.root.join('config', 'constants.yml'))
     @url_cover = @constants["img_banner_url"]["paris"]
   end
@@ -40,6 +41,11 @@ class MissionsController < ApplicationController
   def update
     params[:commit] == 'Publish' ? (@mission.status = 'online') : (@mission.status = 'draft')
     @mission.update(mission_params) ? (redirect_to mission_path @mission) : (render :edit)
+  end
+
+  def validate
+    @mission.validate
+    redirect_back(fallback_location: authenticated_root_path)
   end
 
   private

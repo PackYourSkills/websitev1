@@ -38,6 +38,7 @@ Rails.application.routes.draw do
     resources :connections, only: [:new, :create, :edit, :show, :index, :destroy, :update]
   end
   #to change the status of a mission
+  get '/missions/:id/validate', to:'missions#validate', as: 'validate_mission'
   get '/missions/:id/suspend', to:'missions#suspend', as: 'suspend_mission'
   get '/missions/:id/close', to:'missions#close', as: 'close_mission'
   get '/missions/:id/cancel', to:'missions#cancel', as: 'cancel_mission'
