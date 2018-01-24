@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr/ do #to use i18n | change /fr/ to /fr|es/ to add spanish
     root to: 'pages#home'
     get '/home', to: 'pages#home'
+    get 'AprilIsComing', to: 'pages#AprilIsComing', as: :apriliscoming
   end
 
 
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
 #  get 'NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool', as: :novemberisthenewcool
 #  get 'fr/NovemberIsTheNewCool', to: 'pages#NovemberIsTheNewCool'
   #######################
+
 
   get 'IAmAPacker', to: 'pages#IAmAPacker', as: :iamapacker
   get 'IAmACrew', to: 'pages#IAmACrew', as: :iamacrew

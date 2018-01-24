@@ -111,8 +111,8 @@ fr:
       2_normal: "WebMarketing, Développement web, Photo, Video & Graphisme"
       3_strong: "8 types de missions"
       3_normal: "Créer une charte graphique, Prendre des photos, Tourner et éditer une vidéo, Lancer une campagne Adwords, Booster le SEO, Améliorer l'expérience utilisateur (UX), Coder un siste statique avec CMS"
-      4_strong: "15 missions"
-      4_normal: "dans 15 projets dédié à résoudre des problèmes de sociétés"
+      4_strong: "10 missions"
+      4_normal: "dans 10 projets dédiés à résoudre des problèmes de sociétés"
       5_strong: "3+ événements"
       5_normal: "Meet-up, Visite du Paris alternatif, Apéros"
     call2action:
@@ -129,6 +129,41 @@ fr:
         call2action: "Envoyer"
     follow: "Suivez tout ce qu'il se passe :"
 
+  april:
+    banner:
+      title1: "Pack your skills*"
+      title2: "&Travel to Paris"
+      translate: "*Emporte tes compétences et pars à Paris"
+      underline: "5-22 avril 2018"
+    intro:
+      paragraph1: "Pack Your Skills lance sa première édition pour 2018 en avril. Avant de penser à lancer le service dans une nouvelle ville, nous gardons la même recette et commençons la deuxième année de Pack Your Skills comme nous avons terminé la première… avec une nouvelle édition à Paris !"
+      paragraph2: "Vous souhaitez découvrir cette incroyable ville quand les beaux jours seront de retour ? Soyez prêt..."
+      title: "April is coming* !"
+      translate: "*Avril arrive (c'est moche en français, mais bon... c'était pour la petite référence)!"
+    description:
+      1_strong: "15 jours à Paris"
+      1_normal: "Du 7 au 22 avril 2018"
+      2_strong: "5 compétences"
+      2_normal: "WebMarketing, Développement web, Photo, Video & Graphisme"
+      3_strong: "8 types de missions"
+      3_normal: "Créer une charte graphique, Prendre des photos, Tourner et éditer une vidéo, Lancer une campagne Adwords, Booster le SEO, Améliorer l'expérience utilisateur (UX), Coder un siste statique avec CMS"
+      4_strong: "15 missions"
+      4_normal: "dans 15 projets dédié à résoudre des problèmes de sociétés"
+      5_strong: "3+ événements"
+      5_normal: "Meet-up, Visite du Paris alternatif, Apéros"
+    call2action:
+      title: "Fais partie de l'aventure !"
+      crews:
+        name: "Crew"
+        text: "Vous avez un projet dédié à résoudre un problème de société, basé à Paris, et vous avez besoin de compétences ? Vous êtes partants pour sortir de la monotonie et aimeriez héberger un voyageur ?"
+        comment: "Échangeons rapidement avant de créer votre page de mission! Réservez un appel ici avec Maxime"
+        call2action: "Recevoir un Packer"
+      packers:
+        name: "Packer"
+        text: "Tu veux découvrir l'entrepreneuriat social, te sentir utile et impactant pendant que tu acquiers de l'expérience et découvres Paris avec des locaux?"
+        comment: "Il est temps de vous inscrire pour être prêt à postuler dès que la mission sera en ligne"
+        call2action: "S'inscrire"
+    follow: "Suivez tout ce qu'il se passe :"
 
   mission:
     index:

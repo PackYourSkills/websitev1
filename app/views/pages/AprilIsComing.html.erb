@@ -1,0 +1,124 @@
+<div class="round">
+
+  <section id="round_banner" class="banner section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-offset-2 col-xs-10 col-sm-offset-6 col-sm-6 col-md-offset-7 col-md-5">
+          <h1><%= t('april.banner.title1') %></h1>
+          <h1><%= t('april.banner.title2') %></h1>
+          <div class="translate"><%= t('april.banner.translate') %></div>
+          <p><%= t('april.banner.underline') %></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer_banner">
+      <a href="#round_intro"><%= image_tag "/home.banner.arrow.png", id: 'arrow_banner'  %></a>
+    </div>
+  </section>
+
+  <section id="round_intro" class="section section_red_shape_photo_right">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-6 col-xd-7">
+          <p><%= t('april.intro.paragraph1') %></p>
+          <p><%= t('april.intro.paragraph2') %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="round_title" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1><%= t('april.intro.title') %></h1>
+          <div class="translate"><%= t('april.intro.translate') %></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="round_description" class="section section_blue_shape_photo_left">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-offset-2 col-xs-10 col-sm-offset-4 col-sm-8">
+          <p><strong><%= t('april.description.1_strong') %></strong></p>
+          <p><%= t('april.description.1_normal') %></p>
+          <p><strong><%= t('april.description.2_strong') %></strong></p>
+          <p><%= t('april.description.2_normal') %></p>
+          <p><strong><%= t('april.description.3_strong') %></strong></p>
+          <p><%= t('april.description.3_normal') %></p>
+          <p><strong><%= t('april.description.4_strong') %></strong></p>
+          <p><%= t('april.description.4_normal') %></p>
+          <p><strong><%= t('april.description.5_strong') %></strong></p>
+          <p><%= t('april.description.5_normal') %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Users Part -->
+  <section id="round_call2action" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1><%= t('april.call2action.title') %></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class='col-xs-12 col-md-6'>
+          <div class="row">
+            <div class='col-xs-12 col-sm-3 col-md-12 hide_for_phone arrow arrow_left'>
+              <%= image_tag "/home.crews.png" %>
+            </div>
+            <div class='col-xd-12 col-sm-9 col-md-12'>
+              <p><strong><%= t('april.call2action.crews.name') %></strong></p>
+              <p><%= t('april.call2action.crews.text') %></p>
+              <p class="comment"><strong><%= t('april.call2action.crews.comment') %></strong></p>
+              <a class="green_call2action" href="http://bit.ly/2n6mJMA" role="button"><%= t('april.call2action.crews.call2action') %></a>
+            </div>
+          </div>
+        </div>
+        <div class='col-xs-12 col-md-6'>
+          <div class="row">
+            <div class='col-xs-12 col-sm-3 col-md-12 hide_for_phone arrow arrow_right '>
+              <%= image_tag "/home.packers.png" %>
+            </div>
+            <div class='col-xd-12 col-sm-9 col-md-12'>
+              <p><strong><%= t('april.call2action.packers.name') %></strong></p>
+              <p><%= t('april.call2action.packers.text') %></p>
+              <p class="comment"><strong><%= t('april.call2action.packers.comment') %></strong></p>
+              <%= link_to t('april.call2action.packers.call2action'), new_user_registration_path, class: "green_call2action" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Enf of Users Part -->
+
+  <!-- Social Media Part -->
+  <section id="april_social_network" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-sm-5">
+          <p><strong><%= t('april.follow') %></strong></p>
+        </div>
+        <div class="col-xs-1">
+          <a href="https://www.instagram.com/packyourskills/" target="_blank" class="logo_social_network logo_insta"></a>
+        </div>
+        <div class="col-xs-1">
+          <a href="https://www.facebook.com/PackYourSkills/" target="_blank" class="logo_social_network logo_fb"></a>
+        </div>
+        <div class="col-xs-1">
+          <a href="https://twitter.com/packyourskills" target="_blank" class="logo_social_network logo_twitter"></a>
+        </div>
+        <div class="col-xs-1">
+          <a href="https://www.youtube.com/playlist?list=PLTAYKibpcTw9u8f5zMHd6su4UrfOO9611" target="_blank" class="logo_social_network logo_youtube"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Enf of Social Media Part -->
+
+</div>

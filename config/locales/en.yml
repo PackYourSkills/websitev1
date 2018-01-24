@@ -129,6 +129,42 @@ en:
         call2action: 'Send'
     follow: "Follow everything that's going on :"
 
+  april:
+    banner:
+      title1: "Pack your skills"
+      title2: "& travel to Paris"
+      translate: ""
+      underline: "April 7 to 22, 2018"
+    intro:
+      paragraph1: "Pack Your Skills launches its first edition for 2018 in April. Before thinking about launching the service in a new city, we keep the same recipe and start the second year of Pack Your Skills as we finished the first ... with a new edition in Paris!"
+      paragraph2: "You would like to discover this amazing when the beautiful days will be back? Get ready..."
+      title: "April Is Coming!"
+      translate: ""
+    description:
+      1_strong: "15 days in Paris"
+      1_normal: "April 7 to 22, 2018"
+      2_strong: "5 skills"
+      2_normal: "WebMarketing, Webdevelopment, Photo, Video & Graphic Design"
+      3_strong: "8 kinds of tasks"
+      3_normal: "Create a graphic design, Shoot photos, Shoot and edit a video, Initiate an Adwords campaign, Boost the SEO, Improve UX, Code a static website with CMS"
+      4_strong: "10 opportunities"
+      4_normal: "in 10 mission-driven projects"
+      5_strong: "3+ events"
+      5_normal: "Meet-up, Tour of alternative Paris, Drinks"
+    call2action:
+      title: "Be part of this unique adventure !"
+      crews:
+        name: "Crew"
+        text: "You have a mission-driven project in Paris and need skills ? You want to break free from your routine and would like to host a traveller?"
+        comment: "Let's have a quick exchange before we create your mission page ! Click here to book for a call with Maxime"
+        call2action: "Apply"
+      packers:
+        name: "Packer"
+        text: "You want to discover social entrepreneurship, feel useful and impactful while you gain experience and discover Paris with local people?"
+        comment: "It's time to sign up to get ready to apply as soon as the mission will be online"
+        call2action: 'Sign up'
+    follow: "Follow everything that's going on :"
+
   iamapacker:
     title: "Who are the Packers?"
     q1: 'WHAT DOES IT MEAN TO BE A « PACKER » ?'
