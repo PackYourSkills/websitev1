@@ -190,11 +190,10 @@ fr:
     q3: 'HOW MUCH DOES IT COST TO BE A PACKER ?'
     a3_html: 'For legal reasons, Packers need to become members of our association. To do so, they need to pay for a yearly 10€ subscription.<br><br> The traveling expenses (airplane, bus, Visa…) are at the expense of the Packer.'
     q4: 'WHAT IS THE PROCESS TO BECOME A PACKER ?'
-    a4_html: 'The first step to becoming a Packer is to Sign Up as a Packer. Once you’ve signed up, you can : <br> - Participate in November’s round in Paris : you will be able to see the list of opportunities for November and apply to those you like <br> - Participate later in Paris : after November’s round, projects in Paris will be able to continuously put offers online so you will be able to apply <br>- Participate later in another European city : we will open a new European city in 2018'
+    a4_html: 'The first step to becoming a Packer is to Sign Up. <br>Once you’ve signed up, you will be able to fill your profile to prepare your future application.<br>We are working with the future hosting projects and the opportunities will be online very soon. You will be able to see the list and apply to those you like. <br>...and get ready, we will open a new European city in 2018'
     participate: "You wanna participate ?"
-    call2action: "See all the opportunities for Paris"
-    later: "You wanna participate later"
-    signup: "Sign up"
+    next_edition: "The next edition will be from April 7th to 22nd 2018. Sign up and get ready to apply when the mission will be online!"
+    call2action: "Sign up"
   iamacrew:
     title: "Who are the Crews?"
     q1: 'WHAT DOES IT MEAN TO BE A « CREW » ?'
@@ -206,6 +205,5 @@ fr:
     q4: 'WHAT IS THE PROCESS TO BECOME A CREW ?'
     a4_html: 'The first step to becoming a Crew is to Sign Up as a Crew. Once you’ve signed up, someone from the Pack Your Skills team will call you at the number you gave or on Skype. After the call the team will decide if you correspond to the type of projects we’re looking for. If you do and are based in Paris, you’ll be allowed to put offers online. If you’re not based in Paris, we will need to discuss further because we haven’t opened other cities than Paris yet.'
     participate: "You would like to host a Packer ?"
-    email: "Can you give us your email ?"
-    name: "What is the name of your project ?"
-    city: "In which city would you like to receive a Packer ?"
+    next_edition_html: 'The next edition will be from April 7th to 22nd 2018. <br>Let’s have a quick exchange before we create your mission page ! <br>Click here to book for a call with Maxime'
+    call2action: "Book a call"
