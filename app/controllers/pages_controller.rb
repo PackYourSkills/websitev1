@@ -10,6 +10,9 @@ class PagesController < ApplicationController
   def NovemberIsTheNewCool
   end
 
+  def AprilIsComing
+  end
+
   def IAmAPacker
     @banner_url = @constants["img_banner_url"]["packer"]
   end

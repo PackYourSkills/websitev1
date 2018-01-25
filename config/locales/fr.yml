@@ -44,7 +44,7 @@ fr:
       translate: "*vos compétences peuvent changer le monde"
       baseline1: "Prêtez vos compétences à un projet social"
       baseline2: "en échange de l'hébergement"
-      call2action: "Voir toutes les opportunités"
+      call2action: "Prochaine édition en Avril!"
       date: 'Paris, 5-19 novembre 2017'
       message2crews: 'Vous avez un projet à Paris ? Hébergez un voyageur en échange de ses compéteces !'
     mission:
@@ -111,8 +111,8 @@ fr:
       2_normal: "WebMarketing, Développement web, Photo, Video & Graphisme"
       3_strong: "8 types de missions"
       3_normal: "Créer une charte graphique, Prendre des photos, Tourner et éditer une vidéo, Lancer une campagne Adwords, Booster le SEO, Améliorer l'expérience utilisateur (UX), Coder un siste statique avec CMS"
-      4_strong: "15 missions"
-      4_normal: "dans 15 projets dédié à résoudre des problèmes de sociétés"
+      4_strong: "10 missions"
+      4_normal: "dans 10 projets dédiés à résoudre des problèmes de sociétés"
       5_strong: "3+ événements"
       5_normal: "Meet-up, Visite du Paris alternatif, Apéros"
     call2action:
@@ -129,14 +129,50 @@ fr:
         call2action: "Envoyer"
     follow: "Suivez tout ce qu'il se passe :"
 
+  april:
+    banner:
+      title1: "Pack your skills*"
+      title2: "&Travel to Paris"
+      translate: "*Emporte tes compétences et pars à Paris"
+      underline: "5-22 avril 2018"
+    intro:
+      paragraph1: "Pack Your Skills lance sa première édition pour 2018 en avril. Avant de penser à lancer le service dans une nouvelle ville, nous gardons la même recette et commençons la deuxième année de Pack Your Skills comme nous avons terminé la première… avec une nouvelle édition à Paris !"
+      paragraph2: "Vous souhaitez découvrir cette incroyable ville quand les beaux jours seront de retour ? Soyez prêt..."
+      title: "April is coming* !"
+      translate: "*Avril arrive (c'est moche en français, mais bon... c'était pour la petite référence)!"
+    description:
+      1_strong: "15 jours à Paris"
+      1_normal: "Du 7 au 22 avril 2018"
+      2_strong: "5 compétences"
+      2_normal: "WebMarketing, Développement web, Photo, Video & Graphisme"
+      3_strong: "8 types de missions"
+      3_normal: "Créer une charte graphique, Prendre des photos, Tourner et éditer une vidéo, Lancer une campagne Adwords, Booster le SEO, Améliorer l'expérience utilisateur (UX), Coder un siste statique avec CMS"
+      4_strong: "15 missions"
+      4_normal: "dans 15 projets dédié à résoudre des problèmes de sociétés"
+      5_strong: "3+ événements"
+      5_normal: "Meet-up, Visite du Paris alternatif, Apéros"
+    call2action:
+      title: "Fais partie de l'aventure !"
+      crews:
+        name: "Crew"
+        text: "Vous avez un projet dédié à résoudre un problème de société, basé à Paris, et vous avez besoin de compétences ? Vous êtes partants pour sortir de la monotonie et aimeriez héberger un voyageur ?"
+        comment: "Échangeons rapidement avant de créer votre page de mission! Réservez un appel ici avec Maxime"
+        call2action: "Recevoir un Packer"
+      packers:
+        name: "Packer"
+        text: "Tu veux découvrir l'entrepreneuriat social, te sentir utile et impactant pendant que tu acquiers de l'expérience et découvres Paris avec des locaux?"
+        comment: "Il est temps de vous inscrire pour être prêt à postuler dès que la mission sera en ligne"
+        call2action: "S'inscrire"
+    follow: "Suivez tout ce qu'il se passe :"
 
   mission:
     index:
       title: 'Pack Your Skills, round 3'
       subtitle: 'NOVEMBER 5-19 | PARIS'
       introduction:
-        intro: "You always had a boring November? In 2017, thank's to Pack Your Skills"
-        hashtag: "#NovemberIsTheNewCool"
+        intro1: "Pack Your Skills launches its first edition for 2018 in April in Paris"
+        intro2: "You would like to discover this amazing when the beautiful days will be back? Get ready..."
+        hashtag: "#AprilIsComing"
         explication: "We enable travellers to volunteer in a social or environmental projects by offering their skills in exchange for food and accommodation."
         call2action: "What do you think about coming to Paris in November?"
       filter:
@@ -155,11 +191,10 @@ fr:
     q3: 'HOW MUCH DOES IT COST TO BE A PACKER ?'
     a3_html: 'For legal reasons, Packers need to become members of our association. To do so, they need to pay for a yearly 10€ subscription.<br><br> The traveling expenses (airplane, bus, Visa…) are at the expense of the Packer.'
     q4: 'WHAT IS THE PROCESS TO BECOME A PACKER ?'
-    a4_html: 'The first step to becoming a Packer is to Sign Up as a Packer. Once you’ve signed up, you can : <br> - Participate in November’s round in Paris : you will be able to see the list of opportunities for November and apply to those you like <br> - Participate later in Paris : after November’s round, projects in Paris will be able to continuously put offers online so you will be able to apply <br>- Participate later in another European city : we will open a new European city in 2018'
+    a4_html: 'The first step to becoming a Packer is to Sign Up. <br>Once you’ve signed up, you will be able to fill your profile to prepare your future application.<br>We are working with the future hosting projects and the opportunities will be online very soon. You will be able to see the list and apply to those you like. <br>...and get ready, we will open a new European city in 2018'
     participate: "You wanna participate ?"
-    call2action: "See all the opportunities for Paris"
-    later: "You wanna participate later"
-    signup: "Sign up"
+    next_edition: "The next edition will be from April 7th to 22nd 2018. Sign up and get ready to apply when the mission will be online!"
+    call2action: "Sign up"
   iamacrew:
     title: "Who are the Crews?"
     q1: 'WHAT DOES IT MEAN TO BE A « CREW » ?'
@@ -171,6 +206,5 @@ fr:
     q4: 'WHAT IS THE PROCESS TO BECOME A CREW ?'
     a4_html: 'The first step to becoming a Crew is to Sign Up as a Crew. Once you’ve signed up, someone from the Pack Your Skills team will call you at the number you gave or on Skype. After the call the team will decide if you correspond to the type of projects we’re looking for. If you do and are based in Paris, you’ll be allowed to put offers online. If you’re not based in Paris, we will need to discuss further because we haven’t opened other cities than Paris yet.'
     participate: "You would like to host a Packer ?"
-    email: "Can you give us your email ?"
-    name: "What is the name of your project ?"
-    city: "In which city would you like to receive a Packer ?"
+    next_edition_html: 'The next edition will be from April 7th to 22nd 2018. <br>Let’s have a quick exchange before we create your mission page ! <br>Click here to book for a call with Maxime'
+    call2action: "Book a call"

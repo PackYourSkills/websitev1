@@ -1,5 +1,5 @@
 /* -------------------------------------
- * CSS code specific to NovemberIsTheNewCool page
+ * CSS code specific to Round teasing page
  * ------------------------------------- */
 
 /*-----------------------------------------------------------------------
@@ -10,7 +10,7 @@
 
 -----------------------------------------------------------------------*/
 
-#november {
+.round {
 
 /*---------------------------------------------------------------------*/
 /*  0. GLOBAL STYLES
@@ -26,9 +26,9 @@
   /*  1. BANNER PART
   /*---------------------------------------------------------------------*/
 
-  #november_banner {
+  #round_banner {
     height: 80vh;
-    background-image: url("/november/november.banner.jpg");
+    background-image: url("/round/november.banner.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
     padding:50px 0px 0px 0px;
@@ -133,7 +133,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    #november_banner::before {
+    #round_banner::before {
       content: "";
       text-align:center;
       padding:4px;
@@ -148,11 +148,11 @@
     }
   }
 
-  #november_banner::after {
+  #round_banner::after {
     content: "";
     height:150px;
     width:100%;
-    background-image: url("/november/november.white-wave.png");
+    background-image: url("/round/november.white-wave.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
@@ -166,7 +166,7 @@
   /*  2. INTRO PART
   /*---------------------------------------------------------------------*/
 
-  #november_intro {
+  #round_intro {
     .container {
       @media screen and (min-width: 992px) {
         padding-top:35px;
@@ -180,7 +180,7 @@
     }
   }
 
-  #november_intro::before {
+  #round_intro::before {
     top:-30px;
     @media screen and (min-width: 992px) {
       height:140%;
@@ -200,7 +200,7 @@
   /*  2. TITLE PART
   /*---------------------------------------------------------------------*/
 
-  #november_title {
+  #round_title {
     text-align:center;
     min-height:25px;
     margin:10px 0px 20px 0px;
@@ -217,11 +217,11 @@
   /*  3. DESCRIPTION PART
   /*---------------------------------------------------------------------*/
 
-  #november_description {
+  #round_description {
     z-index:2;
   }
 
-  #november_description::before {
+  #round_description::before {
     @media screen and (min-width: 768px) {
       height:180%;
       top:-40%;
@@ -239,8 +239,8 @@
   /*---------------------------------------------------------------------*/
 
 
-  #november_call2action {
-    background-image: url("/november/november.background.map.paris2.jpg");
+  #round_call2action {
+    background-image: url("/round/november.background.map.paris2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover ;
@@ -306,14 +306,14 @@
       content:url('/home.arrow_left.png');
     }
   }
-  #november_call2action::before {
+  #round_call2action::before {
     content: "";
     position:absolute;
     left:0;
     top:-10%;
     width:100%;
     height:120%;
-    background-image: url("/november/november.big-layer.png");
+    background-image: url("/round/november.big-layer.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100% ;
@@ -324,7 +324,7 @@
   /*  5. SOCIAL NETWORK PART
   /*---------------------------------------------------------------------*/
 
-  #november_social_network {
+  #round_social_network {
     min-height:25px;
     padding:50px 0px;
     .col-xs-4{

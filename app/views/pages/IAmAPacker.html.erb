@@ -20,13 +20,13 @@
       <p><%= t('iamapacker.a4_html') %></p>
     </div>
   </section>
-  <section class="call2action" >
-    <div class="container">
-      <h2><%= t('iamapacker.participate') %></h2>
-      <%= link_to t('iamapacker.call2action'), missions_path, class: "btn btn-success" %>
-      <% unless signed_in? %>
-        <p><%= t('iamapacker.later') %> - <%= link_to t('iamapacker.signup'), new_user_registration_path %></p>
-      <% end %>
-    </div>
-  </section>
+  <% unless signed_in? %>
+    <section class="call2action" >
+      <div class="container">
+        <h2><%= t('iamapacker.participate') %></h2>
+        <p><%= t('iamapacker.next_edition') %></p>
+        <%= link_to t('iamapacker.call2action'), new_user_registration_path, class: "btn btn-success" %>
+      </div>
+    </section>
+  <% end %>
 </div>

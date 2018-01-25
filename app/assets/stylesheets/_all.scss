@@ -262,7 +262,7 @@ form {
   top:0px;
   background-repeat: no-repeat;
   background-position: top right;
-  background-image: url("/november/november.redshape.png");
+  background-image: url("/round/november.redshape.png");
   height:100%;
   background-size: auto 100% ;
 }
@@ -276,10 +276,10 @@ form {
   height:100%;
   top:0;
   @media screen and (min-width: 768px) {
-    background-image: url("/november/november.blueshape.png");
+    background-image: url("/round/november.blueshape.png");
   }
   @media screen and (max-width: 767px) {
-    background-image: url("/november/november.blueshape.phone.png");
+    background-image: url("/round/november.blueshape.phone.png");
   }
 }
 
