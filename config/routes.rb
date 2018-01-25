@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get 'AprilIsComing', to: 'pages#AprilIsComing', as: :apriliscoming
   end
 
+  get "/CallMaxime" => redirect("https://calendly.com/maximebdb")
 
   ## temporary #########
   get 'NovemberIsTheNewCool', to: 'missions#index', as: :novemberisthenewcool
