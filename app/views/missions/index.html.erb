@@ -8,12 +8,53 @@
 
   <section id="introduction" class="section_blue" >
     <div class="introduction_container">
-      <p><%= t('mission.index.introduction.intro') %></p>
+      <p><%= t('mission.index.introduction.intro1') %></p>
+      <p><%= t('mission.index.introduction.intro2') %></p>
       <h2><%= t('mission.index.introduction.hashtag') %></h2>
       <p><%= t('mission.index.introduction.explication') %></p>
       <p><%= t('mission.index.introduction.call2action') %></p>
     </div>
   </section>
+
+  <section id="mission_teasing_call2action" class="section">
+    <div class="container">
+      <div class="row">
+        <div class='col-xs-12 col-md-6'>
+          <div class="row">
+            <div class='col-xs-12 col-sm-3 hide_for_phone arrow arrow_right '>
+              <%= image_tag "/home.packers.png" %>
+            </div>
+            <div class='col-xd-12 col-sm-9'>
+              <p><strong><%= t('april.call2action.packers.name') %></strong></p>
+              <p><%= t('april.call2action.packers.text') %></p>
+              <p class="comment"><strong><%= t('april.call2action.packers.comment') %></strong></p>
+              <%= link_to t('april.call2action.packers.call2action'), new_user_registration_path, class: "green_call2action" %>
+            </div>
+          </div>
+        </div>
+        <div class='col-xs-12 col-md-6'>
+          <div class="row">
+            <div class='col-xs-12 col-sm-3 hide_for_phone arrow arrow_left'>
+              <%= image_tag "/home.crews.png" %>
+            </div>
+            <div class='col-xd-12 col-sm-9'>
+              <p><strong><%= t('april.call2action.crews.name') %></strong></p>
+              <p><%= t('april.call2action.crews.text') %></p>
+              <p class="comment"><strong><%= t('april.call2action.crews.comment') %></strong></p>
+              <a class="green_call2action" href="http://bit.ly/2n6mJMA" role="button"><%= t('april.call2action.crews.call2action') %></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="old_mission" class="section_red" >
+      <div class="introduction_container">
+        <p><%= t('mission.index.oldmission.title') %></p>
+      </div>
+    </div>
+  </section>
+
+
 
   <section class="main-container">
     <div class="container">
