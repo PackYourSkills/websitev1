@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   get "/CallMaxime" => redirect("https://calendly.com/maximebdb/packyourskills")
   get "/Aviva" => redirect("https://lafabrique-france.aviva.com/voting/projet/vue/30-1600"), as: :aviva
+  get "/aviva" => redirect("https://lafabrique-france.aviva.com/voting/projet/vue/30-1600")
 
   ## temporary #########
   get 'NovemberIsTheNewCool', to: 'missions#index', as: :novemberisthenewcool
