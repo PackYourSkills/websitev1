@@ -44,8 +44,8 @@ en:
       translate: ""
       baseline1: "Volunteer your skills within a social project"
       baseline2: "and get hosted in exchange"
-      call2action: "Join our team !"
-      date: 'Paris, November 5-19, 2017'
+      call2action: "Next Round"
+      date: 'Paris, November 11-25, 2018'
       message2crews: 'You have a project in Paris ? Host a traveler in exchange for his skills !'
     mission:
       title: "WHY DID WE CREATE"
@@ -165,6 +165,43 @@ en:
         call2action: 'Sign up'
     follow: "Follow everything that's going on :"
 
+  nov2018:
+    banner:
+      title1: "Pack your skills"
+      title2: "& travel to Paris"
+      translate: ""
+      underline: "Novembver 11 to 25, 2018"
+    intro:
+      paragraph1: "In 2018, Pack Your Skills launches again its November edition. You would like to discover the amazing city of Paris and get the chance to leave this unique experience before then end of the year ? Get ready ! #NovemberIsCoolAgain"
+      paragraph2: "Do not miss it, you will have no other chance in 2018... next round will be in 2019."
+      title: "November Is Cool Again!"
+      translate: ""
+    description:
+      1_strong: "15 days in Paris"
+      1_normal: "November 11 to 25, 2018"
+      2_strong: "5 skills"
+      2_normal: "WebMarketing, Webdevelopment, Photo, Video & Graphic Design"
+      3_strong: "8 kinds of tasks"
+      3_normal: "Create a graphic design, Shoot photos, Shoot and edit a video, Initiate an Adwords campaign, Boost the SEO, Improve UX, Code a static website with CMS"
+      4_strong: "10 opportunities"
+      4_normal: "in 10 mission-driven projects"
+      5_strong: "3+ events"
+      5_normal: "Meet-up, Tour of alternative Paris, Party"
+    call2action:
+      title: "Be part of this unique adventure !"
+      crews:
+        name: "Crew"
+        text: "You have a mission-driven project in Paris and need skills ? You want to break free from your routine and would like to host a traveller?"
+        comment: "Let us know about your project before September to have a chance to receive a Packer. It takes only 1 min!"
+        call2action: "Apply"
+
+      packers:
+        name: "Packer"
+        text: "You want to discover social entrepreneurship, feel useful and impactful while you gain experience and discover Paris with local people?"
+        comment: "It's time to sign up to get ready to apply as soon as the mission will be online"
+        call2action: 'Sign up'
+    follow: "Follow everything that's going on :"
+
   iamapacker:
     title: "Who are the Packers?"
     q1: 'WHAT DOES IT MEAN TO BE A « PACKER » ?'
@@ -176,7 +213,7 @@ en:
     q4: 'WHAT IS THE PROCESS TO BECOME A PACKER ?'
     a4_html: 'The first step to becoming a Packer is to Sign Up. <br>Once you’ve signed up, you will be able to fill your profile to prepare your future application.<br>We are working with the future hosting projects and the opportunities will be online very soon. You will be able to see the list and apply to those you like. <br>...and get ready, we will open a new European city in 2018'
     participate: "You wanna participate ?"
-    next_edition: "The next edition will be from April 7th to 22nd 2018. Sign up and get ready to apply when the mission will be online!"
+    next_edition: "The next edition will be from November 11th to 25 2018. Sign up and get ready to apply when the mission will be online!"
     call2action: "Sign up"
   iamacrew:
     title: "Who are the Crews?"
@@ -189,8 +226,8 @@ en:
     q4: 'WHAT IS THE PROCESS TO BECOME A CREW ?'
     a4_html: 'The first step to becoming a Crew is to book call with Maxime from our team. <br>After the call, the team will decide if you correspond to the type of projects we’re looking for. <br>If you do and are based in Paris, we will put your offer online. If you’re not based in Paris, we will need to discuss further because we haven’t opened other cities than Paris yet.'
     participate: "You would like to host a Packer ?"
-    next_edition_html: 'The next edition will be from April 7th to 22nd 2018. <br>Let’s have a quick exchange before we create your mission page ! <br>Click here to book for a call with Maxime'
-    call2action: "Book a call"
+    next_edition_html: 'The next edition will be from November 11th to 25 2018. <br>Let’s have a quick exchange before we create your mission page !'
+    call2action: "Next Round"
 
 
   mission:

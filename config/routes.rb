@@ -14,15 +14,16 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr/ do #to use i18n | change /fr/ to /fr|es/ to add spanish
     root to: 'pages#home'
     get '/home', to: 'pages#home'
-    get 'AprilIsComing', to: 'pages#AprilIsComing', as: :apriliscoming
+    get 'NovemberIsCoolAgain', to: 'pages#NovemberIsCoolAgain', as: :novemberiscoolagain
   end
 
   get "/CallMaxime" => redirect("https://calendly.com/maximebdb/packyourskills")
   get "/joinourteam" => redirect("https://medium.com/@maxime_bdb/pack-your-skills-rejoignez-laventure-65a7e22a407"), as: :joinus
 
   ## temporary #########
-  get 'NovemberIsTheNewCool', to: 'missions#index', as: :novemberisthenewcool
-  get 'fr/NovemberIsTheNewCool', to: 'missions#index'
+  get 'NovemberIsTheNewCool', to: 'pages#NovemberIsCoolAgain', as: :novemberisthenewcool
+  get 'fr/NovemberIsTheNewCool', to: 'pages#NovemberIsCoolAgain'
+  get 'AprilIsComing', to: 'pages#NovemberIsCoolAgain', as: :apriliscoming
   #######################
 
   ## temporary #########
