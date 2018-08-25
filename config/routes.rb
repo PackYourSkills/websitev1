@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   get "/CallMaxime" => redirect("https://calendly.com/maximebdb/packyourskills")
   get "/joinourteam" => redirect("https://medium.com/@maxime_bdb/pack-your-skills-rejoignez-laventure-65a7e22a407"), as: :joinus
+  get "/blog" => redirect("https://medium.com/pack-your-skills")
 
   ## temporary #########
   get 'NovemberIsTheNewCool', to: 'pages#NovemberIsCoolAgain', as: :novemberisthenewcool
