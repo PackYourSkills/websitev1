@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get "/joinourteam" => redirect("https://medium.com/@maxime_bdb/pack-your-skills-rejoignez-laventure-65a7e22a407"), as: :joinus
 
   ## BLOG
-  get "/blog", to: redirect('http://www.packyourskills.com/blog/', status: 301)
+  get "/blog", to: redirect('http://blog.packyourskills.com/')
   # get "/blog" => redirect("https://medium.com/pack-your-skills")
 
   ## temporary #########
