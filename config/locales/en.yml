@@ -233,15 +233,15 @@ en:
   mission:
     index:
       title: 'Pack Your Skills'
-      subtitle: 'NEXT ROUND : APRIL 7-22 | PARIS'
+      subtitle: 'NEXT ROUND : NOVEMBER 11-25 | PARIS'
       introduction:
-        intro1: "Pack Your Skills launches its first edition for 2018 in April in Paris"
-        intro2: "You would like to discover this amazing when the beautiful days will be back? Get ready..."
-        hashtag: "#AprilIsComing"
+        intro1: "In 2018, Pack Your Skills launches again its November edition. You would like to discover the amazing city of Paris and get the chance to leave this unique experience before then end of the year ? Get ready ! #NovemberIsCoolAgain"
+        intro2: "Do not miss it, you will have no other chance in 2018... next round will be in 2019."
+        hashtag: "#NovemberIsCoolAgain"
         explication: "We enable travellers to volunteer in a social or environmental projects by offering their skills in exchange for food and accommodation."
-        call2action: "What do you think about coming to Paris in April?"
+        call2action: "What do you think about coming to Paris in November?"
       oldmission:
-        title: "Discover the mission from November edition"
+        title: "Discover the mission from last edition"
       filter:
         all: 'All'
         webdev: 'Web Development'
