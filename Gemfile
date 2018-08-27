@@ -99,6 +99,9 @@ gem 'postmark-rails'
 # MailChimp
 gem 'gibbon'
 
+#Redirect blog.packyourskills.com to packyourskills.com/blog
+gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
+
 
 #==> End
 #==================================================
