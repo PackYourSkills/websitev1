@@ -8,6 +8,8 @@ class MissionsController < ApplicationController
     @all_missions = policy_scope(Mission)
     @online_missions = @all_missions.where(status: 'online')
     @validated_missions = @all_missions.where(status: 'validated')
+    @draft_missions = @all_missions.where(status: 'draft')
+
     @constants = YAML.load_file(Rails.root.join('config', 'constants.yml'))
     @url_cover = @constants["img_banner_url"]["paris"]
   end

@@ -3,6 +3,17 @@
     <h2>Admin</h2>
   </div>
 </div>
+<h3> Draft Missions </h3>
+<% @draft_missions.each_with_index do |mission, index| %>
+  <p> -------- </p>
+  <p>Mission <%= index + 1 %> - <%= mission.crew.name %> - <%= mission.skill %> - <%= mission.status %> -
+    <%= link_to "validate the mission",  validate_mission_path(mission) %><br>
+  <%= mission.title %> - <%= link_to "Edit mission info", edit_mission_path(mission.id) %> - <%= link_to "Edit Crew info", edit_crew_path(mission.crew.id) %></p>
+  <p>Application</p>
+  <% mission.connections.each_with_index do |connection, index| %>
+    <p>=><%= index + 1 %> - Status : <%= connection.status %> - Packer : <%= connection.packer.first_name %> <%= connection.packer.last_name %> - <%= link_to "See application", mission_connection_path(mission.id, connection.id) %></p>
+  <% end %>
+<% end %>
 <h3> Online Missions </h3>
 <% @public_missions.each_with_index do |mission, index| %>
   <p> -------- </p>
