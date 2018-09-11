@@ -41,6 +41,7 @@ class PagesController < ApplicationController
     @missions = Mission.all
     @public_missions = @missions.where(status: ('online'))
     @validated_missions = @missions.where(status: ('validated'))
+    @draft_missions = @all_missions.where(status: 'draft')
   end
 
   def packer_room
