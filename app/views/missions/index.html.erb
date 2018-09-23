@@ -15,7 +15,7 @@
       <p><%= t('mission.index.introduction.call2action') %></p>
     </div>
   </section>
-
+<!--
   <section id="mission_teasing_call2action" class="section">
     <div class="container">
       <div class="row">
@@ -53,8 +53,7 @@
       </div>
     </div>
   </section>
-
-
+ -->
 
   <section class="main-container">
     <div class="container">
@@ -89,7 +88,9 @@
                 </div>
               </div>
             <% end %>
-            <% @validated_missions.each_with_index do |mission, index| %>
+
+<!--
+             <% @validated_missions.each_with_index do |mission, index| %>
               <div class="col-xs-12 col-sm-6 col-md-4 isotope-item <%= mission.skill.downcase.gsub(/\s+/, "") %>">
                 <div class= "card_mission">
                   <div class= "banner_card_mission" style="background-image: url('<%= cl_image_path mission.url_cover, angle: 0 %>')" >
@@ -111,6 +112,8 @@
                 </div>
               </div>
             <% end %>
+ -->
+
           </div>
         </div>
       </div>
