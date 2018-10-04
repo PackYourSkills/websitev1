@@ -55,11 +55,13 @@
   }
 
   .SeeMissions {
+    .row {
+      margin-top:20px;
+    }
     a {
       font-size:21px;
       color:$green;
       text-decoration:none;
-      margin-top:10px;
     }
     a:hover {
       color:$red;

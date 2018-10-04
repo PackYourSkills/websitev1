@@ -11,12 +11,24 @@
 
   <section class= "SeeMissions">
     <div class="container">
-      <h2>See your mission</h2>
+      <h2>Your mission(s)</h2>
       <% @missions.each_with_index do |mission, index| %>
         <div class="row">
-          <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+          <div class="col-xs-12 col-sm-offset-2 col-sm-8">
             <p><%= link_to mission.title, mission_path(@mission.id) %></p>
-            </div>
+            <%= @all_online = mission.connections.select { |c| c.online? } %>
+            <% if @all_online.size == 0 %>
+              <p>no application yet!</p>
+            <% else %>
+              <% if @all_online.size != 0 %>
+                <div class="box_application">
+                  <% @all_online.each_with_index do |connection, index| %>
+                    <p><%= index + 1 %> - <strong><%= connection.packer.first_name %> <%= connection.packer.last_name %></strong> - <%= link_to "view", mission_connection_path(connection.mission.id, connection.id) %></p>
+                  <% end %>
+                </div>
+              <% end %>
+
+            <% end %>
           </div>
         </div>
       <% end %>
