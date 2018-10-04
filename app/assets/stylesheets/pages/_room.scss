@@ -66,6 +66,30 @@
     a:hover {
       color:$red;
     }
+    .connections_room_crews {
+      text-align:center;
+      margin-top:15px;
+      margin-bottom:15px;
+      h2 {
+        font-size: 22px;
+        margin: 0px 0px 10px 0px;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 5px 0px;
+      }
+      p {
+        font-size: 16px;
+      }
+      a {
+        margin:15px 0px;
+        text-decoration:none;
+        color:$green;
+      }
+      a:hover {
+        opacity:0.5;
+      }
+    }
   }
 
   #connections_room_packer {
