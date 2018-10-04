@@ -19,7 +19,6 @@
     .banner_content {
       p { font-size:16px; color:white;}
     }
-
   }
   .call2action {
     margin: 25px 0px;
@@ -52,6 +51,17 @@
     }
     a:hover {
       color:$green;
+    }
+    .SeeMissions {
+      a {
+        font-size:21px;
+        color:$green;
+        text-decoration:none;
+        margin-top:10px;
+      }
+      a:hover {
+        color:$red;
+      }
     }
   }
 
