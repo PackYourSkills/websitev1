@@ -60,8 +60,8 @@ class PagesController < ApplicationController
   def crew_room
     @crew = current_user.crew
     authorize @crew
-    @mission = @crew.missions.connections
-    @connections = @crew.missions.connections
+    @mission = @crew.missions.last
+    @connections = @mission.connections
     @all_online = @connections.select { |c| c.online? }
   end
 end
