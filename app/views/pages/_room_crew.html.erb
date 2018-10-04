@@ -9,18 +9,18 @@
     </div>
   </section>
 
-  <section class= "call2action">
+  <section class= "SeeMissions">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-offset-4 col-sm-4">
-          <div class="box">
-            <p>See your mission</p>
-            <% @missions.each_with_index do |mission, index| %>
+      <h2>See your mission</h2>
+      <% @missions.each_with_index do |mission, index| %>
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-4 col-sm-4">
+            <div class="box call2action">
               <p><%= link_to mission.title, mission_path(@mission.id) %></p>
-            <% end %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </section>
 
