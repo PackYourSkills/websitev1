@@ -40,24 +40,4 @@
       <% end %>
     </div>
   </section>
-
-  <div id="connections_room_packer">
-    <div class="container container_flex">
-      <div class="box">
-        <h2>Applications</h2>
-        <% if @all_online.size == 0 %>
-          <p>You don't have any application yet!</p>
-        <% else %>
-          <% if @all_online.size != 0 %>
-            <div class="box_application">
-              <% @all_online.each_with_index do |connection, index| %>
-                <p><%= index + 1 %> - <strong><%= connection.packer.first_name %> <%= connection.packer.last_name %></strong> - <%= link_to "view", mission_connection_path(connection.mission.id, connection.id) %></p>
-              <% end %>
-            </div>
-          <% end %>
-
-        <% end %>
-      </div>
-    </div>
-  </section>
 </div>
