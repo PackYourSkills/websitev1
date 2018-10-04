@@ -9,13 +9,12 @@
     </div>
   </section>
 
-  <% @missions.each_with_index do |mission, index| %>
   <section class= "call2action">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-offset-4 col-sm-4">
           <div class="box">
-            <p><%= link_to "See your mission #{mission.title}", mission_path(mission.id) %></p>
+            <p><%= link_to "See your mission", mission_path(@mission.id) %></p>
           </div>
         </div>
       </div>
@@ -26,21 +25,19 @@
     <div class="container container_flex">
       <div class="box">
         <h2>All the applications</h2>
-        <% if mission.connections.select { |c| c.online? }.size == 0 %>
+        <% if @all_online.size == 0 %>
           <p>You don't have any application yet!</p>
         <% else %>
-          <% if mission.connections.select { |c| c.online? }.size != 0 %>
+          <% if @all_online.size != 0 %>
             <div class="box_application">
-              <% mission.connections.select { |c| c.online? }.each_with_index do |connection, index| %>
+              <% @all_online.each_with_index do |connection, index| %>
                 <p><%= index + 1 %> - <strong><%= connection.packer.first_name %> <%= connection.packer.last_name %></strong> - <%= link_to "view", mission_connection_path(connection.mission.id, connection.id) %></p>
               <% end %>
             </div>
           <% end %>
+
         <% end %>
       </div>
     </div>
   </section>
-  <% end %>
-
-
 </div>
