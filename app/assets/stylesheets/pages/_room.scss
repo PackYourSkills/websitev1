@@ -52,16 +52,17 @@
     a:hover {
       color:$green;
     }
-    .SeeMissions {
-      a {
-        font-size:21px;
-        color:$green;
-        text-decoration:none;
-        margin-top:10px;
-      }
-      a:hover {
-        color:$red;
-      }
+  }
+
+  .SeeMissions {
+    a {
+      font-size:21px;
+      color:$green;
+      text-decoration:none;
+      margin-top:10px;
+    }
+    a:hover {
+      color:$red;
     }
   }
 
