@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   get "/CallMaxime" => redirect("https://calendly.com/maximebdb/packyourskills")
-  get "/joinourteam" => redirect("https://medium.com/@maxime_bdb/pack-your-skills-rejoignez-laventure-65a7e22a407"), as: :joinus
+  get "/joinourteam" => redirect("http://www.packyourskills.com/RecrutementJanvier2019.pdf"), as: :joinus
 
   ## BLOG
   get "/blog", to: redirect('http://blog.packyourskills.com/')
